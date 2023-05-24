@@ -45,17 +45,17 @@ Public Class Signup
             cmd.Connection = conn
             cmd.CommandText = str
 
-            cmd.Parameters.AddWithValue("@name", TextBoxName.Text)
-            cmd.Parameters.AddWithValue("@contact", TextBoxCont.Text)
-            cmd.Parameters.AddWithValue("@email", TextBoxEma.Text)
-            cmd.Parameters.AddWithValue("@office", ComboBoxOffice.Text)
-            cmd.Parameters.AddWithValue("@region", ComboBoxRegion.Text)
-            cmd.Parameters.AddWithValue("@emtype", ComboBoxEmployType.Text)
-            cmd.Parameters.AddWithValue("@stat", ComboBoxStatus.Text)
-            cmd.Parameters.AddWithValue("@pos", ComboBoxPosition.Text)
-            cmd.Parameters.AddWithValue("@desig", ComboBoxDesig.Text)
-            cmd.Parameters.AddWithValue("@username", TextBoxUsername.Text)
-            cmd.Parameters.AddWithValue("@password", TextBoxPass.Text)
+            cmd.Parameters.AddWithValue("@name", txtFname.Text)
+            cmd.Parameters.AddWithValue("@contact", txtContact.Text)
+            cmd.Parameters.AddWithValue("@email", txtEmail.Text)
+            cmd.Parameters.AddWithValue("@office", pickOffice.Text)
+            cmd.Parameters.AddWithValue("@region", pickRegion.Text)
+            cmd.Parameters.AddWithValue("@emtype", pickEmType.Text)
+            cmd.Parameters.AddWithValue("@stat", pickEmStat.Text)
+            cmd.Parameters.AddWithValue("@pos", pickPosition.Text)
+            cmd.Parameters.AddWithValue("@desig", pickDesignation.Text)
+            cmd.Parameters.AddWithValue("@username", txtCreateUsername.Text)
+            cmd.Parameters.AddWithValue("@password", txtCreatePw.Text)
 
 
 
@@ -74,17 +74,17 @@ Public Class Signup
     End Sub
 
     Sub clear()
-        TextBoxName.Clear()
-        TextBoxCont.Clear()
-        TextBoxEma.Clear()
-        ComboBoxOffice.Text = ""
-        ComboBoxPosition.Text = ""
-        ComboBoxEmployType.Text = ""
-        ComboBoxRegion.Text = ""
-        ComboBoxStatus.Text = ""
-        ComboBoxDesig.Text = ""
-        TextBoxUsername.Clear()
-        TextBoxPass.Clear()
+        txtFname.Clear()
+        txtContact.Clear()
+        txtEmail.Clear()
+        pickOffice.Text = ""
+        pickPosition.Text = ""
+        pickEmType.Text = ""
+        pickRegion.Text = ""
+        pickEmStat.Text = ""
+        pickDesignation.Text = ""
+        txtCreateUsername.Clear()
+        txtCreatePw.Clear()
         PictureBoxProfile.Image = My.Resources.user
     End Sub
 
