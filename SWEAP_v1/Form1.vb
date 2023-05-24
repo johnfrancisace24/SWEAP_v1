@@ -22,25 +22,28 @@ Public Class Form1
     End Sub
 
     Private Sub ButtonLogIn_Click(sender As Object, e As EventArgs) Handles btnLogIn.Click
-        Dim user, pass, status As String
+        Dim status As String
 
         Try
             conn.Open()
-            Dim cmd As New MySqlCommand("SELECT * FROM user", conn)
+            Dim cmd As New MySqlCommand("SELECT * FROM user WHERE username=@NAME AND password=@PASS", conn)
+            cmd.Parameters.AddWithValue("@NAME", txtUser.Text)
+            cmd.Parameters.AddWithValue("@PASS", txtBoxPass.Text)
             rid = cmd.ExecuteReader
             While rid.Read
-                If (txtUser.Text = rid.GetString("username") And txtBoxPass.Text = rid.GetString("password")) Then
-                    user = rid.GetString("username")
-                    pass = rid.GetString("password")
-                End If
+                status = rid.GetString("status")
             End While
         Catch ex As Exception
-            MsgBox("lmao doesn't work")
+            MsgBox("Account doesn't exist.")
         Finally
             conn.Close()
         End Try
-        If () Then
+        If (status = "admin") Then
             AdminDashboard.Show()
-        Me.Hide()
+            Me.Hide()
+        Else
+            MsgBox("Invalid username or passowrd.")
+        End If
+
     End Sub
 End Class
