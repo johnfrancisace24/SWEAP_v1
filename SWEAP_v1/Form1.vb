@@ -22,31 +22,38 @@ Public Class Form1
     End Sub
 
     Private Sub ButtonLogIn_Click(sender As Object, e As EventArgs) Handles btnLogIn.Click
-        Dim status As String
 
-        Try
-            conn.Open()
-            Dim cmd As New MySqlCommand("SELECT * FROM user WHERE username=@NAME AND password=@PASS", conn)
-            cmd.Parameters.AddWithValue("@NAME", txtUser.Text)
-            cmd.Parameters.AddWithValue("@PASS", txtBoxPass.Text)
-            rid = cmd.ExecuteReader
-            While rid.Read
-                status = rid.GetString("status")
-            End While
-        Catch ex As Exception
-            MsgBox("Account doesn't exist.")
-        Finally
-            conn.Close()
-        End Try
-        If (status = "admin") Then
-            AdminDashboard.Show()
-            Me.Hide()
-        ElseIf (status = "user") Then
-            userdashboard.Show()
-            Me.Hide()
+        If (txtUser.Text = "") Then
+            MsgBox("Username can't be blank.")
+        ElseIf (txtBoxPass.text = "") Then
+            MsgBox("Password can't be blank.")
         Else
-            MsgBox("Invalid username or passowrd.")
+            Dim status As String
+            Try
+                conn.Open()
+                Dim cmd As New MySqlCommand("SELECT * FROM user WHERE username=@NAME AND password=@PASS", conn)
+                cmd.Parameters.AddWithValue("@NAME", txtUser.Text)
+                cmd.Parameters.AddWithValue("@PASS", txtBoxPass.Text)
+                rid = cmd.ExecuteReader
+                While rid.Read
+                    status = rid.GetString("status")
+                End While
+            Catch ex As Exception
+                MsgBox("Account doesn't exist.")
+            Finally
+                conn.Close()
+            End Try
+            If (status = "admin") Then
+                AdminDashboard.Show()
+                Me.Hide()
+            ElseIf (status = "user") Then
+                userdashboard.Show()
+                Me.Hide()
+            Else
+                MsgBox("Invalid username or passowrd.")
+            End If
         End If
+
 
     End Sub
 End Class

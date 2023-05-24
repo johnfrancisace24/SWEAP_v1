@@ -2,10 +2,9 @@
 Imports MySql.Data.MySqlClient
 
 Public Class Signup
-
-    Dim conn As New MySqlConnection
     Dim cnstr As String = "server= 172.30.206.81; user = drugpusher; password= druguser; database = sweap; port=3306"
-    Dim cmd As New MySqlCommand
+    Dim conn As New MySqlConnection(cnstr)
+    Dim rid As MySqlDataReader
     Dim str As String
 
 
@@ -34,43 +33,38 @@ Public Class Signup
         End Try
     End Sub
 
-    Private Sub ButtonReg_Click(sender As Object, e As EventArgs) Handles ButtonReg.Click
+    Private Sub ButtonReg_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
+        If (txtFname.Text = "" Or txtLname.Text = "") Then
+            MsgBox("Fields can't be blank.")
+        Else
+            Dim getID As Integer
+            Try
+                conn.Open()
+                Dim cmd As New MySqlCommand("INSERT INTO user(username, password, email, created_at, updated_at)
+                                            VALUES(@NAME, @PW, @EMAIL, NOW(), NOW()", conn)
+                Dim cmd2 As New MySqlCommand("SELECT * FROM user WHERE username=@USERNAME", conn)
+                Dim cmd3 As New MySqlCommand("INSERT INTO user_info(user_id, first_name, last_name)VALUES(@UID, @FNAME, @LNAME)", conn)
+                cmd.Parameters.AddWithValue("@NAME", txtCreateUsername.Text)
+                cmd.Parameters.AddWithValue("@PW", txtCreatePw.Text)
+                cmd.Parameters.AddWithValue("@EMAIL", txtEmail.Text)
+                cmd.ExecuteNonQuery()
+                cmd2.Parameters.AddWithValue("@USERNAME", txtCreateUsername.Text)
 
-        Try
-
-
-            conn = New MySqlConnection(cnstr)
-            conn.Open()
-            str = "insert into register (name, contact, email, office, region, employment_type, status_of_employment, position, designation, username, password ) values (@name,@contact,@email,@office,@region,@emtype,@stat,@pos,@desig,@username,@password)"
-            cmd.Connection = conn
-            cmd.CommandText = str
-
-            cmd.Parameters.AddWithValue("@name", txtFname.Text)
-            cmd.Parameters.AddWithValue("@contact", txtContact.Text)
-            cmd.Parameters.AddWithValue("@email", txtEmail.Text)
-            cmd.Parameters.AddWithValue("@office", pickOffice.Text)
-            cmd.Parameters.AddWithValue("@region", pickRegion.Text)
-            cmd.Parameters.AddWithValue("@emtype", pickEmType.Text)
-            cmd.Parameters.AddWithValue("@stat", pickEmStat.Text)
-            cmd.Parameters.AddWithValue("@pos", pickPosition.Text)
-            cmd.Parameters.AddWithValue("@desig", pickDesignation.Text)
-            cmd.Parameters.AddWithValue("@username", txtCreateUsername.Text)
-            cmd.Parameters.AddWithValue("@password", txtCreatePw.Text)
-
-
-
-            Dim i As Integer = cmd.ExecuteNonQuery
-            If i > 0 Then
-                MessageBox.Show("Account Successfully Created!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                clear()
-                Me.Close()
-                Form1.Show()
-            Else
-                MessageBox.Show("Account Cannot be Created!", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
+                rid = cmd2.ExecuteReader
+                While rid.Read
+                    getID = rid.GetInt32("id")
+                End While
+                cmd3.Parameters.AddWithValue("@UID", getID)
+                cmd3.Parameters.AddWithValue("FNAME", txtFname.Text)
+                cmd3.Parameters.AddWithValue("@LNAME", txtLname.Text)
+                cmd3.ExecuteNonQuery()
+                MsgBox("successfully added")
+            Catch ex As Exception
+                MsgBox("Doesn't work lmao.")
+            Finally
+                conn.Close()
+            End Try
+        End If
     End Sub
 
     Sub clear()
