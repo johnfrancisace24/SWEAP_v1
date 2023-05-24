@@ -110,7 +110,7 @@ Partial Class Form1
         ' 
         LinkLabelsignup.AutoSize = True
         LinkLabelsignup.DisabledLinkColor = Color.Transparent
-        LinkLabelsignup.ForeColor = Color.White
+        LinkLabelsignup.ForeColor = Color.Aqua
         LinkLabelsignup.LinkColor = Color.AliceBlue
         LinkLabelsignup.Location = New Point(619, 358)
         LinkLabelsignup.Name = "LinkLabelsignup"
