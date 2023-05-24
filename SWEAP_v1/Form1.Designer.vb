@@ -25,11 +25,11 @@ Partial Class Form1
         PictureBox1 = New PictureBox()
         Panel1 = New Panel()
         ButtonClose = New Button()
-        TextBoxPass = New TextBox()
-        TextBoxUser = New TextBox()
+        txtBoxPass = New TextBox()
+        txtUser = New TextBox()
         Label3 = New Label()
         LinkLabelsignup = New LinkLabel()
-        ButtonLogIn = New Button()
+        btnLogIn = New Button()
         CheckBoxShow = New CheckBox()
         Label2 = New Label()
         Label1 = New Label()
@@ -42,9 +42,10 @@ Partial Class Form1
         PictureBox1.BackColor = Color.FromArgb(CByte(255), CByte(77), CByte(77))
         PictureBox1.BackgroundImage = My.Resources.Resources.Logo
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox1.Location = New Point(34, 70)
+        PictureBox1.Location = New Point(42, 88)
+        PictureBox1.Margin = New Padding(4, 4, 4, 4)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(355, 324)
+        PictureBox1.Size = New Size(444, 405)
         PictureBox1.TabIndex = 1
         PictureBox1.TabStop = False
         ' 
@@ -52,18 +53,19 @@ Partial Class Form1
         ' 
         Panel1.BackColor = Color.FromArgb(CByte(255), CByte(77), CByte(77))
         Panel1.Controls.Add(ButtonClose)
-        Panel1.Controls.Add(TextBoxPass)
-        Panel1.Controls.Add(TextBoxUser)
+        Panel1.Controls.Add(txtBoxPass)
+        Panel1.Controls.Add(txtUser)
         Panel1.Controls.Add(Label3)
         Panel1.Controls.Add(LinkLabelsignup)
-        Panel1.Controls.Add(ButtonLogIn)
+        Panel1.Controls.Add(btnLogIn)
         Panel1.Controls.Add(CheckBoxShow)
         Panel1.Controls.Add(Label2)
         Panel1.Controls.Add(Label1)
         Panel1.Controls.Add(PictureBox1)
-        Panel1.Location = New Point(9, 11)
+        Panel1.Location = New Point(11, 14)
+        Panel1.Margin = New Padding(4, 4, 4, 4)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(795, 464)
+        Panel1.Size = New Size(994, 580)
         Panel1.TabIndex = 2
         ' 
         ' ButtonClose
@@ -73,36 +75,40 @@ Partial Class Form1
         ButtonClose.BackgroundImageLayout = ImageLayout.Stretch
         ButtonClose.FlatAppearance.BorderSize = 0
         ButtonClose.FlatStyle = FlatStyle.Flat
-        ButtonClose.Location = New Point(764, 4)
+        ButtonClose.Location = New Point(955, 5)
+        ButtonClose.Margin = New Padding(4, 4, 4, 4)
         ButtonClose.Name = "ButtonClose"
-        ButtonClose.Size = New Size(27, 27)
+        ButtonClose.Size = New Size(34, 34)
         ButtonClose.TabIndex = 19
         ButtonClose.UseVisualStyleBackColor = False
         ' 
-        ' TextBoxPass
+        ' txtBoxPass
         ' 
-        TextBoxPass.Font = New Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBoxPass.Location = New Point(437, 198)
-        TextBoxPass.Name = "TextBoxPass"
-        TextBoxPass.PasswordChar = "*"c
-        TextBoxPass.Size = New Size(289, 38)
-        TextBoxPass.TabIndex = 18
+        txtBoxPass.Font = New Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        txtBoxPass.Location = New Point(546, 248)
+        txtBoxPass.Margin = New Padding(4, 4, 4, 4)
+        txtBoxPass.Name = "txtBoxPass"
+        txtBoxPass.PasswordChar = "*"c
+        txtBoxPass.Size = New Size(360, 44)
+        txtBoxPass.TabIndex = 18
         ' 
-        ' TextBoxUser
+        ' txtUser
         ' 
-        TextBoxUser.Font = New Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBoxUser.Location = New Point(437, 112)
-        TextBoxUser.Name = "TextBoxUser"
-        TextBoxUser.Size = New Size(289, 38)
-        TextBoxUser.TabIndex = 17
+        txtUser.Font = New Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        txtUser.Location = New Point(546, 140)
+        txtUser.Margin = New Padding(4, 4, 4, 4)
+        txtUser.Name = "txtUser"
+        txtUser.Size = New Size(360, 44)
+        txtUser.TabIndex = 17
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label3.Location = New Point(457, 360)
+        Label3.Location = New Point(571, 450)
+        Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(160, 20)
+        Label3.Size = New Size(193, 25)
         Label3.TabIndex = 16
         Label3.Text = "Dont have an account?"
         ' 
@@ -112,34 +118,37 @@ Partial Class Form1
         LinkLabelsignup.DisabledLinkColor = Color.Transparent
         LinkLabelsignup.ForeColor = Color.White
         LinkLabelsignup.LinkColor = Color.AliceBlue
-        LinkLabelsignup.Location = New Point(619, 358)
+        LinkLabelsignup.Location = New Point(774, 448)
+        LinkLabelsignup.Margin = New Padding(4, 0, 4, 0)
         LinkLabelsignup.Name = "LinkLabelsignup"
-        LinkLabelsignup.Size = New Size(91, 20)
+        LinkLabelsignup.Size = New Size(112, 25)
         LinkLabelsignup.TabIndex = 15
         LinkLabelsignup.TabStop = True
         LinkLabelsignup.Text = "Sign up now"
         ' 
-        ' ButtonLogIn
+        ' btnLogIn
         ' 
-        ButtonLogIn.BackColor = Color.FromArgb(CByte(45), CByte(152), CByte(218))
-        ButtonLogIn.FlatAppearance.BorderSize = 0
-        ButtonLogIn.FlatStyle = FlatStyle.Flat
-        ButtonLogIn.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        ButtonLogIn.ForeColor = Color.White
-        ButtonLogIn.Location = New Point(437, 289)
-        ButtonLogIn.Name = "ButtonLogIn"
-        ButtonLogIn.Size = New Size(288, 41)
-        ButtonLogIn.TabIndex = 14
-        ButtonLogIn.Text = "LOGIN"
-        ButtonLogIn.UseVisualStyleBackColor = False
+        btnLogIn.BackColor = Color.FromArgb(CByte(45), CByte(152), CByte(218))
+        btnLogIn.FlatAppearance.BorderSize = 0
+        btnLogIn.FlatStyle = FlatStyle.Flat
+        btnLogIn.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        btnLogIn.ForeColor = Color.White
+        btnLogIn.Location = New Point(546, 361)
+        btnLogIn.Margin = New Padding(4, 4, 4, 4)
+        btnLogIn.Name = "btnLogIn"
+        btnLogIn.Size = New Size(360, 51)
+        btnLogIn.TabIndex = 14
+        btnLogIn.Text = "LOGIN"
+        btnLogIn.UseVisualStyleBackColor = False
         ' 
         ' CheckBoxShow
         ' 
         CheckBoxShow.AutoSize = True
         CheckBoxShow.ForeColor = Color.Transparent
-        CheckBoxShow.Location = New Point(437, 244)
+        CheckBoxShow.Location = New Point(546, 305)
+        CheckBoxShow.Margin = New Padding(4, 4, 4, 4)
         CheckBoxShow.Name = "CheckBoxShow"
-        CheckBoxShow.Size = New Size(157, 24)
+        CheckBoxShow.Size = New Size(193, 29)
         CheckBoxShow.TabIndex = 13
         CheckBoxShow.Text = "SHOW PASSWORD"
         CheckBoxShow.UseVisualStyleBackColor = True
@@ -149,9 +158,10 @@ Partial Class Form1
         Label2.AutoSize = True
         Label2.Font = New Font("Sitka Small", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Label2.ForeColor = Color.Transparent
-        Label2.Location = New Point(440, 166)
+        Label2.Location = New Point(550, 208)
+        Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(133, 29)
+        Label2.Size = New Size(157, 35)
         Label2.TabIndex = 12
         Label2.Text = "PASSWORD"
         ' 
@@ -160,22 +170,24 @@ Partial Class Form1
         Label1.AutoSize = True
         Label1.Font = New Font("Sitka Small", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.ForeColor = Color.Transparent
-        Label1.Location = New Point(437, 70)
+        Label1.Location = New Point(546, 88)
+        Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(136, 29)
+        Label1.Size = New Size(162, 35)
         Label1.TabIndex = 11
         Label1.Text = "USERNAME"
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(56), CByte(103), CByte(214))
-        ClientSize = New Size(812, 486)
+        ClientSize = New Size(1015, 608)
         ControlBox = False
         Controls.Add(Panel1)
         ForeColor = Color.Black
         FormBorderStyle = FormBorderStyle.FixedSingle
+        Margin = New Padding(4, 4, 4, 4)
         Name = "Form1"
         StartPosition = FormStartPosition.CenterScreen
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
@@ -188,11 +200,11 @@ Partial Class Form1
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label3 As Label
     Friend WithEvents LinkLabelsignup As LinkLabel
-    Friend WithEvents ButtonLogIn As Button
+    Friend WithEvents btnLogIn As Button
     Friend WithEvents CheckBoxShow As CheckBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBoxUser As TextBox
-    Friend WithEvents TextBoxPass As TextBox
+    Friend WithEvents txtUser As TextBox
+    Friend WithEvents txtBoxPass As TextBox
     Friend WithEvents ButtonClose As Button
 End Class

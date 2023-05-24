@@ -1,9 +1,9 @@
 ﻿Public Class Form1
     Private Sub CheckBoxShow_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBoxShow.CheckedChanged
         If CheckBoxShow.Checked = False Then
-            TextBoxPass.PasswordChar = "*"
+            txtBoxPass.PasswordChar = "*"
         Else
-            TextBoxPass.PasswordChar = ""
+            txtBoxPass.PasswordChar = ""
         End If
     End Sub
 
@@ -16,7 +16,7 @@
         Me.Close()
     End Sub
 
-    Private Sub ButtonLogIn_Click(sender As Object, e As EventArgs) Handles ButtonLogIn.Click
+    Private Sub ButtonLogIn_Click(sender As Object, e As EventArgs) Handles btnLogIn.Click
 
     End Sub
 End Class
