@@ -29,21 +29,4 @@ Public Class userdashboard
 
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles name.Click
-        conn.Open()
-
-        Dim query As String = "SELECT name FROM register WHERE id = @id"
-
-        Dim cmd As New MySqlCommand(query, conn)
-        cmd.Parameters.AddWithValue("@id", )
-        Dim reader As MySqlDataReader = cmd.ExecuteReader()
-
-        If reader.Read() Then
-            name.Text = reader("name").ToString()
-        End If
-
-        reader.Close()
-        conn.Close()
-
-    End Sub
 End Class

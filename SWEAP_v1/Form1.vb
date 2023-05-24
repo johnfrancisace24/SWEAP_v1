@@ -41,6 +41,9 @@ Public Class Form1
         If (status = "admin") Then
             AdminDashboard.Show()
             Me.Hide()
+        ElseIf (status = "user") Then
+            userdashboard.Show()
+            Me.Hide()
         Else
             MsgBox("Invalid username or passowrd.")
         End If
