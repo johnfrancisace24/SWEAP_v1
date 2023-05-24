@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Windows
+Imports MySql.Data.MySqlClient
 
 Public Class userdashboard
     Dim co As String = "server=localhost;port=3306;user=root;password=;database=sweap"
@@ -16,8 +17,8 @@ Public Class userdashboard
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Panel3.Hide()
         Panel1.Show()
+        Panel3.Hide()
         Panel5.Hide()
 
     End Sub
@@ -29,4 +30,84 @@ Public Class userdashboard
 
     End Sub
 
+<<<<<<< HEAD
+    Public Sub flname()
+        Try
+            conn.Open()
+
+            Dim query As String = "SELECT name FROM register"
+
+            Dim cmd As New MySqlCommand(query, conn)
+            Dim reader As MySqlDataReader = cmd.ExecuteReader()
+
+            If reader.Read() Then
+                Dim name As String = reader.GetString("name")
+                fname.Text = name
+            End If
+            MsgBox("Gumana")
+            reader.Close()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        conn.Close()
+    End Sub
+
+    Public Sub position()
+        Try
+            conn.Open()
+
+            Dim query As String = "SELECT designation FROM register"
+
+            Dim cmd As New MySqlCommand(query, conn)
+            Dim reader As MySqlDataReader = cmd.ExecuteReader()
+
+            If reader.Read() Then
+                Dim des As String = reader.GetString("designation")
+                designation.Text = des
+            End If
+            MsgBox("Gumana")
+            reader.Close()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        conn.Close()
+    End Sub
+
+    Public Sub DGV_load()
+        DataGridView1.Rows.Clear()
+
+        Try
+            conn.Open()
+            Dim cmd As New MySqlCommand("SELECT * FROM register", conn)
+            dr = cmd.ExecuteReader
+            While dr.Read
+                DataGridView1.Rows.Add(dr.Item("name"), dr.Item("contact"), dr.Item("office"), dr.Item("region"), dr.Item("employment_type"), dr.Item("status_of_employment"), dr.Item("position"), dr.Item("designation"))
+            End While
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            conn.Close()
+        End Try
+
+    End Sub
+    Private Sub userdashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        DGV_load()
+        flname()
+        position()
+
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim AnswerYes As String
+        AnswerYes = MsgBox("Are you sure you want to Exit", vbQuestion + vbYesNo, "User Repsonse")
+
+        If AnswerYes = vbYes Then
+            Me.Hide()
+        End If
+    End Sub
+=======
+>>>>>>> 6c008a8f62523f16b4c998bddae8d1317aa28f9f
 End Class
