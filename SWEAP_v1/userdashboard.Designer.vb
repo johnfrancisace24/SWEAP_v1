@@ -474,13 +474,15 @@ Partial Class userdashboard
         Label11.Dock = DockStyle.Left
         Label11.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Label11.ForeColor = SystemColors.ControlLightLight
+        Label11.Image = My.Resources.Resources.Logo1
+        Label11.ImageAlign = ContentAlignment.MiddleLeft
         Label11.Location = New Point(0, 0)
         Label11.Name = "Label11"
         Label11.Padding = New Padding(5, 0, 0, 0)
-        Label11.Size = New Size(435, 39)
+        Label11.Size = New Size(429, 39)
         Label11.TabIndex = 3
-        Label11.Text = "Social Welfare Employees Association of the Philippines"
-        Label11.TextAlign = ContentAlignment.MiddleLeft
+        Label11.Text = "Social Welfare Employees Association Of The Philippines"
+        Label11.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Panel5
         ' 
@@ -577,9 +579,9 @@ Partial Class userdashboard
         ClientSize = New Size(1189, 640)
         Controls.Add(Panel2)
         Controls.Add(Panel4)
-        Controls.Add(Panel3)
         Controls.Add(Panel1)
         Controls.Add(Panel5)
+        Controls.Add(Panel3)
         FormBorderStyle = FormBorderStyle.None
         Name = "userdashboard"
         StartPosition = FormStartPosition.CenterScreen

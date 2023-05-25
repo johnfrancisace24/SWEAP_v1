@@ -137,7 +137,7 @@ Public Class userdashboard
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Dim AnswerYes As String
-        AnswerYes = MsgBox("Are you sure you want to Exit", vbQuestion + vbYesNo, "User Repsonse")
+        AnswerYes = MsgBox("Are you sure you want to Log out", vbQuestion + vbYesNo, "User Repsonse")
 
         If AnswerYes = vbYes Then
             Form1.Show()
