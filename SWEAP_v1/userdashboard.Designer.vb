@@ -23,6 +23,7 @@ Partial Class userdashboard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel2 = New Panel()
+        Button5 = New Button()
         Button4 = New Button()
         Button3 = New Button()
         Button2 = New Button()
@@ -50,6 +51,7 @@ Partial Class userdashboard
         Panel1 = New Panel()
         Label10 = New Label()
         Panel8 = New Panel()
+        Label13 = New Label()
         Panel7 = New Panel()
         cnt = New Label()
         Label12 = New Label()
@@ -72,6 +74,7 @@ Partial Class userdashboard
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
         Panel1.SuspendLayout()
+        Panel8.SuspendLayout()
         Panel7.SuspendLayout()
         Panel4.SuspendLayout()
         Panel5.SuspendLayout()
@@ -81,6 +84,7 @@ Partial Class userdashboard
         ' Panel2
         ' 
         Panel2.BackColor = Color.FromArgb(CByte(255), CByte(77), CByte(77))
+        Panel2.Controls.Add(Button5)
         Panel2.Controls.Add(Button4)
         Panel2.Controls.Add(Button3)
         Panel2.Controls.Add(Button2)
@@ -92,6 +96,23 @@ Partial Class userdashboard
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(245, 601)
         Panel2.TabIndex = 1
+        ' 
+        ' Button5
+        ' 
+        Button5.Cursor = Cursors.Hand
+        Button5.FlatAppearance.BorderSize = 0
+        Button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(128), CByte(128))
+        Button5.FlatStyle = FlatStyle.Flat
+        Button5.ForeColor = SystemColors.ButtonHighlight
+        Button5.Image = My.Resources.Resources._exit
+        Button5.ImageAlign = ContentAlignment.MiddleLeft
+        Button5.Location = New Point(3, 555)
+        Button5.Name = "Button5"
+        Button5.Padding = New Padding(5, 0, 0, 0)
+        Button5.Size = New Size(239, 35)
+        Button5.TabIndex = 6
+        Button5.Text = "LOG OUT"
+        Button5.UseVisualStyleBackColor = True
         ' 
         ' Button4
         ' 
@@ -168,6 +189,8 @@ Partial Class userdashboard
         ' 
         ' PictureBox1
         ' 
+        PictureBox1.BackgroundImage = My.Resources.Resources.profile__1_
+        PictureBox1.BackgroundImageLayout = ImageLayout.Center
         PictureBox1.Dock = DockStyle.Top
         PictureBox1.Location = New Point(0, 0)
         PictureBox1.Name = "PictureBox1"
@@ -382,10 +405,21 @@ Partial Class userdashboard
         ' Panel8
         ' 
         Panel8.BackColor = Color.White
+        Panel8.Controls.Add(Label13)
         Panel8.Location = New Point(14, 305)
         Panel8.Name = "Panel8"
         Panel8.Size = New Size(904, 281)
         Panel8.TabIndex = 1
+        ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label13.Location = New Point(12, 19)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(131, 21)
+        Label13.TabIndex = 2
+        Label13.Text = "CONTRIBUTION:"
         ' 
         ' Panel7
         ' 
@@ -543,9 +577,9 @@ Partial Class userdashboard
         ClientSize = New Size(1189, 640)
         Controls.Add(Panel2)
         Controls.Add(Panel4)
-        Controls.Add(Panel5)
         Controls.Add(Panel3)
         Controls.Add(Panel1)
+        Controls.Add(Panel5)
         FormBorderStyle = FormBorderStyle.None
         Name = "userdashboard"
         StartPosition = FormStartPosition.CenterScreen
@@ -556,6 +590,8 @@ Partial Class userdashboard
         Panel3.PerformLayout()
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
+        Panel8.ResumeLayout(False)
+        Panel8.PerformLayout()
         Panel7.ResumeLayout(False)
         Panel7.PerformLayout()
         Panel4.ResumeLayout(False)
@@ -610,4 +646,6 @@ Partial Class userdashboard
     Friend WithEvents Label11 As Label
     Friend WithEvents cnt As Label
     Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Button5 As Button
 End Class
