@@ -102,7 +102,7 @@ Public Class Signup
         pickEmType.Text = ""
         pickRegion.Text = ""
         pickEmStat.Text = ""
-        pickDesignation.Text = ""
+        pickCommittee.Text = ""
         txtCreateUsername.Clear()
         txtCreatePw.Clear()
         pBoxCreateProfile.Image = My.Resources.user
