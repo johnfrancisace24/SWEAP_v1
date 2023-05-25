@@ -109,6 +109,6 @@ Public Class Signup
     End Sub
 
     Private Sub btnCancel_MouseEnter(sender As Object, e As EventArgs) Handles btnCancel.MouseEnter
-        btnCancel.BackColor = 
+        'btnCancel.BackColor = 
     End Sub
 End Class
