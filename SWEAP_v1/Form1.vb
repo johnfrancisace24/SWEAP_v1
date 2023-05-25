@@ -37,7 +37,6 @@ Public Class Form1
                 rid = cmd.ExecuteReader
                 While rid.Read
                     status = rid.GetInt32("is_admin")
-
                 End While
             Catch ex As Exception
                 MsgBox("Account doesn't exist.")
@@ -48,7 +47,6 @@ Public Class Form1
                 AdminDashboard.Show()
                 Me.Hide()
             ElseIf (status = 0) Then
-
                 userdashboard.Show()
                 Me.Hide()
             Else

@@ -30,8 +30,9 @@ Public Class Signup
             pBoxCreateProfile.BackgroundImage = System.Drawing.Image.FromFile(sourceFilePath)
         End If
         Dim destinationPath As String = locateProject & "\profile_pictures\" & txtCreateUsername.Text & Path.GetExtension(opf.FileName)
-
+        MsgBox(destinationPath)
         File.Copy(sourceFilePath, destinationPath, True)
+
         MsgBox("File saved to " & destinationPath)
         MessageBox.Show("File transferred successfully.")
 
