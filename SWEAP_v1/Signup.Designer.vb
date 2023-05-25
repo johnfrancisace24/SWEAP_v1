@@ -363,7 +363,7 @@ Partial Class Signup
         ' 
         ' Panel1
         ' 
-        Panel1.BackColor = Color.FromArgb(CByte(153), CByte(0), CByte(0))
+        Panel1.BackColor = Color.DarkRed
         Panel1.Controls.Add(btnCancel)
         Panel1.Controls.Add(btnRegister)
         Panel1.Controls.Add(ButtonUpload)
@@ -395,7 +395,14 @@ Partial Class Signup
         Panel1.Location = New Point(14, 15)
         Panel1.Margin = New Padding(4, 3, 4, 3)
         Panel1.Name = "Panel1"
+
+        Panel1.Size = New Size(822, 562)
+
         Panel1.Size = New Size(1174, 837)
+
+
+        Panel1.Size = New Size(1174, 837)
+
         Panel1.TabIndex = 13
         ' 
         ' Label12
@@ -413,7 +420,7 @@ Partial Class Signup
         ' 
         ' txtLname
         ' 
-        txtLname.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txtLname.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
         txtLname.Location = New Point(491, 90)
         txtLname.Margin = New Padding(4, 3, 4, 3)
         txtLname.Name = "txtLname"
@@ -422,10 +429,17 @@ Partial Class Signup
         ' 
         ' Signup
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(10.0F, 25.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(255), CByte(204), CByte(51))
+
+        ClientSize = New Size(844, 582)
+
         ClientSize = New Size(1206, 870)
+
+
+        ClientSize = New Size(1206, 870)
+
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
         Margin = New Padding(4, 3, 4, 3)
