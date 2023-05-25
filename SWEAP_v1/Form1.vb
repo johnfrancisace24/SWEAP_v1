@@ -31,12 +31,13 @@ Public Class Form1
             Dim status As String
             Try
                 conn.Open()
-                Dim cmd As New MySqlCommand("SELECT * FROM user WHERE username=@NAME AND password=@PASS", conn)
+                Dim cmd As New MySqlCommand("SELECT name, designation FROM user WHERE username=@NAME AND password=@PASS", conn)
                 cmd.Parameters.AddWithValue("@NAME", txtUser.Text)
                 cmd.Parameters.AddWithValue("@PASS", txtBoxPass.Text)
                 rid = cmd.ExecuteReader
                 While rid.Read
                     status = rid.GetInt32("is_admin")
+
                 End While
             Catch ex As Exception
                 MsgBox("Account doesn't exist.")
@@ -47,6 +48,7 @@ Public Class Form1
                 AdminDashboard.Show()
                 Me.Hide()
             ElseIf (status = 0) Then
+
                 userdashboard.Show()
                 Me.Hide()
             Else

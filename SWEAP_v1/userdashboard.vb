@@ -37,7 +37,7 @@ Public Class userdashboard
         Try
             conn.Open()
 
-            Dim query As String = "SELECT first_name FROM user"
+            Dim query As String = "SELECT first_name, designation  FROM user"
 
             Dim cmd As New MySqlCommand(query, conn)
 
@@ -46,31 +46,9 @@ Public Class userdashboard
 
             If dr.Read() Then
                 Dim name As String = dr.GetString("first_name")
-                fname.Text = name
-            End If
-            MsgBox("Gumana")
-
-
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        Finally
-            dr.Close()
-            conn.Close()
-        End Try
-
-    End Sub
-
-    Public Sub position()
-        Try
-            conn.Open()
-
-            Dim query As String = "SELECT designation FROM user"
-
-            Dim cmd As New MySqlCommand(query, conn)
-            Dim dr As MySqlDataReader = cmd.ExecuteReader()
-
-            If dr.Read() Then
                 Dim des As String = dr.GetString("designation")
+                'Dim pic As String = dr.GetString("")
+                fname.Text = name
                 designation.Text = des
             End If
             MsgBox("Gumana")
@@ -79,10 +57,9 @@ Public Class userdashboard
         Catch ex As Exception
             MsgBox(ex.Message)
         Finally
-            conn.Close()
             dr.Close()
+            conn.Close()
         End Try
-
 
     End Sub
 
@@ -115,7 +92,6 @@ Public Class userdashboard
     Private Sub userdashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DGV_load()
         flname()
-        position()
         mem()
 
 
@@ -143,5 +119,9 @@ Public Class userdashboard
             Form1.Show()
             Me.Hide()
         End If
+    End Sub
+
+    Private Sub fname_Click(sender As Object, e As EventArgs) Handles fname.Click
+
     End Sub
 End Class
