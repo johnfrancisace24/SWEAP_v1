@@ -43,7 +43,7 @@ Partial Class Signup
         Label3 = New Label()
         Label9 = New Label()
         Label4 = New Label()
-        PictureBoxProfile = New PictureBox()
+        pBoxCreateProfile = New PictureBox()
         Label5 = New Label()
         Label8 = New Label()
         Label6 = New Label()
@@ -52,7 +52,7 @@ Partial Class Signup
         Panel1 = New Panel()
         Label12 = New Label()
         txtLname = New TextBox()
-        CType(PictureBoxProfile, ComponentModel.ISupportInitialize).BeginInit()
+        CType(pBoxCreateProfile, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -73,7 +73,7 @@ Partial Class Signup
         ' 
         btnRegister.BackColor = Color.SpringGreen
         btnRegister.FlatStyle = FlatStyle.Flat
-        btnRegister.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        btnRegister.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         btnRegister.Location = New Point(446, 434)
         btnRegister.Margin = New Padding(3, 2, 3, 2)
         btnRegister.Name = "btnRegister"
@@ -86,7 +86,7 @@ Partial Class Signup
         ' 
         ButtonUpload.BackColor = Color.DeepSkyBlue
         ButtonUpload.FlatStyle = FlatStyle.Flat
-        ButtonUpload.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        ButtonUpload.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         ButtonUpload.Image = CType(resources.GetObject("ButtonUpload.Image"), Image)
         ButtonUpload.ImageAlign = ContentAlignment.MiddleLeft
         ButtonUpload.Location = New Point(610, 203)
@@ -119,7 +119,7 @@ Partial Class Signup
         ' 
         ' txtCreatePw
         ' 
-        txtCreatePw.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        txtCreatePw.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         txtCreatePw.Location = New Point(344, 358)
         txtCreatePw.Margin = New Padding(3, 2, 3, 2)
         txtCreatePw.Name = "txtCreatePw"
@@ -128,7 +128,7 @@ Partial Class Signup
         ' 
         ' txtCreateUsername
         ' 
-        txtCreateUsername.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        txtCreateUsername.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         txtCreateUsername.Location = New Point(59, 358)
         txtCreateUsername.Margin = New Padding(3, 2, 3, 2)
         txtCreateUsername.Name = "txtCreateUsername"
@@ -137,7 +137,7 @@ Partial Class Signup
         ' 
         ' pickDesignation
         ' 
-        pickDesignation.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        pickDesignation.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         pickDesignation.FormattingEnabled = True
         pickDesignation.Location = New Point(344, 296)
         pickDesignation.Margin = New Padding(3, 2, 3, 2)
@@ -147,7 +147,7 @@ Partial Class Signup
         ' 
         ' pickPosition
         ' 
-        pickPosition.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        pickPosition.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         pickPosition.FormattingEnabled = True
         pickPosition.Items.AddRange(New Object() {"ΑΑΙ", "AA II", "AA II PANTAWID PAMILYA RPMO", "AA III", "AA III - Sr. Bookkeeper", "AA III / Information Officer NHTS-PR AA III-Municipal Roving Bookkeeper AA-II", "AA-II KALAHI-CIDDS", "AA-II KALAHI-CIDDS NCDDP_AF", "AC - KAASA", "Accountant I", "Accountant I/Officer In Charge", "Accountant II", "Accountant III", "Accounting Clerk", "Acting Secretary", "Acting Social Welfare Officer III", "Activity Therapist ", "Activity Worker I ", "Admin Aide I", "ADMIN AIDE III", "ADMIN AIDE IIII", "Admin Aide IV", "ADMIN AIDE VI", "Admin Assistant", "Admin Assistant III", "Admin Assistant III (Computer Operator II) ", "Admin Assistant V (Private Secretary I)", "Admin cum Finance Officer", "Admin Officer IV-Head, RROS", "Admin. Aide VI", "Admin.Assistant III/Information Officer (LIstahanan)", "Admin. Officer IV/Head", "Admin. Officer V-Unit Head", "Administrative Aide I", "Administrative Aide II", "Administrative Aide III", "Admin Aide IV", "ADMIN AIDE VI", "Admin Assistant", "Admin Assistant III", "Admin Assistant III (Computer Operator II) ", "Admin Assistant V (Private Secretary I)", "Admin cum Finance Officer", "Admin Officer IV-Head, RROS", "Admin. Aide VI", "Admin.Assistant III/Information Officer (LIstahanan)", "Admin.Officer IV/Head", "Admin. Officer V-Unit Head", "Administrative Aide I", "Administrative Aide II", "Administrative Aide III", "Administrative Aide III (Encoder)", "Administrative Aide IV", "Administrative Aide IV (Clerk II)", "Administrative Aide IV(Driver)", "Administrative Aide IV(Encoder)"})
         pickPosition.Location = New Point(344, 170)
@@ -158,7 +158,7 @@ Partial Class Signup
         ' 
         ' pickEmStat
         ' 
-        pickEmStat.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        pickEmStat.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         pickEmStat.FormattingEnabled = True
         pickEmStat.Location = New Point(59, 296)
         pickEmStat.Margin = New Padding(3, 2, 3, 2)
@@ -168,7 +168,7 @@ Partial Class Signup
         ' 
         ' pickEmType
         ' 
-        pickEmType.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        pickEmType.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         pickEmType.FormattingEnabled = True
         pickEmType.Location = New Point(344, 231)
         pickEmType.Margin = New Padding(3, 2, 3, 2)
@@ -178,7 +178,7 @@ Partial Class Signup
         ' 
         ' pickRegion
         ' 
-        pickRegion.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        pickRegion.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         pickRegion.FormattingEnabled = True
         pickRegion.Items.AddRange(New Object() {"BARMM, Bangsamoro Autonomous Region in Muslim Mindanao DSWD-ARMM, Autonomous Region in Muslim Mindanao", "DSWD-CAR, Cordillera Administrative Region", "DSWD-CARAGA, Caraga", "DSWD-Central Office, Central Office", "DSWD-NCR, National Capital Region", "DSWD-NIR, Negros Island Region DSWD-Region 1, Ilocos Region", "DSWD-Region 10, Northern Mindanao", "DSWD-Region 11, Davao Region", "DSWD-Region 12, SOCCSKSARGEN", "DSWD-Region 2, Cagayan Valley ", "DSWD-Region 3, Central Luzon ", "DSWD-Region 5, Bicol Region ", "DSWD-Region 6, Western Visayas ", "DSWD-Region 7, Central Visayas ", "DSWD-Region 8, Eastern Visayas", "DSWD-Region 9, Zamboanga Peninsula ", "DSWD-Region CALABARZON, CALABARZON ", "DSWD-Region MIMAROPA, MIMAROPA", "Dubai UAE, Dubai UAE"})
         pickRegion.Location = New Point(59, 231)
@@ -189,7 +189,7 @@ Partial Class Signup
         ' 
         ' pickOffice
         ' 
-        pickOffice.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        pickOffice.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         pickOffice.FormattingEnabled = True
         pickOffice.Location = New Point(59, 170)
         pickOffice.Margin = New Padding(3, 2, 3, 2)
@@ -199,7 +199,7 @@ Partial Class Signup
         ' 
         ' txtEmail
         ' 
-        txtEmail.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        txtEmail.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         txtEmail.Location = New Point(344, 110)
         txtEmail.Margin = New Padding(3, 2, 3, 2)
         txtEmail.Name = "txtEmail"
@@ -208,7 +208,7 @@ Partial Class Signup
         ' 
         ' txtContact
         ' 
-        txtContact.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        txtContact.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         txtContact.Location = New Point(59, 110)
         txtContact.Margin = New Padding(3, 2, 3, 2)
         txtContact.Name = "txtContact"
@@ -227,7 +227,7 @@ Partial Class Signup
         ' 
         ' txtFname
         ' 
-        txtFname.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        txtFname.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         txtFname.Location = New Point(59, 54)
         txtFname.Margin = New Padding(3, 2, 3, 2)
         txtFname.Name = "txtFname"
@@ -264,18 +264,18 @@ Partial Class Signup
         Label4.TabIndex = 3
         Label4.Text = "EMAIL"
         ' 
-        ' PictureBoxProfile
+        ' pBoxCreateProfile
         ' 
-        PictureBoxProfile.BackgroundImage = My.Resources.Resources.user
-        PictureBoxProfile.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBoxProfile.BorderStyle = BorderStyle.Fixed3D
-        PictureBoxProfile.Location = New Point(610, 54)
-        PictureBoxProfile.Margin = New Padding(3, 2, 3, 2)
-        PictureBoxProfile.Name = "PictureBoxProfile"
-        PictureBoxProfile.Size = New Size(151, 145)
-        PictureBoxProfile.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBoxProfile.TabIndex = 9
-        PictureBoxProfile.TabStop = False
+        pBoxCreateProfile.BackgroundImage = My.Resources.Resources.user
+        pBoxCreateProfile.BackgroundImageLayout = ImageLayout.Stretch
+        pBoxCreateProfile.BorderStyle = BorderStyle.Fixed3D
+        pBoxCreateProfile.Location = New Point(610, 54)
+        pBoxCreateProfile.Margin = New Padding(3, 2, 3, 2)
+        pBoxCreateProfile.Name = "pBoxCreateProfile"
+        pBoxCreateProfile.Size = New Size(151, 145)
+        pBoxCreateProfile.SizeMode = PictureBoxSizeMode.StretchImage
+        pBoxCreateProfile.TabIndex = 9
+        pBoxCreateProfile.TabStop = False
         ' 
         ' Label5
         ' 
@@ -352,7 +352,7 @@ Partial Class Signup
         Panel1.Controls.Add(Label3)
         Panel1.Controls.Add(Label9)
         Panel1.Controls.Add(Label4)
-        Panel1.Controls.Add(PictureBoxProfile)
+        Panel1.Controls.Add(pBoxCreateProfile)
         Panel1.Controls.Add(Label5)
         Panel1.Controls.Add(Label8)
         Panel1.Controls.Add(Label6)
@@ -376,7 +376,7 @@ Partial Class Signup
         ' 
         ' txtLname
         ' 
-        txtLname.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        txtLname.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         txtLname.Location = New Point(344, 54)
         txtLname.Margin = New Padding(3, 2, 3, 2)
         txtLname.Name = "txtLname"
@@ -385,7 +385,7 @@ Partial Class Signup
         ' 
         ' Signup
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(6), CByte(82), CByte(221))
         ClientSize = New Size(844, 522)
@@ -395,7 +395,7 @@ Partial Class Signup
         Name = "Signup"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Signup"
-        CType(PictureBoxProfile, ComponentModel.ISupportInitialize).EndInit()
+        CType(pBoxCreateProfile, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         ResumeLayout(False)
@@ -421,7 +421,7 @@ Partial Class Signup
     Friend WithEvents Label3 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents PictureBoxProfile As PictureBox
+    Friend WithEvents pBoxCreateProfile As PictureBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label6 As Label
