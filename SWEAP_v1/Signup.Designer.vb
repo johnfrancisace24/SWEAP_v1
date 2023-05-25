@@ -23,7 +23,7 @@ Partial Class Signup
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Signup))
-        ButtonCancel = New Button()
+        btnCancel = New Button()
         btnRegister = New Button()
         ButtonUpload = New Button()
         Label11 = New Label()
@@ -56,18 +56,18 @@ Partial Class Signup
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
-        ' ButtonCancel
+        ' btnCancel
         ' 
-        ButtonCancel.BackColor = Color.FromArgb(CByte(45), CByte(152), CByte(218))
-        ButtonCancel.FlatStyle = FlatStyle.Flat
-        ButtonCancel.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        ButtonCancel.Location = New Point(228, 434)
-        ButtonCancel.Margin = New Padding(3, 2, 3, 2)
-        ButtonCancel.Name = "ButtonCancel"
-        ButtonCancel.Size = New Size(148, 31)
-        ButtonCancel.TabIndex = 29
-        ButtonCancel.Text = "CANCEL"
-        ButtonCancel.UseVisualStyleBackColor = False
+        btnCancel.BackColor = Color.FromArgb(CByte(45), CByte(152), CByte(218))
+        btnCancel.FlatStyle = FlatStyle.Flat
+        btnCancel.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        btnCancel.Location = New Point(228, 434)
+        btnCancel.Margin = New Padding(3, 2, 3, 2)
+        btnCancel.Name = "btnCancel"
+        btnCancel.Size = New Size(148, 31)
+        btnCancel.TabIndex = 29
+        btnCancel.Text = "CANCEL"
+        btnCancel.UseVisualStyleBackColor = False
         ' 
         ' btnRegister
         ' 
@@ -330,7 +330,7 @@ Partial Class Signup
         ' Panel1
         ' 
         Panel1.BackColor = Color.FromArgb(CByte(23), CByte(192), CByte(235))
-        Panel1.Controls.Add(ButtonCancel)
+        Panel1.Controls.Add(btnCancel)
         Panel1.Controls.Add(btnRegister)
         Panel1.Controls.Add(ButtonUpload)
         Panel1.Controls.Add(Label11)
@@ -401,7 +401,7 @@ Partial Class Signup
         ResumeLayout(False)
     End Sub
 
-    Friend WithEvents ButtonCancel As Button
+    Friend WithEvents btnCancel As Button
     Friend WithEvents btnRegister As Button
     Friend WithEvents ButtonUpload As Button
     Friend WithEvents Label11 As Label

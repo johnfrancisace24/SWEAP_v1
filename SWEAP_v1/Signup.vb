@@ -8,7 +8,7 @@ Public Class Signup
     Dim str As String
 
 
-    Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles ButtonCancel.Click
+    Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Hide()
         Form1.Show()
     End Sub
@@ -89,7 +89,5 @@ Public Class Signup
         pBoxCreateProfile.Image = My.Resources.user
     End Sub
 
-    Private Sub ButtonCancel_MouseEnter(sender As Object, e As EventArgs) Handles ButtonCancel.MouseEnter
 
-    End Sub
 End Class
