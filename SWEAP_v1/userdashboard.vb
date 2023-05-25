@@ -25,12 +25,7 @@ Public Class userdashboard
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btnview.Click
-        Panel5.Show()
-        Panel1.Hide()
-        Panel3.Hide()
 
-    End Sub
 
 
     Public Sub flname()
@@ -73,20 +68,6 @@ Public Class userdashboard
         conn.Close()
     End Sub
     Public Sub DGV_load()
-        DataGridView1.Rows.Clear()
-
-        Try
-            conn.Open()
-            Dim cmd As New MySqlCommand("SELECT * FROM `user` ", conn)
-            dr = cmd.ExecuteReader
-            While dr.Read
-                DataGridView1.Rows.Add(dr.Item("first_name"), dr.Item("contact"), dr.Item("office"), dr.Item("region"), dr.Item("employment_type"), dr.Item("employment_status"), dr.Item("position"), dr.Item("designation"))
-            End While
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        Finally
-            conn.Close()
-        End Try
 
     End Sub
     Private Sub userdashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -107,9 +88,7 @@ Public Class userdashboard
         End If
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
-    End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Dim AnswerYes As String

@@ -99,8 +99,7 @@ Public Class Signup
         txtEmail.Clear()
         pickOffice.Text = ""
         pickPosition.Text = ""
-        pickEmType.Text = ""
-        pickRegion.Text = ""
+
         pickEmStat.Text = ""
         pickCommittee.Text = ""
         txtCreateUsername.Clear()

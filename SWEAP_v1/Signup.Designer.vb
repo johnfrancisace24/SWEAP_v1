@@ -84,7 +84,7 @@ Partial Class Signup
         ' 
         btnCancel.BackColor = Color.FromArgb(CByte(255), CByte(211), CByte(42))
         btnCancel.FlatStyle = FlatStyle.Flat
-        btnCancel.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        btnCancel.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         btnCancel.Location = New Point(311, 603)
         btnCancel.Margin = New Padding(2, 1, 2, 1)
         btnCancel.Name = "btnCancel"
@@ -97,7 +97,7 @@ Partial Class Signup
         ' 
         btnRegister.BackColor = Color.FromArgb(CByte(255), CByte(211), CByte(42))
         btnRegister.FlatStyle = FlatStyle.Flat
-        btnRegister.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        btnRegister.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         btnRegister.Location = New Point(545, 603)
         btnRegister.Margin = New Padding(2, 1, 2, 1)
         btnRegister.Name = "btnRegister"
@@ -110,7 +110,7 @@ Partial Class Signup
         ' 
         ButtonUpload.BackColor = Color.FromArgb(CByte(255), CByte(211), CByte(42))
         ButtonUpload.FlatStyle = FlatStyle.Flat
-        ButtonUpload.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        ButtonUpload.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         ButtonUpload.Image = CType(resources.GetObject("ButtonUpload.Image"), Image)
         ButtonUpload.ImageAlign = ContentAlignment.MiddleLeft
         ButtonUpload.Location = New Point(803, 204)
@@ -149,7 +149,7 @@ Partial Class Signup
         ' 
         ' txtCreatePw
         ' 
-        txtCreatePw.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        txtCreatePw.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         txtCreatePw.Location = New Point(290, 342)
         txtCreatePw.Margin = New Padding(2, 1, 2, 1)
         txtCreatePw.Name = "txtCreatePw"
@@ -158,7 +158,7 @@ Partial Class Signup
         ' 
         ' txtCreateUsername
         ' 
-        txtCreateUsername.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        txtCreateUsername.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         txtCreateUsername.Location = New Point(41, 342)
         txtCreateUsername.Margin = New Padding(2, 1, 2, 1)
         txtCreateUsername.Name = "txtCreateUsername"
@@ -167,7 +167,7 @@ Partial Class Signup
         ' 
         ' pickCommittee
         ' 
-        pickCommittee.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        pickCommittee.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         pickCommittee.FormattingEnabled = True
         pickCommittee.Items.AddRange(New Object() {"Education, Information & Research", "Organizing & Membership", "Grievances", "Welfare", "Finance", "Sports & Culture"})
         pickCommittee.Location = New Point(290, 282)
@@ -178,7 +178,7 @@ Partial Class Signup
         ' 
         ' pickPosition
         ' 
-        pickPosition.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        pickPosition.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         pickPosition.FormattingEnabled = True
         pickPosition.Items.AddRange(New Object() {"ΑΑΙ", "AA II", "AA II PANTAWID PAMILYA RPMO", "AA III", "AA III - Sr. Bookkeeper", "AA III / Information Officer NHTS-PR AA III-Municipal Roving Bookkeeper AA-II", "AA-II KALAHI-CIDDS", "AA-II KALAHI-CIDDS NCDDP_AF", "AC - KAASA", "Accountant I", "Accountant I/Officer In Charge", "Accountant II", "Accountant III", "Accounting Clerk", "Acting Secretary", "Acting Social Welfare Officer III", "Activity Therapist ", "Activity Worker I ", "Admin Aide I", "ADMIN AIDE III", "ADMIN AIDE IIII", "Admin Aide IV", "ADMIN AIDE VI", "Admin Assistant", "Admin Assistant III", "Admin Assistant III (Computer Operator II) ", "Admin Assistant V (Private Secretary I)", "Admin cum Finance Officer", "Admin Officer IV-Head, RROS", "Admin. Aide VI", "Admin.Assistant III/Information Officer (LIstahanan)", "Admin. Officer IV/Head", "Admin. Officer V-Unit Head", "Administrative Aide I", "Administrative Aide II", "Administrative Aide III", "Admin Aide IV", "ADMIN AIDE VI", "Admin Assistant", "Admin Assistant III", "Admin Assistant III (Computer Operator II) ", "Admin Assistant V (Private Secretary I)", "Admin cum Finance Officer", "Admin Officer IV-Head, RROS", "Admin. Aide VI", "Admin.Assistant III/Information Officer (LIstahanan)", "Admin.Officer IV/Head", "Admin. Officer V-Unit Head", "Administrative Aide I", "Administrative Aide II", "Administrative Aide III", "Administrative Aide III (Encoder)", "Administrative Aide IV", "Administrative Aide IV (Clerk II)", "Administrative Aide IV(Driver)", "Administrative Aide IV(Encoder)"})
         pickPosition.Location = New Point(538, 224)
@@ -189,7 +189,7 @@ Partial Class Signup
         ' 
         ' pickEmStat
         ' 
-        pickEmStat.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        pickEmStat.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         pickEmStat.FormattingEnabled = True
         pickEmStat.Items.AddRange(New Object() {"MOA/COS", "CASUAL/CONTRACTUAL", "REGULAR", "TEMPORARY"})
         pickEmStat.Location = New Point(41, 282)
@@ -200,7 +200,7 @@ Partial Class Signup
         ' 
         ' pickOffice
         ' 
-        pickOffice.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        pickOffice.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         pickOffice.FormattingEnabled = True
         pickOffice.Items.AddRange(New Object() {"4Ps, Pantawid Pamilya Pilipino Program Division", "ADRP, Accounting Division for Regular Programs", "AS-BGMD, Building and Grounds Management Division", "AS-GCD, General Services Division", "AS-OD, Administrative Service ", "AS-PSAMD, Property, Supply Asset Management Division", "AS-RAMD, Records and Archive Management Division", "BangUn Project, Bangsamoro umpungan sa Nutrisyon Project", "BDRP, FMS, Budget Division for regular programs", "CANCELLED, FOR CANCELLATION OF INCORRECT QTY IN STOCK CARD", "CDRP, Cash Division for Regular Programs", "CLinic, Clinic", "CO-SWEAP, Social Welfare Employees Association of the philippines", "COA, Commision on Adult", "CPSB, Community Programs and Services Bureau", "DEF, DEFAULT", "DFA Doha Qatar", "DLLO, Department Legislative", "DMG-DRMB, Disaster Response and Management Group", "DSWD AOC, DSWD Agency Operation Centre", "EPAHP-NPMO, Enhanced Partnership Against Hunger and Proverty", "Exhausted EUL, For Properties with Exhausted Useful Live", "FMS-AD, FMS-Accounting Division", "FMS-ADSP, FMS-Accounting Division for Special Program", "FMS-BD, Budget Division", "FMS-CD, Cash Division", "FMS-GDSP, FMS-Grants Division for Special Program", "FMS-MD, FMS-Management Division", "FMS-OASD, FMS-Office of Assistant Service Director", "FMS-OD, Financial Management Service", "FMS-SP, FMS-Special Project", "FMS-SP, FMS-Strengthening System", "For WRITE-OFF, List of Property for WRITE-OFF", "GASSG-HDPRC, Human Development and Proverty Reduction Cluster", "GASSG-LS, Legal Service", "HRMDS, Human Resource Management & Development", "HRMDS-PAD, HRMDS-Personnel Administration Division", "HRPPMD, HRDS, Human Resource Planning and Performance Mgt. Division", "Human Resource Welfare Div., HRWD, HRDS", "ICTMS, ICTMS", "IDG-OUSEC, Office of U/sec for IDG", "INACTIVE, INACTIVE RECORDS", "Inactive Properties, Expired and Exhausted Properties and Supplies", "ISSO, International Social Service Office", "KC-NCDDP, National Community Driven Development Program (KALAHI-CIDSS)", "Learning and Dev't Div., LDD, HRDS", "LOBBY, Properties in Lobby", "NHTO, National Household Targeting Office", "NRLMB, National Resource & Logistic Management Bureau", "Resource Center", "OAS-Administration, OAS-Administration", "OAS-CIOSD, Office of A/Sec for Centers and Institutions and Other Special Directives", "OAS-Finance For GASSG, OAS-Finance for GASSG", "OAS-LA Office of the Assistant Secretary for Luzon Affairs", "OAS-OPG, Protective", "OAS-OSEC, Office of the Assistant Secretary for OSEC", "OAS-OSEC Concerns, Office of the Assistant Secretary for OSEC Concerns", "OAS-PP, Office of the Assistant Secretary for policy and Plans", "OAS-SCBG, Office of the Assistant Secretary for Standards and Capacity Building Group", "OAS-SP, OAS Statutory Programs", "OAS-Special Projects, Office of the Assistant Secretary for Special Project", "OAS-SS, Office of the Assistant Secretary for Support Service", "OAS-SWD, Office of the Assistant Secretary for Social Welfare and Depelopment", "OAS-VA, Office of the Assistant Secretary for Visayas Affairs", "OASDRMG, Office of the Assistant Secretary for Disaster Response Management group", "OASIMHTS, Office of the Assistant Secretary for Information Management and Household", "Targeting System", "OASMA, Office of the Assistant Secretary for Mindanao Affairs", "OASOPG-PP, Office of Asst. Secretary for OPG-Protective Programs", "OASPP-PDPB, Policy Development and Planning Bureau", "OASPP-RMO, Risk Management Office", "OASPPG-(SB-UCT), Standards Bureau and Unconditional Cash Transfer Project Management", "Office", "OASSC-STB, Social Technology Bureau", "OASSCB - SWIDB, Social Welfare Institutional Development Bureau", "OASSCB-SB, Standard Bureau", "OASSPEP, OAS Specialized Programs", "OASSWCC, Office of the Assistant Secretary for Special Women's and Children's Concern", "OFTRO, Office of the Resident Ombudsman", "OIC, U/SEC for GASSG, OIC, Office of the Undersecretary for GASSG", "OPG-NCTSU, National Convergence Technical Support Unit", "OSEC, Office of the Secretary", "OSG, Office of the Secretary Group", "OSG-IAS, Internal Audit Service", "OSG-SMS, Social Marketing Service", "OSM, OFFICE FOR STRATEGY MANAGEMENT", "OUS-EC, Office of the Undersecretary for Exigent concerns", "OUS-LLA, Office of the Undersecretary Legislative Liason Affairs", "OUS-OPG-Protective, OUS-OPG-Protective", "OUS-PPDLLO, Office of the Secretary for Policy and Plans and Deparment Legislative Liaison Office", "OUS-SC, Office of the Under Secretary for Special Concern", "OUS-Special Projects, Office of the Undersecretary for Special Projects", "OUS-SWD, Office of the Undersecretary for Social Welfare and Development", "OUSDRM, Office of the Undersecretary for Disaster Response Management Group", "OUSEC-ADMIN for GASSG, GENERAL ADMINISTRATION AND SUPPORT SERVICES GROUP", "OUSEC-PPG, Office of U/Sec for PPG - DO NOT USE ", "OUSISP, Office of the Undersecretary for Inclusive and Sustainable Peace", "OUSO, Office of the Undersecretary for Operation", "OUSPPG, Office of the Undersecretary for Policy and plans Group", "OUSSCBG, Office of the Undersecretary for Standards and Capacity Building Group", "OUSSPIM, Office of the Undersecretary for Support Programs Infastructure Management", "PMB, Program Management Bureau", "PMD, Procurement Management Division", "PMD-BACSS, Bids and Awards Commitee Secretariat Section", "PMD-CMS, Contract Management Section", "PMD-PPMS, Procurement Planning and Management Section", "PROMOTIVE-OPG, Promotive Operation and Programs Group", "PROPERTY, WAREHOUSE, PROPERTY, WAREHOUSE", "PROTECTIVE-OPG, Protective Operation and Programs Group", "PSB-SWATO, Social Welfare Attche", "PSFMO-CIU, PSFMO-CIU", "RECLASSIFIED PROPERTY, RECLASSIFIED PROPERTY", "RGMO, Resource Generation and Management Office", "Security Guard, Security Guard", "SLP, Sustainable Livelihood Program", "Supplier, DSWD - Supplier", "SWADCAP, Social Welfare And Development Center Asia Pacific", "SWEMC, SWEMC", "SWIDB, (DO NOT USE) Social Welfare Institutional Development Bureau", "TCT,NPMO, Targeted Cash transfer NPMO", "", "", "", "", "", "", "", "", ""})
         pickOffice.Location = New Point(290, 221)
@@ -211,7 +211,7 @@ Partial Class Signup
         ' 
         ' txtEmail
         ' 
-        txtEmail.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        txtEmail.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         txtEmail.Location = New Point(290, 162)
         txtEmail.Margin = New Padding(2, 1, 2, 1)
         txtEmail.Name = "txtEmail"
@@ -220,7 +220,7 @@ Partial Class Signup
         ' 
         ' txtContact
         ' 
-        txtContact.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        txtContact.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         txtContact.Location = New Point(41, 162)
         txtContact.Margin = New Padding(2, 1, 2, 1)
         txtContact.Name = "txtContact"
@@ -242,7 +242,7 @@ Partial Class Signup
         ' 
         ' txtFname
         ' 
-        txtFname.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        txtFname.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         txtFname.Location = New Point(41, 44)
         txtFname.Margin = New Padding(2, 1, 2, 1)
         txtFname.Name = "txtFname"
@@ -468,7 +468,7 @@ Partial Class Signup
         ' 
         ' TextBox13
         ' 
-        TextBox13.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        TextBox13.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         TextBox13.Location = New Point(597, 555)
         TextBox13.Margin = New Padding(2, 1, 2, 1)
         TextBox13.Name = "TextBox13"
@@ -477,7 +477,7 @@ Partial Class Signup
         ' 
         ' TextBox14
         ' 
-        TextBox14.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        TextBox14.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         TextBox14.Location = New Point(389, 555)
         TextBox14.Margin = New Padding(2, 1, 2, 1)
         TextBox14.Name = "TextBox14"
@@ -486,7 +486,7 @@ Partial Class Signup
         ' 
         ' TextBox15
         ' 
-        TextBox15.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        TextBox15.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         TextBox15.Location = New Point(38, 555)
         TextBox15.Margin = New Padding(2, 1, 2, 1)
         TextBox15.Name = "TextBox15"
@@ -495,7 +495,7 @@ Partial Class Signup
         ' 
         ' TextBox12
         ' 
-        TextBox12.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        TextBox12.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         TextBox12.Location = New Point(597, 524)
         TextBox12.Margin = New Padding(2, 1, 2, 1)
         TextBox12.Name = "TextBox12"
@@ -504,7 +504,7 @@ Partial Class Signup
         ' 
         ' TextBox11
         ' 
-        TextBox11.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        TextBox11.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         TextBox11.Location = New Point(597, 493)
         TextBox11.Margin = New Padding(2, 1, 2, 1)
         TextBox11.Name = "TextBox11"
@@ -513,7 +513,7 @@ Partial Class Signup
         ' 
         ' TextBox10
         ' 
-        TextBox10.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        TextBox10.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         TextBox10.Location = New Point(597, 462)
         TextBox10.Margin = New Padding(2, 1, 2, 1)
         TextBox10.Name = "TextBox10"
@@ -522,7 +522,7 @@ Partial Class Signup
         ' 
         ' TextBox9
         ' 
-        TextBox9.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        TextBox9.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         TextBox9.Location = New Point(597, 431)
         TextBox9.Margin = New Padding(2, 1, 2, 1)
         TextBox9.Name = "TextBox9"
@@ -531,7 +531,7 @@ Partial Class Signup
         ' 
         ' TextBox8
         ' 
-        TextBox8.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        TextBox8.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         TextBox8.Location = New Point(389, 524)
         TextBox8.Margin = New Padding(2, 1, 2, 1)
         TextBox8.Name = "TextBox8"
@@ -540,7 +540,7 @@ Partial Class Signup
         ' 
         ' TextBox7
         ' 
-        TextBox7.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        TextBox7.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         TextBox7.Location = New Point(389, 493)
         TextBox7.Margin = New Padding(2, 1, 2, 1)
         TextBox7.Name = "TextBox7"
@@ -549,7 +549,7 @@ Partial Class Signup
         ' 
         ' TextBox6
         ' 
-        TextBox6.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        TextBox6.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         TextBox6.Location = New Point(389, 462)
         TextBox6.Margin = New Padding(2, 1, 2, 1)
         TextBox6.Name = "TextBox6"
@@ -558,7 +558,7 @@ Partial Class Signup
         ' 
         ' TextBox5
         ' 
-        TextBox5.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        TextBox5.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         TextBox5.Location = New Point(389, 431)
         TextBox5.Margin = New Padding(2, 1, 2, 1)
         TextBox5.Name = "TextBox5"
@@ -567,7 +567,7 @@ Partial Class Signup
         ' 
         ' TextBox4
         ' 
-        TextBox4.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        TextBox4.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         TextBox4.Location = New Point(38, 524)
         TextBox4.Margin = New Padding(2, 1, 2, 1)
         TextBox4.Name = "TextBox4"
@@ -576,7 +576,7 @@ Partial Class Signup
         ' 
         ' TextBox3
         ' 
-        TextBox3.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        TextBox3.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         TextBox3.Location = New Point(38, 493)
         TextBox3.Margin = New Padding(2, 1, 2, 1)
         TextBox3.Name = "TextBox3"
@@ -585,7 +585,7 @@ Partial Class Signup
         ' 
         ' TextBox2
         ' 
-        TextBox2.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        TextBox2.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         TextBox2.Location = New Point(38, 462)
         TextBox2.Margin = New Padding(2, 1, 2, 1)
         TextBox2.Name = "TextBox2"
@@ -594,7 +594,7 @@ Partial Class Signup
         ' 
         ' TextBox1
         ' 
-        TextBox1.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        TextBox1.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         TextBox1.Location = New Point(38, 431)
         TextBox1.Margin = New Padding(2, 1, 2, 1)
         TextBox1.Name = "TextBox1"
@@ -616,7 +616,7 @@ Partial Class Signup
         ' 
         ' DatePickerBdate
         ' 
-        DatePickerBdate.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        DatePickerBdate.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         DatePickerBdate.Location = New Point(41, 221)
         DatePickerBdate.Margin = New Padding(2)
         DatePickerBdate.Name = "DatePickerBdate"
@@ -625,7 +625,7 @@ Partial Class Signup
         ' 
         ' txtEduc
         ' 
-        txtEduc.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        txtEduc.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         txtEduc.Location = New Point(538, 162)
         txtEduc.Margin = New Padding(2, 1, 2, 1)
         txtEduc.Name = "txtEduc"
@@ -647,7 +647,7 @@ Partial Class Signup
         ' 
         ' txtAdd
         ' 
-        txtAdd.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        txtAdd.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         txtAdd.Location = New Point(41, 101)
         txtAdd.Margin = New Padding(2, 1, 2, 1)
         txtAdd.Multiline = True
@@ -683,7 +683,7 @@ Partial Class Signup
         ' 
         ' txtMname
         ' 
-        txtMname.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        txtMname.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         txtMname.Location = New Point(290, 44)
         txtMname.Margin = New Padding(2, 1, 2, 1)
         txtMname.Name = "txtMname"
@@ -705,7 +705,7 @@ Partial Class Signup
         ' 
         ' txtLname
         ' 
-        txtLname.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        txtLname.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         txtLname.Location = New Point(538, 44)
         txtLname.Margin = New Padding(3, 2, 3, 2)
         txtLname.Name = "txtLname"
@@ -714,7 +714,7 @@ Partial Class Signup
         ' 
         ' Signup
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(255), CByte(204), CByte(51))
         ClientSize = New Size(1012, 665)
