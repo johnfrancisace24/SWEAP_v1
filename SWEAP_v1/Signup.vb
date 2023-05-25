@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports System.Reflection
 Imports MySql.Data.MySqlClient
 
 Public Class Signup
@@ -6,6 +7,7 @@ Public Class Signup
     Dim conn As New MySqlConnection(cnstr)
     Dim rid As MySqlDataReader
     Dim str As String
+    Dim sourceFilePath As String
 
 
     Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
@@ -19,9 +21,13 @@ Public Class Signup
     Dim arrimage() As Byte
     Private Sub ButtonUpload_Click(sender As Object, e As EventArgs) Handles ButtonUpload.Click
         ' Dim imageInput As String
-        Dim locateProject As String = Path.GetDirectoryName(Application.StartupPath)
+        ' Dim locateProject As String = My.Application.Info.DirectoryPath
+        ' Dim indext As Integer = locateProject.IndexOf("bin\Debug\net6.0-windows")
+        ' Dim location As String = locateProject.Substring(0, indext)
+        ' MsgBox(locateProject)
+        ' MsgBox(location)
         Dim opf As New OpenFileDialog
-        Dim sourceFilePath As String
+
         opf.Filter = "Choose Image(*.jpg; *.png; *.gif) | * .jpg; *.png; *.gif"
         'opf.InitialDirectory = "C:\"
         If opf.ShowDialog = DialogResult.OK Then
@@ -31,17 +37,30 @@ Public Class Signup
         End If
 
 
-
-        Dim destinationPath As String = locateProject & "\" & txtCreateUsername.Text & Path.GetExtension(opf.FileName)
-
-        File.Copy(sourceFilePath, destinationPath, True)
-
-        MsgBox("File saved to " & destinationPath)
-        MessageBox.Show("File transferred successfully.")
+        ' Dim destinationPath As String = location & "\Resources\" & txtCreateUsername.Text & Path.GetExtension(opf.FileName)
+        ' File.Copy(sourceFilePath, destinationPath, True)
+        ' MsgBox("File saved to " & destinationPath)
+        ' MessageBox.Show("File transferred successfully.")
 
     End Sub
 
     Private Sub ButtonReg_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
+        '-------------------------SAVE PROFILE---------------------------------------
+        Dim locateProject As String = My.Application.Info.DirectoryPath
+        Dim indext As Integer = locateProject.IndexOf("bin\Debug\net6.0-windows")
+        Dim location As String = locateProject.Substring(0, indext)
+        MsgBox(locateProject)
+        MsgBox(location)
+        Dim opf As New OpenFileDialog
+
+
+        Dim destinationPath As String = Location & "\Resources\" & txtCreateUsername.Text & Path.GetExtension(opf.FileName)
+        File.Copy(sourceFilePath, destinationPath, True)
+        MsgBox("File saved to " & destinationPath)
+        MessageBox.Show("File transferred successfully.")
+        '------------------------------------------------------------
+        Dim imageInput As String = txtCreateUsername.Text & Path.GetExtension(opf.FileName)
+
         If (txtFname.Text = "" Or txtLname.Text = "") Then
             MsgBox("Fields can't be blank.")
         Else
