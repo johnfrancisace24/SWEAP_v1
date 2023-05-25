@@ -1,4 +1,5 @@
 ﻿Imports System.Diagnostics.Eventing
+Imports System.IO
 Imports System.Windows
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar
 Imports MySql.Data.MySqlClient
@@ -72,18 +73,25 @@ Public Class userdashboard
     End Sub
 
     Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
+        Dim locateProject As String = My.Application.Info.DirectoryPath
+        Dim indext As Integer = locateProject.IndexOf("bin\Debug\net6.0-windows")
+        Dim location As String = locateProject.Substring(0, indext)
+        Dim destinationPath As String = location & "\Resources"
+        Dim pathCatcher As String
         Try
             conn.Open()
-            Dim cmd As New MySqlCommand("SELECT CONCAT(first_name, ' ', middle_name, ' ', last_name) AS fullName FROM user WHERE id=@ID", conn)
+            Dim cmd As New MySqlCommand("SELECT CONCAT(first_name, ' ', middle_name, ' ', last_name) AS fullName, image FROM user WHERE id=@ID", conn)
             cmd.Parameters.AddWithValue("@ID", Form1.log_id)
             dr = cmd.ExecuteReader
             While dr.Read
                 lblFname.Text = dr.GetString("fullName")
+                pathCatcher = dr.GetString("image")
             End While
         Catch ex As Exception
             MsgBox("doesn't wokr lmao2")
         Finally
             conn.Close()
         End Try
+        imgProfile.BackgroundImage = Image.FromFile(destinationPath & pathCatcher)
     End Sub
 End Class

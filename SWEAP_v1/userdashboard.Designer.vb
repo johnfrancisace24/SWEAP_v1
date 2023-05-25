@@ -30,7 +30,7 @@ Partial Class userdashboard
         btnprof = New Button()
         designation = New Label()
         lblFname = New Label()
-        PictureBox1 = New PictureBox()
+        imgProfile = New PictureBox()
         Button1 = New Button()
         Panel3 = New Panel()
         TextBox6 = New TextBox()
@@ -70,7 +70,7 @@ Partial Class userdashboard
         Label14 = New Label()
         Label3 = New Label()
         Panel2.SuspendLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(imgProfile, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
         Panel1.SuspendLayout()
         Panel8.SuspendLayout()
@@ -88,7 +88,7 @@ Partial Class userdashboard
         Panel2.Controls.Add(btnprof)
         Panel2.Controls.Add(designation)
         Panel2.Controls.Add(lblFname)
-        Panel2.Controls.Add(PictureBox1)
+        Panel2.Controls.Add(imgProfile)
         Panel2.Dock = DockStyle.Left
         Panel2.Location = New Point(0, 39)
         Panel2.Name = "Panel2"
@@ -165,10 +165,9 @@ Partial Class userdashboard
         ' 
         ' designation
         ' 
-        designation.Dock = DockStyle.Top
         designation.Font = New Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
         designation.ForeColor = SystemColors.ActiveCaptionText
-        designation.Location = New Point(0, 190)
+        designation.Location = New Point(0, 199)
         designation.Name = "designation"
         designation.Size = New Size(245, 20)
         designation.TabIndex = 2
@@ -176,25 +175,23 @@ Partial Class userdashboard
         ' 
         ' lblFname
         ' 
-        lblFname.Dock = DockStyle.Top
-        lblFname.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        lblFname.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         lblFname.ForeColor = SystemColors.ActiveCaptionText
-        lblFname.Location = New Point(0, 164)
+        lblFname.Location = New Point(0, 173)
         lblFname.Name = "lblFname"
         lblFname.Size = New Size(245, 26)
         lblFname.TabIndex = 1
         lblFname.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' PictureBox1
+        ' imgProfile
         ' 
-        PictureBox1.BackgroundImage = My.Resources.Resources.profile__1_
-        PictureBox1.BackgroundImageLayout = ImageLayout.Center
-        PictureBox1.Dock = DockStyle.Top
-        PictureBox1.Location = New Point(0, 0)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(245, 164)
-        PictureBox1.TabIndex = 0
-        PictureBox1.TabStop = False
+        imgProfile.BackgroundImage = My.Resources.Resources.profile__1_
+        imgProfile.BackgroundImageLayout = ImageLayout.Stretch
+        imgProfile.Location = New Point(38, 6)
+        imgProfile.Name = "imgProfile"
+        imgProfile.Size = New Size(170, 164)
+        imgProfile.TabIndex = 0
+        imgProfile.TabStop = False
         ' 
         ' Button1
         ' 
@@ -499,7 +496,7 @@ Partial Class userdashboard
         Panel5.Controls.Add(Label3)
         Panel5.Location = New Point(251, 39)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(995, 601)
+        Panel5.Size = New Size(938, 601)
         Panel5.TabIndex = 20
         ' 
         ' Button3
@@ -591,16 +588,16 @@ Partial Class userdashboard
         ClientSize = New Size(1189, 640)
         Controls.Add(Panel2)
         Controls.Add(Panel4)
-        Controls.Add(Panel5)
         Controls.Add(Panel1)
         Controls.Add(Panel3)
+        Controls.Add(Panel5)
         FormBorderStyle = FormBorderStyle.None
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "userdashboard"
         StartPosition = FormStartPosition.CenterScreen
         Text = "userdashboard"
         Panel2.ResumeLayout(False)
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(imgProfile, ComponentModel.ISupportInitialize).EndInit()
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
         Panel1.ResumeLayout(False)
@@ -618,7 +615,7 @@ Partial Class userdashboard
     Friend WithEvents btnprof As Button
     Friend WithEvents designation As Label
     Friend WithEvents lblFname As Label
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents imgProfile As PictureBox
     Friend WithEvents Button1 As Button
     Friend WithEvents btndash As Button
     Friend WithEvents Panel3 As Panel

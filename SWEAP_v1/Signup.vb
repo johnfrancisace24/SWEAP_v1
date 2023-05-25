@@ -55,15 +55,11 @@ Public Class Signup
             Dim locateProject As String = My.Application.Info.DirectoryPath
             Dim indext As Integer = locateProject.IndexOf("bin\Debug\net6.0-windows")
             Dim location As String = locateProject.Substring(0, indext)
-            MsgBox(locateProject)
-            MsgBox(location)
             Dim opf As New OpenFileDialog
 
 
-            Dim destinationPath As String = location & "\Resources\" & txtCreateUsername.Text & Path.GetExtension(opf.FileName)
+            Dim destinationPath As String = location & "\Resources\" & txtCreateUsername.Text & getExtension
             File.Copy(sourceFilePath, destinationPath, True)
-            MsgBox("File saved to " & destinationPath)
-            MessageBox.Show("File transferred successfully.")
             '------------------------------------------------------------
             Dim imageInput As String = "\" & txtCreateUsername.Text & getExtension
             Try
