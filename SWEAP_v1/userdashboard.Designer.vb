@@ -24,6 +24,7 @@ Partial Class userdashboard
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(userdashboard))
         Panel2 = New Panel()
+        Button2 = New Button()
         Button5 = New Button()
         btndash = New Button()
         btnprof = New Button()
@@ -58,17 +59,16 @@ Partial Class userdashboard
         Panel6 = New Panel()
         Panel4 = New Panel()
         Label11 = New Label()
-        Button2 = New Button()
         Panel5 = New Panel()
-        Label3 = New Label()
-        Label14 = New Label()
-        Label15 = New Label()
-        Label16 = New Label()
-        TextBox1 = New TextBox()
-        TextBox10 = New TextBox()
-        TextBox11 = New TextBox()
-        TextBox12 = New TextBox()
         Button3 = New Button()
+        posTxt = New TextBox()
+        addTxt = New TextBox()
+        passTxt = New TextBox()
+        userTxt = New TextBox()
+        Label16 = New Label()
+        Label15 = New Label()
+        Label14 = New Label()
+        Label3 = New Label()
         Panel2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
@@ -94,6 +94,23 @@ Partial Class userdashboard
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(245, 601)
         Panel2.TabIndex = 1
+        ' 
+        ' Button2
+        ' 
+        Button2.Cursor = Cursors.Hand
+        Button2.FlatAppearance.BorderSize = 0
+        Button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(235), CByte(204), CByte(100))
+        Button2.FlatStyle = FlatStyle.Flat
+        Button2.ForeColor = SystemColors.ActiveCaptionText
+        Button2.Image = My.Resources.Resources.settings
+        Button2.ImageAlign = ContentAlignment.MiddleLeft
+        Button2.Location = New Point(3, 492)
+        Button2.Name = "Button2"
+        Button2.Padding = New Padding(5, 0, 0, 0)
+        Button2.Size = New Size(239, 48)
+        Button2.TabIndex = 7
+        Button2.Text = "ACCOUNT SETTING"
+        Button2.UseVisualStyleBackColor = True
         ' 
         ' Button5
         ' 
@@ -468,31 +485,14 @@ Partial Class userdashboard
         Label11.Text = "Social Welfare Employees Association Of The Philippines"
         Label11.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' Button2
-        ' 
-        Button2.Cursor = Cursors.Hand
-        Button2.FlatAppearance.BorderSize = 0
-        Button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(235), CByte(204), CByte(100))
-        Button2.FlatStyle = FlatStyle.Flat
-        Button2.ForeColor = SystemColors.ActiveCaptionText
-        Button2.Image = My.Resources.Resources.settings
-        Button2.ImageAlign = ContentAlignment.MiddleLeft
-        Button2.Location = New Point(3, 492)
-        Button2.Name = "Button2"
-        Button2.Padding = New Padding(5, 0, 0, 0)
-        Button2.Size = New Size(239, 48)
-        Button2.TabIndex = 7
-        Button2.Text = "ACCOUNT SETTING"
-        Button2.UseVisualStyleBackColor = True
-        ' 
         ' Panel5
         ' 
         Panel5.BackColor = Color.FromArgb(CByte(239), CByte(243), CByte(246))
         Panel5.Controls.Add(Button3)
-        Panel5.Controls.Add(TextBox12)
-        Panel5.Controls.Add(TextBox11)
-        Panel5.Controls.Add(TextBox10)
-        Panel5.Controls.Add(TextBox1)
+        Panel5.Controls.Add(posTxt)
+        Panel5.Controls.Add(addTxt)
+        Panel5.Controls.Add(passTxt)
+        Panel5.Controls.Add(userTxt)
         Panel5.Controls.Add(Label16)
         Panel5.Controls.Add(Label15)
         Panel5.Controls.Add(Label14)
@@ -502,35 +502,46 @@ Partial Class userdashboard
         Panel5.Size = New Size(995, 601)
         Panel5.TabIndex = 20
         ' 
-        ' Label3
+        ' Button3
         ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label3.Location = New Point(70, 95)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(87, 21)
-        Label3.TabIndex = 0
-        Label3.Text = "Username:"
+        Button3.BackColor = Color.FromArgb(CByte(255), CByte(204), CByte(51))
+        Button3.Cursor = Cursors.Hand
+        Button3.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Button3.Location = New Point(163, 218)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(104, 32)
+        Button3.TabIndex = 8
+        Button3.Text = "Update"
+        Button3.UseVisualStyleBackColor = False
         ' 
-        ' Label14
+        ' posTxt
         ' 
-        Label14.AutoSize = True
-        Label14.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label14.Location = New Point(74, 124)
-        Label14.Name = "Label14"
-        Label14.Size = New Size(83, 21)
-        Label14.TabIndex = 1
-        Label14.Text = "Password:"
+        posTxt.Location = New Point(163, 181)
+        posTxt.Name = "posTxt"
+        posTxt.Size = New Size(213, 23)
+        posTxt.TabIndex = 7
         ' 
-        ' Label15
+        ' addTxt
         ' 
-        Label15.AutoSize = True
-        Label15.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label15.Location = New Point(83, 154)
-        Label15.Name = "Label15"
-        Label15.Size = New Size(74, 21)
-        Label15.TabIndex = 2
-        Label15.Text = "Address:"
+        addTxt.Location = New Point(163, 152)
+        addTxt.Name = "addTxt"
+        addTxt.Size = New Size(213, 23)
+        addTxt.TabIndex = 6
+        ' 
+        ' passTxt
+        ' 
+        passTxt.Location = New Point(163, 122)
+        passTxt.Name = "passTxt"
+        passTxt.PasswordChar = "*"c
+        passTxt.Size = New Size(213, 23)
+        passTxt.TabIndex = 5
+        ' 
+        ' userTxt
+        ' 
+        userTxt.Location = New Point(163, 93)
+        userTxt.Name = "userTxt"
+        userTxt.Size = New Size(213, 23)
+        userTxt.TabIndex = 4
         ' 
         ' Label16
         ' 
@@ -542,44 +553,35 @@ Partial Class userdashboard
         Label16.TabIndex = 3
         Label16.Text = "Position:"
         ' 
-        ' TextBox1
+        ' Label15
         ' 
-        TextBox1.Location = New Point(163, 93)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(213, 23)
-        TextBox1.TabIndex = 4
+        Label15.AutoSize = True
+        Label15.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label15.Location = New Point(83, 154)
+        Label15.Name = "Label15"
+        Label15.Size = New Size(74, 21)
+        Label15.TabIndex = 2
+        Label15.Text = "Address:"
         ' 
-        ' TextBox10
+        ' Label14
         ' 
-        TextBox10.Location = New Point(163, 122)
-        TextBox10.Name = "TextBox10"
-        TextBox10.Size = New Size(213, 23)
-        TextBox10.TabIndex = 5
+        Label14.AutoSize = True
+        Label14.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label14.Location = New Point(74, 124)
+        Label14.Name = "Label14"
+        Label14.Size = New Size(83, 21)
+        Label14.TabIndex = 1
+        Label14.Text = "Password:"
         ' 
-        ' TextBox11
+        ' Label3
         ' 
-        TextBox11.Location = New Point(163, 152)
-        TextBox11.Name = "TextBox11"
-        TextBox11.Size = New Size(213, 23)
-        TextBox11.TabIndex = 6
-        ' 
-        ' TextBox12
-        ' 
-        TextBox12.Location = New Point(163, 181)
-        TextBox12.Name = "TextBox12"
-        TextBox12.Size = New Size(213, 23)
-        TextBox12.TabIndex = 7
-        ' 
-        ' Button3
-        ' 
-        Button3.BackColor = Color.FromArgb(CByte(255), CByte(204), CByte(51))
-        Button3.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Button3.Location = New Point(163, 218)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(104, 32)
-        Button3.TabIndex = 8
-        Button3.Text = "Update"
-        Button3.UseVisualStyleBackColor = False
+        Label3.AutoSize = True
+        Label3.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label3.Location = New Point(70, 95)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(87, 21)
+        Label3.TabIndex = 0
+        Label3.Text = "Username:"
         ' 
         ' userdashboard
         ' 
@@ -649,10 +651,10 @@ Partial Class userdashboard
     Friend WithEvents Button5 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Panel5 As Panel
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents TextBox11 As TextBox
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents posTxt As TextBox
+    Friend WithEvents addTxt As TextBox
+    Friend WithEvents passTxt As TextBox
+    Friend WithEvents userTxt As TextBox
     Friend WithEvents Label16 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Label14 As Label
