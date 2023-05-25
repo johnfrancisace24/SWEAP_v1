@@ -51,8 +51,11 @@ Partial Class userdashboard
         Label10 = New Label()
         Panel8 = New Panel()
         Panel7 = New Panel()
+        cnt = New Label()
+        Label12 = New Label()
         Panel6 = New Panel()
         Panel4 = New Panel()
+        Label11 = New Label()
         Panel5 = New Panel()
         DataGridView1 = New DataGridView()
         Column1 = New DataGridViewTextBoxColumn()
@@ -65,11 +68,11 @@ Partial Class userdashboard
         Column8 = New DataGridViewTextBoxColumn()
         TextBox1 = New TextBox()
         Label3 = New Label()
-        Label11 = New Label()
         Panel2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
         Panel1.SuspendLayout()
+        Panel7.SuspendLayout()
         Panel4.SuspendLayout()
         Panel5.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
@@ -97,7 +100,6 @@ Partial Class userdashboard
         Button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(128), CByte(128))
         Button4.FlatStyle = FlatStyle.Flat
         Button4.ForeColor = SystemColors.ButtonHighlight
-        'Button4.Image = My.Resources.Resources.layout
         Button4.ImageAlign = ContentAlignment.MiddleLeft
         Button4.Location = New Point(3, 245)
         Button4.Name = "Button4"
@@ -114,7 +116,6 @@ Partial Class userdashboard
         Button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(128), CByte(128))
         Button3.FlatStyle = FlatStyle.Flat
         Button3.ForeColor = SystemColors.ButtonHighlight
-        'Button3.Image = My.Resources.Resources.team
         Button3.ImageAlign = ContentAlignment.MiddleLeft
         Button3.Location = New Point(3, 327)
         Button3.Name = "Button3"
@@ -131,7 +132,6 @@ Partial Class userdashboard
         Button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(128), CByte(128))
         Button2.FlatStyle = FlatStyle.Flat
         Button2.ForeColor = SystemColors.ButtonHighlight
-        'Button2.Image = My.Resources.Resources.profile
         Button2.ImageAlign = ContentAlignment.MiddleLeft
         Button2.Location = New Point(3, 286)
         Button2.Name = "Button2"
@@ -177,7 +177,7 @@ Partial Class userdashboard
         Button1.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Button1.Dock = DockStyle.Right
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Button1.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point)
         Button1.ForeColor = SystemColors.ButtonHighlight
         Button1.Location = New Point(1142, 0)
         Button1.Name = "Button1"
@@ -269,7 +269,7 @@ Partial Class userdashboard
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label9.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Label9.ForeColor = SystemColors.ActiveCaptionText
         Label9.Location = New Point(490, 184)
         Label9.Name = "Label9"
@@ -280,7 +280,7 @@ Partial Class userdashboard
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label2.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Label2.ForeColor = SystemColors.ActiveCaptionText
         Label2.Location = New Point(415, 150)
         Label2.Name = "Label2"
@@ -291,7 +291,7 @@ Partial Class userdashboard
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.ForeColor = SystemColors.ActiveCaptionText
         Label1.Location = New Point(448, 118)
         Label1.Name = "Label1"
@@ -302,7 +302,7 @@ Partial Class userdashboard
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label7.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Label7.ForeColor = SystemColors.ActiveCaptionText
         Label7.Location = New Point(74, 218)
         Label7.Name = "Label7"
@@ -313,7 +313,7 @@ Partial Class userdashboard
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label6.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Label6.ForeColor = SystemColors.ActiveCaptionText
         Label6.Location = New Point(81, 184)
         Label6.Name = "Label6"
@@ -324,7 +324,7 @@ Partial Class userdashboard
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label5.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Label5.ForeColor = SystemColors.ActiveCaptionText
         Label5.Location = New Point(69, 150)
         Label5.Name = "Label5"
@@ -335,7 +335,7 @@ Partial Class userdashboard
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label4.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Label4.ForeColor = SystemColors.ActiveCaptionText
         Label4.Location = New Point(83, 114)
         Label4.Name = "Label4"
@@ -346,7 +346,7 @@ Partial Class userdashboard
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label8.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Label8.ForeColor = SystemColors.ActiveCaptionText
         Label8.Location = New Point(523, 218)
         Label8.Name = "Label8"
@@ -387,10 +387,32 @@ Partial Class userdashboard
         ' Panel7
         ' 
         Panel7.BackColor = Color.White
+        Panel7.Controls.Add(cnt)
+        Panel7.Controls.Add(Label12)
         Panel7.Location = New Point(483, 56)
         Panel7.Name = "Panel7"
         Panel7.Size = New Size(435, 131)
         Panel7.TabIndex = 1
+        ' 
+        ' cnt
+        ' 
+        cnt.AutoSize = True
+        cnt.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        cnt.Location = New Point(85, 94)
+        cnt.Name = "cnt"
+        cnt.Size = New Size(19, 21)
+        cnt.TabIndex = 1
+        cnt.Text = "0"
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label12.Location = New Point(8, 94)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(80, 21)
+        Label12.TabIndex = 0
+        Label12.Text = "MEMBER:"
         ' 
         ' Panel6
         ' 
@@ -409,6 +431,19 @@ Partial Class userdashboard
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(1189, 39)
         Panel4.TabIndex = 5
+        ' 
+        ' Label11
+        ' 
+        Label11.Dock = DockStyle.Left
+        Label11.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label11.ForeColor = SystemColors.ControlLightLight
+        Label11.Location = New Point(0, 0)
+        Label11.Name = "Label11"
+        Label11.Padding = New Padding(5, 0, 0, 0)
+        Label11.Size = New Size(369, 39)
+        Label11.TabIndex = 3
+        Label11.Text = "Social Welfare Employees Association of the Philippines"
+        Label11.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Panel5
         ' 
@@ -489,7 +524,7 @@ Partial Class userdashboard
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label3.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Label3.ForeColor = SystemColors.ButtonFace
         Label3.Location = New Point(620, 13)
         Label3.Name = "Label3"
@@ -497,22 +532,9 @@ Partial Class userdashboard
         Label3.TabIndex = 2
         Label3.Text = "Search:"
         ' 
-        ' Label11
-        ' 
-        Label11.Dock = DockStyle.Left
-        Label11.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label11.ForeColor = SystemColors.ControlLightLight
-        Label11.Location = New Point(0, 0)
-        Label11.Name = "Label11"
-        Label11.Padding = New Padding(5, 0, 0, 0)
-        Label11.Size = New Size(369, 39)
-        Label11.TabIndex = 3
-        Label11.Text = "Social Welfare Employees Association of the Philippines"
-        Label11.TextAlign = ContentAlignment.MiddleLeft
-        ' 
         ' userdashboard
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(56), CByte(103), CByte(214))
         ClientSize = New Size(1189, 640)
@@ -531,6 +553,8 @@ Partial Class userdashboard
         Panel3.PerformLayout()
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
+        Panel7.ResumeLayout(False)
+        Panel7.PerformLayout()
         Panel4.ResumeLayout(False)
         Panel5.ResumeLayout(False)
         Panel5.PerformLayout()
@@ -581,4 +605,6 @@ Partial Class userdashboard
     Friend WithEvents Panel7 As Panel
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Label11 As Label
+    Friend WithEvents cnt As Label
+    Friend WithEvents Label12 As Label
 End Class

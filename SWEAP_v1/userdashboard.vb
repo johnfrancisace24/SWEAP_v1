@@ -1,4 +1,5 @@
 ﻿Imports System.Windows
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar
 Imports MySql.Data.MySqlClient
 
 Public Class userdashboard
@@ -35,7 +36,7 @@ Public Class userdashboard
         Try
             conn.Open()
 
-            Dim query As String = "SELECT name FROM register"
+            Dim query As String = "SELECT name FROM user"
 
             Dim cmd As New MySqlCommand(query, conn)
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
@@ -57,7 +58,7 @@ Public Class userdashboard
         Try
             conn.Open()
 
-            Dim query As String = "SELECT designation FROM register"
+            Dim query As String = "SELECT designation FROM user"
 
             Dim cmd As New MySqlCommand(query, conn)
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
@@ -75,6 +76,15 @@ Public Class userdashboard
         conn.Close()
     End Sub
 
+    Public Sub mem()
+        conn.Open()
+        cmd = New MySqlCommand("SELECT count(*) FROM `user` ", conn)
+
+        Dim count1 = Convert.ToString(cmd.ExecuteScalar)
+
+        cnt.Text = count1
+        conn.Close()
+    End Sub
     Public Sub DGV_load()
         DataGridView1.Rows.Clear()
 
