@@ -26,7 +26,6 @@ Partial Class userdashboard
         Panel2 = New Panel()
         Button5 = New Button()
         btndash = New Button()
-        btnview = New Button()
         btnprof = New Button()
         designation = New Label()
         fname = New Label()
@@ -59,18 +58,17 @@ Partial Class userdashboard
         Panel6 = New Panel()
         Panel4 = New Panel()
         Label11 = New Label()
+        Button2 = New Button()
         Panel5 = New Panel()
-        DataGridView1 = New DataGridView()
-        Column1 = New DataGridViewTextBoxColumn()
-        Column2 = New DataGridViewTextBoxColumn()
-        Column3 = New DataGridViewTextBoxColumn()
-        Column4 = New DataGridViewTextBoxColumn()
-        Column5 = New DataGridViewTextBoxColumn()
-        Column6 = New DataGridViewTextBoxColumn()
-        Column7 = New DataGridViewTextBoxColumn()
-        Column8 = New DataGridViewTextBoxColumn()
-        TextBox1 = New TextBox()
         Label3 = New Label()
+        Label14 = New Label()
+        Label15 = New Label()
+        Label16 = New Label()
+        TextBox1 = New TextBox()
+        TextBox10 = New TextBox()
+        TextBox11 = New TextBox()
+        TextBox12 = New TextBox()
+        Button3 = New Button()
         Panel2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
@@ -79,15 +77,14 @@ Partial Class userdashboard
         Panel7.SuspendLayout()
         Panel4.SuspendLayout()
         Panel5.SuspendLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel2
         ' 
         Panel2.BackColor = Color.FromArgb(CByte(255), CByte(204), CByte(51))
+        Panel2.Controls.Add(Button2)
         Panel2.Controls.Add(Button5)
         Panel2.Controls.Add(btndash)
-        Panel2.Controls.Add(btnview)
         Panel2.Controls.Add(btnprof)
         Panel2.Controls.Add(designation)
         Panel2.Controls.Add(fname)
@@ -102,7 +99,7 @@ Partial Class userdashboard
         ' 
         Button5.Cursor = Cursors.Hand
         Button5.FlatAppearance.BorderSize = 0
-        Button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(128), CByte(128))
+        Button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(235), CByte(204), CByte(100))
         Button5.FlatStyle = FlatStyle.Flat
         Button5.ForeColor = SystemColors.ActiveCaptionText
         Button5.Image = My.Resources.Resources._exit
@@ -119,8 +116,7 @@ Partial Class userdashboard
         ' 
         btndash.Cursor = Cursors.Hand
         btndash.FlatAppearance.BorderSize = 0
-        btndash.FlatAppearance.CheckedBackColor = Color.Transparent
-        btndash.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(204), CByte(51))
+        btndash.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(235), CByte(204), CByte(100))
         btndash.FlatStyle = FlatStyle.Flat
         btndash.ForeColor = SystemColors.ActiveCaptionText
         btndash.Image = My.Resources.Resources.dashboard__2_
@@ -133,33 +129,14 @@ Partial Class userdashboard
         btndash.Text = "DASHBOARD"
         btndash.UseVisualStyleBackColor = True
         ' 
-        ' btnview
-        ' 
-        btnview.Cursor = Cursors.Hand
-        btnview.FlatAppearance.BorderSize = 0
-        btnview.FlatAppearance.CheckedBackColor = Color.Transparent
-        btnview.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(204), CByte(51))
-        btnview.FlatStyle = FlatStyle.Flat
-        btnview.ForeColor = SystemColors.ActiveCaptionText
-        btnview.Image = My.Resources.Resources.group__2_
-        btnview.ImageAlign = ContentAlignment.MiddleLeft
-        btnview.Location = New Point(3, 363)
-        btnview.Name = "btnview"
-        btnview.Padding = New Padding(5, 0, 0, 0)
-        btnview.Size = New Size(239, 48)
-        btnview.TabIndex = 4
-        btnview.Text = "VIEW MEMBER"
-        btnview.UseVisualStyleBackColor = True
-        ' 
         ' btnprof
         ' 
         btnprof.Cursor = Cursors.Hand
         btnprof.FlatAppearance.BorderSize = 0
-        btnprof.FlatAppearance.CheckedBackColor = Color.Transparent
-        btnprof.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(204), CByte(51))
+        btnprof.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(235), CByte(204), CByte(100))
         btnprof.FlatStyle = FlatStyle.Flat
         btnprof.ForeColor = SystemColors.ActiveCaptionText
-        btnprof.Image = My.Resources.Resources.avatar
+        btnprof.Image = My.Resources.Resources.user__1_
         btnprof.ImageAlign = ContentAlignment.MiddleLeft
         btnprof.Location = New Point(3, 311)
         btnprof.Name = "btnprof"
@@ -491,92 +468,118 @@ Partial Class userdashboard
         Label11.Text = "Social Welfare Employees Association Of The Philippines"
         Label11.TextAlign = ContentAlignment.MiddleCenter
         ' 
+        ' Button2
+        ' 
+        Button2.Cursor = Cursors.Hand
+        Button2.FlatAppearance.BorderSize = 0
+        Button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(235), CByte(204), CByte(100))
+        Button2.FlatStyle = FlatStyle.Flat
+        Button2.ForeColor = SystemColors.ActiveCaptionText
+        Button2.Image = My.Resources.Resources.settings
+        Button2.ImageAlign = ContentAlignment.MiddleLeft
+        Button2.Location = New Point(3, 492)
+        Button2.Name = "Button2"
+        Button2.Padding = New Padding(5, 0, 0, 0)
+        Button2.Size = New Size(239, 48)
+        Button2.TabIndex = 7
+        Button2.Text = "ACCOUNT SETTING"
+        Button2.UseVisualStyleBackColor = True
+        ' 
         ' Panel5
         ' 
         Panel5.BackColor = Color.FromArgb(CByte(239), CByte(243), CByte(246))
-        Panel5.Controls.Add(DataGridView1)
+        Panel5.Controls.Add(Button3)
+        Panel5.Controls.Add(TextBox12)
+        Panel5.Controls.Add(TextBox11)
+        Panel5.Controls.Add(TextBox10)
         Panel5.Controls.Add(TextBox1)
+        Panel5.Controls.Add(Label16)
+        Panel5.Controls.Add(Label15)
+        Panel5.Controls.Add(Label14)
         Panel5.Controls.Add(Label3)
         Panel5.Location = New Point(251, 39)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(938, 601)
-        Panel5.TabIndex = 5
-        ' 
-        ' DataGridView1
-        ' 
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Columns.AddRange(New DataGridViewColumn() {Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8})
-        DataGridView1.Location = New Point(4, 51)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.RowTemplate.Height = 25
-        DataGridView1.Size = New Size(931, 547)
-        DataGridView1.TabIndex = 0
-        ' 
-        ' Column1
-        ' 
-        Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        Column1.HeaderText = "Name"
-        Column1.Name = "Column1"
-        ' 
-        ' Column2
-        ' 
-        Column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        Column2.HeaderText = "Contact"
-        Column2.Name = "Column2"
-        ' 
-        ' Column3
-        ' 
-        Column3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        Column3.HeaderText = "Office"
-        Column3.Name = "Column3"
-        ' 
-        ' Column4
-        ' 
-        Column4.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        Column4.HeaderText = "Region"
-        Column4.Name = "Column4"
-        ' 
-        ' Column5
-        ' 
-        Column5.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        Column5.HeaderText = "Employment Type"
-        Column5.Name = "Column5"
-        ' 
-        ' Column6
-        ' 
-        Column6.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        Column6.HeaderText = "Status of Employment"
-        Column6.Name = "Column6"
-        ' 
-        ' Column7
-        ' 
-        Column7.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        Column7.HeaderText = "Postion"
-        Column7.Name = "Column7"
-        ' 
-        ' Column8
-        ' 
-        Column8.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        Column8.HeaderText = "Designation"
-        Column8.Name = "Column8"
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Location = New Point(689, 14)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(237, 23)
-        TextBox1.TabIndex = 1
+        Panel5.Size = New Size(995, 601)
+        Panel5.TabIndex = 20
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label3.ForeColor = SystemColors.ActiveCaptionText
-        Label3.Location = New Point(620, 13)
+        Label3.Location = New Point(70, 95)
         Label3.Name = "Label3"
-        Label3.Size = New Size(63, 21)
-        Label3.TabIndex = 2
-        Label3.Text = "Search:"
+        Label3.Size = New Size(87, 21)
+        Label3.TabIndex = 0
+        Label3.Text = "Username:"
+        ' 
+        ' Label14
+        ' 
+        Label14.AutoSize = True
+        Label14.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label14.Location = New Point(74, 124)
+        Label14.Name = "Label14"
+        Label14.Size = New Size(83, 21)
+        Label14.TabIndex = 1
+        Label14.Text = "Password:"
+        ' 
+        ' Label15
+        ' 
+        Label15.AutoSize = True
+        Label15.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label15.Location = New Point(83, 154)
+        Label15.Name = "Label15"
+        Label15.Size = New Size(74, 21)
+        Label15.TabIndex = 2
+        Label15.Text = "Address:"
+        ' 
+        ' Label16
+        ' 
+        Label16.AutoSize = True
+        Label16.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label16.Location = New Point(85, 183)
+        Label16.Name = "Label16"
+        Label16.Size = New Size(72, 21)
+        Label16.TabIndex = 3
+        Label16.Text = "Position:"
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Location = New Point(163, 93)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(213, 23)
+        TextBox1.TabIndex = 4
+        ' 
+        ' TextBox10
+        ' 
+        TextBox10.Location = New Point(163, 122)
+        TextBox10.Name = "TextBox10"
+        TextBox10.Size = New Size(213, 23)
+        TextBox10.TabIndex = 5
+        ' 
+        ' TextBox11
+        ' 
+        TextBox11.Location = New Point(163, 152)
+        TextBox11.Name = "TextBox11"
+        TextBox11.Size = New Size(213, 23)
+        TextBox11.TabIndex = 6
+        ' 
+        ' TextBox12
+        ' 
+        TextBox12.Location = New Point(163, 181)
+        TextBox12.Name = "TextBox12"
+        TextBox12.Size = New Size(213, 23)
+        TextBox12.TabIndex = 7
+        ' 
+        ' Button3
+        ' 
+        Button3.BackColor = Color.FromArgb(CByte(255), CByte(204), CByte(51))
+        Button3.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Button3.Location = New Point(163, 218)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(104, 32)
+        Button3.TabIndex = 8
+        Button3.Text = "Update"
+        Button3.UseVisualStyleBackColor = False
         ' 
         ' userdashboard
         ' 
@@ -586,8 +589,8 @@ Partial Class userdashboard
         ClientSize = New Size(1189, 640)
         Controls.Add(Panel2)
         Controls.Add(Panel4)
-        Controls.Add(Panel1)
         Controls.Add(Panel5)
+        Controls.Add(Panel1)
         Controls.Add(Panel3)
         FormBorderStyle = FormBorderStyle.None
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
@@ -607,11 +610,9 @@ Partial Class userdashboard
         Panel4.ResumeLayout(False)
         Panel5.ResumeLayout(False)
         Panel5.PerformLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents btnview As Button
     Friend WithEvents btnprof As Button
     Friend WithEvents designation As Label
     Friend WithEvents fname As Label
@@ -620,22 +621,10 @@ Partial Class userdashboard
     Friend WithEvents btndash As Button
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents Panel5 As Panel
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As DataGridViewTextBoxColumn
-    Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents TextBox8 As TextBox
@@ -658,4 +647,15 @@ Partial Class userdashboard
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Button5 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents TextBox12 As TextBox
+    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Button3 As Button
 End Class
