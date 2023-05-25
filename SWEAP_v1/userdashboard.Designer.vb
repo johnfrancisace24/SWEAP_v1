@@ -474,7 +474,7 @@ Partial Class userdashboard
         Label11.Dock = DockStyle.Left
         Label11.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Label11.ForeColor = SystemColors.ControlLightLight
-        Label11.Image = My.Resources.Resources.Logo1
+        Label11.Image = My.Resources.Resources.Logo3
         Label11.ImageAlign = ContentAlignment.MiddleLeft
         Label11.Location = New Point(0, 0)
         Label11.Name = "Label11"
