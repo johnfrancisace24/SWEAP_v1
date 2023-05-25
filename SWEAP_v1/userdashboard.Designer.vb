@@ -83,7 +83,7 @@ Partial Class userdashboard
         ' 
         ' Panel2
         ' 
-        Panel2.BackColor = Color.FromArgb(CByte(255), CByte(77), CByte(77))
+        Panel2.BackColor = Color.FromArgb(CByte(56), CByte(103), CByte(214))
         Panel2.Controls.Add(Button5)
         Panel2.Controls.Add(Button4)
         Panel2.Controls.Add(Button3)
@@ -103,7 +103,7 @@ Partial Class userdashboard
         Button5.FlatAppearance.BorderSize = 0
         Button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(128), CByte(128))
         Button5.FlatStyle = FlatStyle.Flat
-        Button5.ForeColor = SystemColors.ButtonHighlight
+        Button5.ForeColor = SystemColors.ActiveCaptionText
         Button5.Image = My.Resources.Resources._exit
         Button5.ImageAlign = ContentAlignment.MiddleLeft
         Button5.Location = New Point(3, 546)
@@ -120,8 +120,8 @@ Partial Class userdashboard
         Button4.FlatAppearance.BorderSize = 0
         Button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(128), CByte(128))
         Button4.FlatStyle = FlatStyle.Flat
-        Button4.ForeColor = SystemColors.ButtonHighlight
-        Button4.Image = My.Resources.Resources.layout
+        Button4.ForeColor = SystemColors.ActiveCaptionText
+        Button4.Image = My.Resources.Resources.dashboard__2_
         Button4.ImageAlign = ContentAlignment.MiddleLeft
         Button4.Location = New Point(3, 259)
         Button4.Name = "Button4"
@@ -137,8 +137,8 @@ Partial Class userdashboard
         Button3.FlatAppearance.BorderSize = 0
         Button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(128), CByte(128))
         Button3.FlatStyle = FlatStyle.Flat
-        Button3.ForeColor = SystemColors.ButtonHighlight
-        Button3.Image = My.Resources.Resources.team
+        Button3.ForeColor = SystemColors.ActiveCaptionText
+        Button3.Image = My.Resources.Resources.group__2_
         Button3.ImageAlign = ContentAlignment.MiddleLeft
         Button3.Location = New Point(3, 363)
         Button3.Name = "Button3"
@@ -154,8 +154,8 @@ Partial Class userdashboard
         Button2.FlatAppearance.BorderSize = 0
         Button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(128), CByte(128))
         Button2.FlatStyle = FlatStyle.Flat
-        Button2.ForeColor = SystemColors.ButtonHighlight
-        Button2.Image = My.Resources.Resources.profile
+        Button2.ForeColor = SystemColors.ActiveCaptionText
+        Button2.Image = My.Resources.Resources.avatar
         Button2.ImageAlign = ContentAlignment.MiddleLeft
         Button2.Location = New Point(3, 311)
         Button2.Name = "Button2"
