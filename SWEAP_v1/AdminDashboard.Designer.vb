@@ -51,8 +51,9 @@ Partial Class AdminDashboard
         Panel1.Controls.Add(PictureBox1)
         Panel1.Dock = DockStyle.Left
         Panel1.Location = New Point(0, 0)
+        Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(273, 777)
+        Panel1.Size = New Size(239, 583)
         Panel1.TabIndex = 0
         ' 
         ' bttnLogout
@@ -60,35 +61,39 @@ Partial Class AdminDashboard
         bttnLogout.FlatAppearance.BorderSize = 0
         bttnLogout.FlatStyle = FlatStyle.Flat
         bttnLogout.Font = New Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        ' bttnLogout.Image = My.Resources.Resources.exit1
+        bttnLogout.Image = My.Resources.Resources._exit
         bttnLogout.ImageAlign = ContentAlignment.MiddleLeft
-        bttnLogout.Location = New Point(0, 730)
+        bttnLogout.Location = New Point(0, 548)
+        bttnLogout.Margin = New Padding(3, 2, 3, 2)
         bttnLogout.Name = "bttnLogout"
-        bttnLogout.Padding = New Padding(50, 0, 0, 0)
-        bttnLogout.Size = New Size(273, 47)
+        bttnLogout.Padding = New Padding(44, 0, 0, 0)
+        bttnLogout.Size = New Size(239, 35)
         bttnLogout.TabIndex = 9
         bttnLogout.Text = "LOGOUT"
         bttnLogout.UseVisualStyleBackColor = True
         ' 
         ' pnlFund
         ' 
-        pnlFund.Location = New Point(261, 434)
+        pnlFund.Location = New Point(228, 326)
+        pnlFund.Margin = New Padding(3, 2, 3, 2)
         pnlFund.Name = "pnlFund"
-        pnlFund.Size = New Size(10, 65)
+        pnlFund.Size = New Size(9, 49)
         pnlFund.TabIndex = 8
         ' 
         ' pnlEmp
         ' 
-        pnlEmp.Location = New Point(261, 363)
+        pnlEmp.Location = New Point(228, 272)
+        pnlEmp.Margin = New Padding(3, 2, 3, 2)
         pnlEmp.Name = "pnlEmp"
-        pnlEmp.Size = New Size(10, 65)
+        pnlEmp.Size = New Size(9, 49)
         pnlEmp.TabIndex = 7
         ' 
         ' PnlDash
         ' 
-        PnlDash.Location = New Point(261, 292)
+        PnlDash.Location = New Point(228, 219)
+        PnlDash.Margin = New Padding(3, 2, 3, 2)
         PnlDash.Name = "PnlDash"
-        PnlDash.Size = New Size(10, 65)
+        PnlDash.Size = New Size(9, 49)
         PnlDash.TabIndex = 6
         ' 
         ' bttnFundtran
@@ -96,12 +101,13 @@ Partial Class AdminDashboard
         bttnFundtran.FlatAppearance.BorderSize = 0
         bttnFundtran.FlatStyle = FlatStyle.Flat
         bttnFundtran.Font = New Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        'bttnFundtran.Image = My.Resources.Resources.fund
+        bttnFundtran.Image = My.Resources.Resources.fund
         bttnFundtran.ImageAlign = ContentAlignment.MiddleLeft
-        bttnFundtran.Location = New Point(0, 434)
+        bttnFundtran.Location = New Point(0, 326)
+        bttnFundtran.Margin = New Padding(3, 2, 3, 2)
         bttnFundtran.Name = "bttnFundtran"
-        bttnFundtran.Padding = New Padding(5, 0, 10, 0)
-        bttnFundtran.Size = New Size(271, 65)
+        bttnFundtran.Padding = New Padding(4, 0, 9, 0)
+        bttnFundtran.Size = New Size(237, 49)
         bttnFundtran.TabIndex = 5
         bttnFundtran.Text = "FUND TRANSFER"
         bttnFundtran.TextAlign = ContentAlignment.MiddleRight
@@ -112,12 +118,13 @@ Partial Class AdminDashboard
         bttnEmploy.FlatAppearance.BorderSize = 0
         bttnEmploy.FlatStyle = FlatStyle.Flat
         bttnEmploy.Font = New Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        ' bttnEmploy.Image = My.Resources.Resources.team
+        bttnEmploy.Image = My.Resources.Resources.group__2_
         bttnEmploy.ImageAlign = ContentAlignment.MiddleLeft
-        bttnEmploy.Location = New Point(0, 363)
+        bttnEmploy.Location = New Point(0, 272)
+        bttnEmploy.Margin = New Padding(3, 2, 3, 2)
         bttnEmploy.Name = "bttnEmploy"
-        bttnEmploy.Padding = New Padding(5, 0, 10, 0)
-        bttnEmploy.Size = New Size(271, 65)
+        bttnEmploy.Padding = New Padding(4, 0, 9, 0)
+        bttnEmploy.Size = New Size(237, 49)
         bttnEmploy.TabIndex = 4
         bttnEmploy.Text = "EMPLOYEES"
         bttnEmploy.TextAlign = ContentAlignment.MiddleRight
@@ -128,12 +135,13 @@ Partial Class AdminDashboard
         bttnDashboard.FlatAppearance.BorderSize = 0
         bttnDashboard.FlatStyle = FlatStyle.Flat
         bttnDashboard.Font = New Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        ' bttnDashboard.Image = My.Resources.Resources.dashboard
+        bttnDashboard.Image = My.Resources.Resources.dashboard__2_
         bttnDashboard.ImageAlign = ContentAlignment.MiddleLeft
-        bttnDashboard.Location = New Point(0, 292)
+        bttnDashboard.Location = New Point(0, 219)
+        bttnDashboard.Margin = New Padding(3, 2, 3, 2)
         bttnDashboard.Name = "bttnDashboard"
-        bttnDashboard.Padding = New Padding(5, 0, 10, 0)
-        bttnDashboard.Size = New Size(271, 65)
+        bttnDashboard.Padding = New Padding(4, 0, 9, 0)
+        bttnDashboard.Size = New Size(237, 49)
         bttnDashboard.TabIndex = 3
         bttnDashboard.Text = "DASHBOARD"
         bttnDashboard.TextAlign = ContentAlignment.MiddleRight
@@ -144,9 +152,10 @@ Partial Class AdminDashboard
         PictureBox1.BackColor = Color.FromArgb(CByte(56), CByte(103), CByte(214))
         PictureBox1.BackgroundImage = My.Resources.Resources.love
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox1.Location = New Point(24, 21)
+        PictureBox1.Location = New Point(21, 16)
+        PictureBox1.Margin = New Padding(3, 2, 3, 2)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(218, 198)
+        PictureBox1.Size = New Size(191, 148)
         PictureBox1.TabIndex = 2
         PictureBox1.TabStop = False
         ' 
@@ -155,31 +164,33 @@ Partial Class AdminDashboard
         Panel5.BackColor = Color.FromArgb(CByte(255), CByte(77), CByte(77))
         Panel5.Controls.Add(Label1)
         Panel5.Dock = DockStyle.Top
-        Panel5.Location = New Point(273, 0)
+        Panel5.Location = New Point(239, 0)
+        Panel5.Margin = New Padding(3, 2, 3, 2)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(1095, 108)
+        Panel5.Size = New Size(958, 81)
         Panel5.TabIndex = 1
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.Location = New Point(79, 32)
+        Label1.Location = New Point(69, 24)
         Label1.Name = "Label1"
-        Label1.Size = New Size(1016, 35)
+        Label1.Size = New Size(805, 26)
         Label1.TabIndex = 0
         Label1.Text = "SOCIAL WELFARE EMPLOYEES ASSOCIATION OF THE PHILIPPINES"
         ' 
         ' AdminDashboard
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.RoyalBlue
-        ClientSize = New Size(1368, 777)
+        ClientSize = New Size(1197, 583)
         ControlBox = False
         Controls.Add(Panel5)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
+        Margin = New Padding(3, 2, 3, 2)
         Name = "AdminDashboard"
         StartPosition = FormStartPosition.CenterScreen
         Text = "AdminDashboard"
