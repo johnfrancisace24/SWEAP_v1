@@ -80,7 +80,7 @@ Public Class userdashboard
 
         Try
             conn.Open()
-            Dim cmd As New MySqlCommand("SELECT * FROM register", conn)
+            Dim cmd As New MySqlCommand("SELECT * FROM user", conn)
             dr = cmd.ExecuteReader
             While dr.Read
                 DataGridView1.Rows.Add(dr.Item("name"), dr.Item("contact"), dr.Item("office"), dr.Item("region"), dr.Item("employment_type"), dr.Item("status_of_employment"), dr.Item("position"), dr.Item("designation"))
