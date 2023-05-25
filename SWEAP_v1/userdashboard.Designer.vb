@@ -83,7 +83,7 @@ Partial Class userdashboard
         ' 
         ' Panel2
         ' 
-        Panel2.BackColor = Color.FromArgb(CByte(56), CByte(103), CByte(214))
+        Panel2.BackColor = Color.FromArgb(CByte(255), CByte(204), CByte(51))
         Panel2.Controls.Add(Button5)
         Panel2.Controls.Add(Button4)
         Panel2.Controls.Add(Button3)
@@ -169,7 +169,7 @@ Partial Class userdashboard
         ' 
         designation.Dock = DockStyle.Top
         designation.Font = New Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        designation.ForeColor = SystemColors.ButtonFace
+        designation.ForeColor = SystemColors.ActiveCaptionText
         designation.Location = New Point(0, 190)
         designation.Name = "designation"
         designation.Size = New Size(245, 20)
@@ -180,7 +180,7 @@ Partial Class userdashboard
         ' 
         fname.Dock = DockStyle.Top
         fname.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        fname.ForeColor = SystemColors.ButtonFace
+        fname.ForeColor = SystemColors.ActiveCaptionText
         fname.Location = New Point(0, 164)
         fname.Name = "fname"
         fname.Size = New Size(245, 26)
@@ -231,9 +231,9 @@ Partial Class userdashboard
         Panel3.Controls.Add(Label5)
         Panel3.Controls.Add(Label4)
         Panel3.Controls.Add(Label8)
-        Panel3.Location = New Point(252, 42)
+        Panel3.Location = New Point(252, 39)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(930, 591)
+        Panel3.Size = New Size(937, 601)
         Panel3.TabIndex = 4
         ' 
         ' TextBox6
@@ -387,9 +387,9 @@ Partial Class userdashboard
         Panel1.Controls.Add(Panel8)
         Panel1.Controls.Add(Panel7)
         Panel1.Controls.Add(Panel6)
-        Panel1.Location = New Point(251, 42)
+        Panel1.Location = New Point(251, 39)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(930, 591)
+        Panel1.Size = New Size(938, 601)
         Panel1.TabIndex = 19
         ' 
         ' Label10
@@ -461,9 +461,11 @@ Partial Class userdashboard
         ' 
         ' Panel4
         ' 
+        Panel4.BackColor = Color.FromArgb(CByte(153), CByte(0), CByte(0))
         Panel4.Controls.Add(Label11)
         Panel4.Controls.Add(Button1)
         Panel4.Dock = DockStyle.Top
+        Panel4.ForeColor = SystemColors.ControlLightLight
         Panel4.Location = New Point(0, 0)
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(1189, 39)
@@ -490,9 +492,9 @@ Partial Class userdashboard
         Panel5.Controls.Add(DataGridView1)
         Panel5.Controls.Add(TextBox1)
         Panel5.Controls.Add(Label3)
-        Panel5.Location = New Point(251, 42)
+        Panel5.Location = New Point(251, 39)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(931, 591)
+        Panel5.Size = New Size(938, 601)
         Panel5.TabIndex = 5
         ' 
         ' DataGridView1
@@ -502,7 +504,7 @@ Partial Class userdashboard
         DataGridView1.Location = New Point(4, 51)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.RowTemplate.Height = 25
-        DataGridView1.Size = New Size(922, 535)
+        DataGridView1.Size = New Size(931, 547)
         DataGridView1.TabIndex = 0
         ' 
         ' Column1
@@ -575,7 +577,7 @@ Partial Class userdashboard
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.FromArgb(CByte(56), CByte(103), CByte(214))
+        BackColor = Color.FromArgb(CByte(153), CByte(0), CByte(0))
         ClientSize = New Size(1189, 640)
         Controls.Add(Panel2)
         Controls.Add(Panel4)
