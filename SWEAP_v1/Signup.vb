@@ -31,8 +31,8 @@ Public Class Signup
         End If
 
 
-        Dim destinationPath As String = locateProject & "\" & txtCreateUsername.Text & Path.GetExtension(opf.FileName)
 
+        Dim destinationPath As String = locateProject & "\" & txtCreateUsername.Text & Path.GetExtension(opf.FileName)
 
         File.Copy(sourceFilePath, destinationPath, True)
 
