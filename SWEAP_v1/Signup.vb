@@ -19,6 +19,7 @@ Public Class Signup
     Dim arrimage() As Byte
     Private Sub ButtonUpload_Click(sender As Object, e As EventArgs) Handles ButtonUpload.Click
         ' Dim imageInput As String
+        Dim locateProject As String = Path.GetDirectoryName(Application.StartupPath)
         Dim opf As New OpenFileDialog
         Dim sourceFilePath As String
         opf.Filter = "Choose Image(*.jpg; *.png; *.gif) | * .jpg; *.png; *.gif"
@@ -28,10 +29,10 @@ Public Class Signup
             sourceFilePath = System.IO.Path.GetFullPath(opf.FileName)
             pBoxCreateProfile.BackgroundImage = System.Drawing.Image.FromFile(sourceFilePath)
         End If
-        Dim destinationPath As String = "C:\Users\masantelices\Desktop\Benhur\project\haha.png"
+        Dim destinationPath As String = locateProject & "\profile_pictures\" & txtCreateUsername.Text & Path.GetExtension(opf.FileName)
 
         File.Copy(sourceFilePath, destinationPath, True)
-
+        MsgBox("File saved to " & destinationPath)
         MessageBox.Show("File transferred successfully.")
 
     End Sub
