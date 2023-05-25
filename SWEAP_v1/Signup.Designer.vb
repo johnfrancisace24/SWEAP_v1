@@ -351,7 +351,7 @@ Partial Class Signup
         ' 
         ' Panel1
         ' 
-        Panel1.BackColor = Color.FromArgb(CByte(153), CByte(0), CByte(0))
+        Panel1.BackColor = Color.DarkRed
         Panel1.Controls.Add(btnCancel)
         Panel1.Controls.Add(btnRegister)
         Panel1.Controls.Add(ButtonUpload)
@@ -383,7 +383,7 @@ Partial Class Signup
         Panel1.Location = New Point(10, 9)
         Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(822, 502)
+        Panel1.Size = New Size(822, 562)
         Panel1.TabIndex = 13
         ' 
         ' Label12
@@ -412,7 +412,7 @@ Partial Class Signup
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(255), CByte(204), CByte(51))
-        ClientSize = New Size(844, 522)
+        ClientSize = New Size(844, 582)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
         Margin = New Padding(3, 2, 3, 2)

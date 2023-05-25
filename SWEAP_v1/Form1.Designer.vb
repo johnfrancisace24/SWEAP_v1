@@ -52,7 +52,7 @@ Partial Class Form1
         ' 
         ' Panel1
         ' 
-        Panel1.BackColor = Color.FromArgb(CByte(153), CByte(0), CByte(0))
+        Panel1.BackColor = Color.DarkRed
         Panel1.Controls.Add(ButtonClose)
         Panel1.Controls.Add(txtBoxPass)
         Panel1.Controls.Add(txtUser)
