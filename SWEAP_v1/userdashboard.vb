@@ -1,4 +1,5 @@
-﻿Imports System.Windows
+﻿Imports System.Diagnostics.Eventing
+Imports System.Windows
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar
 Imports MySql.Data.MySqlClient
 
@@ -41,19 +42,22 @@ Public Class userdashboard
             Dim cmd As New MySqlCommand(query, conn)
 
             'cmd.Parameters.AddWithValue("@id", dr.GetString("id"))
-            Dim reader As MySqlDataReader = cmd.ExecuteReader()
+            Dim dr As MySqlDataReader = cmd.ExecuteReader()
 
-            If reader.Read() Then
-                Dim name As String = reader.GetString("first_name")
+            If dr.Read() Then
+                Dim name As String = dr.GetString("first_name")
                 fname.Text = name
             End If
             MsgBox("Gumana")
-            reader.Close()
+
 
         Catch ex As Exception
             MsgBox(ex.Message)
+        Finally
+            dr.Close()
+            conn.Close()
         End Try
-        conn.Close()
+
     End Sub
 
     Public Sub position()
@@ -63,19 +67,23 @@ Public Class userdashboard
             Dim query As String = "SELECT designation FROM user"
 
             Dim cmd As New MySqlCommand(query, conn)
-            Dim reader As MySqlDataReader = cmd.ExecuteReader()
+            Dim dr As MySqlDataReader = cmd.ExecuteReader()
 
-            If reader.Read() Then
-                Dim des As String = reader.GetString("designation")
+            If dr.Read() Then
+                Dim des As String = dr.GetString("designation")
                 designation.Text = des
             End If
             MsgBox("Gumana")
-            reader.Close()
+
 
         Catch ex As Exception
             MsgBox(ex.Message)
+        Finally
+            conn.Close()
+            dr.Close()
         End Try
-        conn.Close()
+
+
     End Sub
 
     Public Sub mem()
@@ -95,7 +103,7 @@ Public Class userdashboard
             Dim cmd As New MySqlCommand("SELECT * FROM `user` ", conn)
             dr = cmd.ExecuteReader
             While dr.Read
-                DataGridView1.Rows.Add(dr.Item("first_name"), dr.Item("contact"), dr.Item("office"), dr.Item("region"), dr.Item("employment_type"), dr.Item("status_of_employment"), dr.Item("position"), dr.Item("designation"))
+                DataGridView1.Rows.Add(dr.Item("first_name"), dr.Item("contact"), dr.Item("office"), dr.Item("region"), dr.Item("employment_type"), dr.Item("employment_status"), dr.Item("position"), dr.Item("designation"))
             End While
         Catch ex As Exception
             MsgBox(ex.Message)
