@@ -58,7 +58,7 @@ Partial Class Signup
         ' 
         ' btnCancel
         ' 
-        btnCancel.BackColor = Color.FromArgb(CByte(45), CByte(152), CByte(218))
+        btnCancel.BackColor = Color.FromArgb(CByte(255), CByte(211), CByte(42))
         btnCancel.FlatStyle = FlatStyle.Flat
         btnCancel.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         btnCancel.Location = New Point(228, 434)
@@ -71,7 +71,7 @@ Partial Class Signup
         ' 
         ' btnRegister
         ' 
-        btnRegister.BackColor = Color.FromArgb(CByte(45), CByte(152), CByte(218))
+        btnRegister.BackColor = Color.FromArgb(CByte(255), CByte(211), CByte(42))
         btnRegister.FlatStyle = FlatStyle.Flat
         btnRegister.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         btnRegister.Location = New Point(446, 434)
@@ -84,7 +84,7 @@ Partial Class Signup
         ' 
         ' ButtonUpload
         ' 
-        ButtonUpload.BackColor = Color.DeepSkyBlue
+        ButtonUpload.BackColor = Color.FromArgb(CByte(255), CByte(211), CByte(42))
         ButtonUpload.FlatStyle = FlatStyle.Flat
         ButtonUpload.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         ButtonUpload.Image = CType(resources.GetObject("ButtonUpload.Image"), Image)
@@ -100,20 +100,24 @@ Partial Class Signup
         ' Label11
         ' 
         Label11.AutoSize = True
-        Label11.Font = New Font("Century", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Label11.BackColor = Color.Transparent
+        Label11.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label11.ForeColor = Color.Yellow
         Label11.Location = New Point(344, 340)
         Label11.Name = "Label11"
-        Label11.Size = New Size(87, 16)
+        Label11.Size = New Size(96, 16)
         Label11.TabIndex = 25
         Label11.Text = "PASSWORD "
         ' 
         ' Label10
         ' 
         Label10.AutoSize = True
-        Label10.Font = New Font("Century", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Label10.BackColor = Color.Transparent
+        Label10.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label10.ForeColor = Color.Yellow
         Label10.Location = New Point(59, 340)
         Label10.Name = "Label10"
-        Label10.Size = New Size(85, 16)
+        Label10.Size = New Size(93, 16)
         Label10.TabIndex = 23
         Label10.Text = "USERNAME"
         ' 
@@ -218,10 +222,12 @@ Partial Class Signup
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Century", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Label1.BackColor = Color.Transparent
+        Label1.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.ForeColor = Color.Yellow
         Label1.Location = New Point(59, 36)
         Label1.Name = "Label1"
-        Label1.Size = New Size(92, 16)
+        Label1.Size = New Size(102, 16)
         Label1.TabIndex = 0
         Label1.Text = "FIRST NAME"
         ' 
@@ -237,30 +243,36 @@ Partial Class Signup
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Century", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Label3.BackColor = Color.Transparent
+        Label3.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label3.ForeColor = Color.Yellow
         Label3.Location = New Point(59, 96)
         Label3.Name = "Label3"
-        Label3.Size = New Size(73, 16)
+        Label3.Size = New Size(80, 16)
         Label3.TabIndex = 2
         Label3.Text = "CONTACT"
         ' 
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Font = New Font("Century", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Label9.BackColor = Color.Transparent
+        Label9.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label9.ForeColor = Color.Yellow
         Label9.Location = New Point(344, 278)
         Label9.Name = "Label9"
-        Label9.Size = New Size(104, 16)
+        Label9.Size = New Size(115, 16)
         Label9.TabIndex = 10
         Label9.Text = "DESIGNATION"
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Century", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Label4.BackColor = Color.Transparent
+        Label4.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label4.ForeColor = Color.Yellow
         Label4.Location = New Point(344, 92)
         Label4.Name = "Label4"
-        Label4.Size = New Size(51, 16)
+        Label4.Size = New Size(56, 16)
         Label4.TabIndex = 3
         Label4.Text = "EMAIL"
         ' 
@@ -280,56 +292,66 @@ Partial Class Signup
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Century", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Label5.BackColor = Color.Transparent
+        Label5.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label5.ForeColor = Color.Yellow
         Label5.Location = New Point(59, 152)
         Label5.Name = "Label5"
-        Label5.Size = New Size(58, 16)
+        Label5.Size = New Size(64, 16)
         Label5.TabIndex = 4
         Label5.Text = "OFFICE"
         ' 
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Font = New Font("Century", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Label8.BackColor = Color.Transparent
+        Label8.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label8.ForeColor = Color.Yellow
         Label8.Location = New Point(59, 213)
         Label8.Name = "Label8"
-        Label8.Size = New Size(61, 16)
+        Label8.Size = New Size(67, 16)
         Label8.TabIndex = 8
         Label8.Text = "REGION"
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Century", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Label6.BackColor = Color.Transparent
+        Label6.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label6.ForeColor = Color.Yellow
         Label6.Location = New Point(344, 152)
         Label6.Name = "Label6"
-        Label6.Size = New Size(74, 16)
+        Label6.Size = New Size(82, 16)
         Label6.TabIndex = 5
         Label6.Text = "POSITION"
         ' 
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Century", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Label7.BackColor = Color.Transparent
+        Label7.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label7.ForeColor = Color.Yellow
         Label7.Location = New Point(344, 213)
         Label7.Name = "Label7"
-        Label7.Size = New Size(146, 16)
+        Label7.Size = New Size(161, 16)
         Label7.TabIndex = 7
         Label7.Text = "EMPLOYMENT TYPE"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Century", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Label2.BackColor = Color.Transparent
+        Label2.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label2.ForeColor = Color.Yellow
         Label2.Location = New Point(59, 278)
         Label2.Name = "Label2"
-        Label2.Size = New Size(187, 16)
+        Label2.Size = New Size(207, 16)
         Label2.TabIndex = 6
         Label2.Text = "STATUS OF EMPLOYMENT"
         ' 
         ' Panel1
         ' 
-        Panel1.BackColor = Color.FromArgb(CByte(23), CByte(192), CByte(235))
+        Panel1.BackColor = Color.FromArgb(CByte(153), CByte(0), CByte(0))
         Panel1.Controls.Add(btnCancel)
         Panel1.Controls.Add(btnRegister)
         Panel1.Controls.Add(ButtonUpload)
@@ -367,10 +389,12 @@ Partial Class Signup
         ' Label12
         ' 
         Label12.AutoSize = True
-        Label12.Font = New Font("Century", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Label12.BackColor = Color.Transparent
+        Label12.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label12.ForeColor = Color.Yellow
         Label12.Location = New Point(344, 37)
         Label12.Name = "Label12"
-        Label12.Size = New Size(87, 16)
+        Label12.Size = New Size(96, 16)
         Label12.TabIndex = 0
         Label12.Text = "LAST NAME"
         ' 
@@ -387,7 +411,7 @@ Partial Class Signup
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.FromArgb(CByte(6), CByte(82), CByte(221))
+        BackColor = Color.FromArgb(CByte(255), CByte(204), CByte(51))
         ClientSize = New Size(844, 522)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
