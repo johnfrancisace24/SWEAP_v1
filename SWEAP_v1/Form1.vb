@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Form1
-    Dim test As String = "server=172.30.206.81;port=3306;user=drugpusher;password=druguser;database=sweap"
+    Dim test As String = "server=172.30.206.81;port=3306;user=sweapp;password=druguser;database=sweap"
     Dim conn As New MySqlConnection(test)
     Dim gagi As Integer
     Dim rid As MySqlDataReader
@@ -31,7 +31,7 @@ Public Class Form1
             Dim status As String
             Try
                 conn.Open()
-                Dim cmd As New MySqlCommand("SELECT name, designation FROM user WHERE username=@NAME AND password=@PASS", conn)
+                Dim cmd As New MySqlCommand("SELECT * FROM user WHERE username=@NAME AND password=@PASS", conn)
                 cmd.Parameters.AddWithValue("@NAME", txtUser.Text)
                 cmd.Parameters.AddWithValue("@PASS", txtBoxPass.Text)
                 rid = cmd.ExecuteReader

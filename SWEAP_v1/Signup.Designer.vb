@@ -51,26 +51,26 @@ Partial Class Signup
         Label17 = New Label()
         Label8 = New Label()
         Label7 = New Label()
-        TextBox13 = New TextBox()
-        TextBox14 = New TextBox()
-        TextBox15 = New TextBox()
-        TextBox12 = New TextBox()
-        TextBox11 = New TextBox()
-        TextBox10 = New TextBox()
-        TextBox9 = New TextBox()
-        TextBox8 = New TextBox()
-        TextBox7 = New TextBox()
-        TextBox6 = New TextBox()
-        TextBox5 = New TextBox()
-        TextBox4 = New TextBox()
-        TextBox3 = New TextBox()
-        TextBox2 = New TextBox()
-        TextBox1 = New TextBox()
+        txtBenifAge5 = New TextBox()
+        txtBenifRel5 = New TextBox()
+        txtBenifName5 = New TextBox()
+        txtBenifAge4 = New TextBox()
+        txtBenifAge3 = New TextBox()
+        txtBenifAge2 = New TextBox()
+        txtBenifAge1 = New TextBox()
+        txtBenifRel4 = New TextBox()
+        txtBenifRel3 = New TextBox()
+        txtBenifRel2 = New TextBox()
+        txtBenifRel1 = New TextBox()
+        txtBenifName4 = New TextBox()
+        txtBenifName3 = New TextBox()
+        txtBenifName2 = New TextBox()
+        txtBenifName1 = New TextBox()
         Label16 = New Label()
-        DatePickerBdate = New DateTimePicker()
+        pickBDate = New DateTimePicker()
         txtEduc = New TextBox()
         Label15 = New Label()
-        txtAdd = New TextBox()
+        txtAddress = New TextBox()
         Label14 = New Label()
         Label13 = New Label()
         txtMname = New TextBox()
@@ -348,27 +348,27 @@ Partial Class Signup
         Panel1.Controls.Add(Label17)
         Panel1.Controls.Add(Label8)
         Panel1.Controls.Add(Label7)
-        Panel1.Controls.Add(TextBox13)
-        Panel1.Controls.Add(TextBox14)
-        Panel1.Controls.Add(TextBox15)
-        Panel1.Controls.Add(TextBox12)
-        Panel1.Controls.Add(TextBox11)
-        Panel1.Controls.Add(TextBox10)
-        Panel1.Controls.Add(TextBox9)
-        Panel1.Controls.Add(TextBox8)
-        Panel1.Controls.Add(TextBox7)
-        Panel1.Controls.Add(TextBox6)
-        Panel1.Controls.Add(TextBox5)
-        Panel1.Controls.Add(TextBox4)
-        Panel1.Controls.Add(TextBox3)
-        Panel1.Controls.Add(TextBox2)
-        Panel1.Controls.Add(TextBox1)
+        Panel1.Controls.Add(txtBenifAge5)
+        Panel1.Controls.Add(txtBenifRel5)
+        Panel1.Controls.Add(txtBenifName5)
+        Panel1.Controls.Add(txtBenifAge4)
+        Panel1.Controls.Add(txtBenifAge3)
+        Panel1.Controls.Add(txtBenifAge2)
+        Panel1.Controls.Add(txtBenifAge1)
+        Panel1.Controls.Add(txtBenifRel4)
+        Panel1.Controls.Add(txtBenifRel3)
+        Panel1.Controls.Add(txtBenifRel2)
+        Panel1.Controls.Add(txtBenifRel1)
+        Panel1.Controls.Add(txtBenifName4)
+        Panel1.Controls.Add(txtBenifName3)
+        Panel1.Controls.Add(txtBenifName2)
+        Panel1.Controls.Add(txtBenifName1)
         Panel1.Controls.Add(btnRegister)
         Panel1.Controls.Add(Label16)
-        Panel1.Controls.Add(DatePickerBdate)
+        Panel1.Controls.Add(pickBDate)
         Panel1.Controls.Add(txtEduc)
         Panel1.Controls.Add(Label15)
-        Panel1.Controls.Add(txtAdd)
+        Panel1.Controls.Add(txtAddress)
         Panel1.Controls.Add(Label14)
         Panel1.Controls.Add(Label13)
         Panel1.Controls.Add(txtMname)
@@ -466,140 +466,140 @@ Partial Class Signup
         Label7.TabIndex = 54
         Label7.Text = "NAME"
         ' 
-        ' TextBox13
+        ' txtBenifAge5
         ' 
-        TextBox13.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox13.Location = New Point(597, 555)
-        TextBox13.Margin = New Padding(2, 1, 2, 1)
-        TextBox13.Name = "TextBox13"
-        TextBox13.Size = New Size(111, 29)
-        TextBox13.TabIndex = 53
+        txtBenifAge5.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txtBenifAge5.Location = New Point(597, 555)
+        txtBenifAge5.Margin = New Padding(2, 1, 2, 1)
+        txtBenifAge5.Name = "txtBenifAge5"
+        txtBenifAge5.Size = New Size(111, 29)
+        txtBenifAge5.TabIndex = 53
         ' 
-        ' TextBox14
+        ' txtBenifRel5
         ' 
-        TextBox14.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox14.Location = New Point(389, 555)
-        TextBox14.Margin = New Padding(2, 1, 2, 1)
-        TextBox14.Name = "TextBox14"
-        TextBox14.Size = New Size(204, 29)
-        TextBox14.TabIndex = 52
+        txtBenifRel5.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txtBenifRel5.Location = New Point(389, 555)
+        txtBenifRel5.Margin = New Padding(2, 1, 2, 1)
+        txtBenifRel5.Name = "txtBenifRel5"
+        txtBenifRel5.Size = New Size(204, 29)
+        txtBenifRel5.TabIndex = 52
         ' 
-        ' TextBox15
+        ' txtBenifName5
         ' 
-        TextBox15.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox15.Location = New Point(38, 555)
-        TextBox15.Margin = New Padding(2, 1, 2, 1)
-        TextBox15.Name = "TextBox15"
-        TextBox15.Size = New Size(347, 29)
-        TextBox15.TabIndex = 51
+        txtBenifName5.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txtBenifName5.Location = New Point(38, 555)
+        txtBenifName5.Margin = New Padding(2, 1, 2, 1)
+        txtBenifName5.Name = "txtBenifName5"
+        txtBenifName5.Size = New Size(347, 29)
+        txtBenifName5.TabIndex = 51
         ' 
-        ' TextBox12
+        ' txtBenifAge4
         ' 
-        TextBox12.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox12.Location = New Point(597, 524)
-        TextBox12.Margin = New Padding(2, 1, 2, 1)
-        TextBox12.Name = "TextBox12"
-        TextBox12.Size = New Size(111, 29)
-        TextBox12.TabIndex = 50
+        txtBenifAge4.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txtBenifAge4.Location = New Point(597, 524)
+        txtBenifAge4.Margin = New Padding(2, 1, 2, 1)
+        txtBenifAge4.Name = "txtBenifAge4"
+        txtBenifAge4.Size = New Size(111, 29)
+        txtBenifAge4.TabIndex = 50
         ' 
-        ' TextBox11
+        ' txtBenifAge3
         ' 
-        TextBox11.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox11.Location = New Point(597, 493)
-        TextBox11.Margin = New Padding(2, 1, 2, 1)
-        TextBox11.Name = "TextBox11"
-        TextBox11.Size = New Size(111, 29)
-        TextBox11.TabIndex = 49
+        txtBenifAge3.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txtBenifAge3.Location = New Point(597, 493)
+        txtBenifAge3.Margin = New Padding(2, 1, 2, 1)
+        txtBenifAge3.Name = "txtBenifAge3"
+        txtBenifAge3.Size = New Size(111, 29)
+        txtBenifAge3.TabIndex = 49
         ' 
-        ' TextBox10
+        ' txtBenifAge2
         ' 
-        TextBox10.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox10.Location = New Point(597, 462)
-        TextBox10.Margin = New Padding(2, 1, 2, 1)
-        TextBox10.Name = "TextBox10"
-        TextBox10.Size = New Size(111, 29)
-        TextBox10.TabIndex = 48
+        txtBenifAge2.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txtBenifAge2.Location = New Point(597, 462)
+        txtBenifAge2.Margin = New Padding(2, 1, 2, 1)
+        txtBenifAge2.Name = "txtBenifAge2"
+        txtBenifAge2.Size = New Size(111, 29)
+        txtBenifAge2.TabIndex = 48
         ' 
-        ' TextBox9
+        ' txtBenifAge1
         ' 
-        TextBox9.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox9.Location = New Point(597, 431)
-        TextBox9.Margin = New Padding(2, 1, 2, 1)
-        TextBox9.Name = "TextBox9"
-        TextBox9.Size = New Size(111, 29)
-        TextBox9.TabIndex = 47
+        txtBenifAge1.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txtBenifAge1.Location = New Point(597, 431)
+        txtBenifAge1.Margin = New Padding(2, 1, 2, 1)
+        txtBenifAge1.Name = "txtBenifAge1"
+        txtBenifAge1.Size = New Size(111, 29)
+        txtBenifAge1.TabIndex = 47
         ' 
-        ' TextBox8
+        ' txtBenifRel4
         ' 
-        TextBox8.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox8.Location = New Point(389, 524)
-        TextBox8.Margin = New Padding(2, 1, 2, 1)
-        TextBox8.Name = "TextBox8"
-        TextBox8.Size = New Size(204, 29)
-        TextBox8.TabIndex = 46
+        txtBenifRel4.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txtBenifRel4.Location = New Point(389, 524)
+        txtBenifRel4.Margin = New Padding(2, 1, 2, 1)
+        txtBenifRel4.Name = "txtBenifRel4"
+        txtBenifRel4.Size = New Size(204, 29)
+        txtBenifRel4.TabIndex = 46
         ' 
-        ' TextBox7
+        ' txtBenifRel3
         ' 
-        TextBox7.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox7.Location = New Point(389, 493)
-        TextBox7.Margin = New Padding(2, 1, 2, 1)
-        TextBox7.Name = "TextBox7"
-        TextBox7.Size = New Size(204, 29)
-        TextBox7.TabIndex = 45
+        txtBenifRel3.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txtBenifRel3.Location = New Point(389, 493)
+        txtBenifRel3.Margin = New Padding(2, 1, 2, 1)
+        txtBenifRel3.Name = "txtBenifRel3"
+        txtBenifRel3.Size = New Size(204, 29)
+        txtBenifRel3.TabIndex = 45
         ' 
-        ' TextBox6
+        ' txtBenifRel2
         ' 
-        TextBox6.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox6.Location = New Point(389, 462)
-        TextBox6.Margin = New Padding(2, 1, 2, 1)
-        TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(204, 29)
-        TextBox6.TabIndex = 44
+        txtBenifRel2.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txtBenifRel2.Location = New Point(389, 462)
+        txtBenifRel2.Margin = New Padding(2, 1, 2, 1)
+        txtBenifRel2.Name = "txtBenifRel2"
+        txtBenifRel2.Size = New Size(204, 29)
+        txtBenifRel2.TabIndex = 44
         ' 
-        ' TextBox5
+        ' txtBenifRel1
         ' 
-        TextBox5.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox5.Location = New Point(389, 431)
-        TextBox5.Margin = New Padding(2, 1, 2, 1)
-        TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(204, 29)
-        TextBox5.TabIndex = 43
+        txtBenifRel1.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txtBenifRel1.Location = New Point(389, 431)
+        txtBenifRel1.Margin = New Padding(2, 1, 2, 1)
+        txtBenifRel1.Name = "txtBenifRel1"
+        txtBenifRel1.Size = New Size(204, 29)
+        txtBenifRel1.TabIndex = 43
         ' 
-        ' TextBox4
+        ' txtBenifName4
         ' 
-        TextBox4.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox4.Location = New Point(38, 524)
-        TextBox4.Margin = New Padding(2, 1, 2, 1)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(347, 29)
-        TextBox4.TabIndex = 42
+        txtBenifName4.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txtBenifName4.Location = New Point(38, 524)
+        txtBenifName4.Margin = New Padding(2, 1, 2, 1)
+        txtBenifName4.Name = "txtBenifName4"
+        txtBenifName4.Size = New Size(347, 29)
+        txtBenifName4.TabIndex = 42
         ' 
-        ' TextBox3
+        ' txtBenifName3
         ' 
-        TextBox3.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox3.Location = New Point(38, 493)
-        TextBox3.Margin = New Padding(2, 1, 2, 1)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(347, 29)
-        TextBox3.TabIndex = 41
+        txtBenifName3.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txtBenifName3.Location = New Point(38, 493)
+        txtBenifName3.Margin = New Padding(2, 1, 2, 1)
+        txtBenifName3.Name = "txtBenifName3"
+        txtBenifName3.Size = New Size(347, 29)
+        txtBenifName3.TabIndex = 41
         ' 
-        ' TextBox2
+        ' txtBenifName2
         ' 
-        TextBox2.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox2.Location = New Point(38, 462)
-        TextBox2.Margin = New Padding(2, 1, 2, 1)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(347, 29)
-        TextBox2.TabIndex = 40
+        txtBenifName2.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txtBenifName2.Location = New Point(38, 462)
+        txtBenifName2.Margin = New Padding(2, 1, 2, 1)
+        txtBenifName2.Name = "txtBenifName2"
+        txtBenifName2.Size = New Size(347, 29)
+        txtBenifName2.TabIndex = 40
         ' 
-        ' TextBox1
+        ' txtBenifName1
         ' 
-        TextBox1.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox1.Location = New Point(38, 431)
-        TextBox1.Margin = New Padding(2, 1, 2, 1)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(347, 29)
-        TextBox1.TabIndex = 39
+        txtBenifName1.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txtBenifName1.Location = New Point(38, 431)
+        txtBenifName1.Margin = New Padding(2, 1, 2, 1)
+        txtBenifName1.Name = "txtBenifName1"
+        txtBenifName1.Size = New Size(347, 29)
+        txtBenifName1.TabIndex = 39
         ' 
         ' Label16
         ' 
@@ -614,14 +614,14 @@ Partial Class Signup
         Label16.TabIndex = 37
         Label16.Text = "BIRTHDATE"
         ' 
-        ' DatePickerBdate
+        ' pickBDate
         ' 
-        DatePickerBdate.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        DatePickerBdate.Location = New Point(41, 221)
-        DatePickerBdate.Margin = New Padding(2)
-        DatePickerBdate.Name = "DatePickerBdate"
-        DatePickerBdate.Size = New Size(230, 29)
-        DatePickerBdate.TabIndex = 36
+        pickBDate.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        pickBDate.Location = New Point(41, 221)
+        pickBDate.Margin = New Padding(2)
+        pickBDate.Name = "pickBDate"
+        pickBDate.Size = New Size(230, 29)
+        pickBDate.TabIndex = 36
         ' 
         ' txtEduc
         ' 
@@ -645,15 +645,15 @@ Partial Class Signup
         Label15.TabIndex = 34
         Label15.Text = "EDUCATIONAL ATTAINMENT"
         ' 
-        ' txtAdd
+        ' txtAddress
         ' 
-        txtAdd.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        txtAdd.Location = New Point(41, 101)
-        txtAdd.Margin = New Padding(2, 1, 2, 1)
-        txtAdd.Multiline = True
-        txtAdd.Name = "txtAdd"
-        txtAdd.Size = New Size(727, 29)
-        txtAdd.TabIndex = 33
+        txtAddress.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txtAddress.Location = New Point(41, 101)
+        txtAddress.Margin = New Padding(2, 1, 2, 1)
+        txtAddress.Multiline = True
+        txtAddress.Name = "txtAddress"
+        txtAddress.Size = New Size(727, 29)
+        txtAddress.TabIndex = 33
         ' 
         ' Label14
         ' 
@@ -755,32 +755,32 @@ Partial Class Signup
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label12 As Label
     Friend WithEvents txtLname As TextBox
-    Friend WithEvents txtAdd As TextBox
+    Friend WithEvents txtAddress As TextBox
     Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents txtMname As TextBox
     Friend WithEvents txtEduc As TextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
-    Friend WithEvents DatePickerBdate As DateTimePicker
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents pickBDate As DateTimePicker
+    Friend WithEvents txtBenifName1 As TextBox
     Friend WithEvents Label17 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox13 As TextBox
-    Friend WithEvents TextBox14 As TextBox
-    Friend WithEvents TextBox15 As TextBox
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents TextBox11 As TextBox
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtBenifAge5 As TextBox
+    Friend WithEvents txtBenifRel5 As TextBox
+    Friend WithEvents txtBenifName5 As TextBox
+    Friend WithEvents txtBenifAge4 As TextBox
+    Friend WithEvents txtBenifAge3 As TextBox
+    Friend WithEvents txtBenifAge2 As TextBox
+    Friend WithEvents txtBenifAge1 As TextBox
+    Friend WithEvents txtBenifRel4 As TextBox
+    Friend WithEvents txtBenifRel3 As TextBox
+    Friend WithEvents txtBenifRel2 As TextBox
+    Friend WithEvents txtBenifRel1 As TextBox
+    Friend WithEvents txtBenifName4 As TextBox
+    Friend WithEvents txtBenifName3 As TextBox
+    Friend WithEvents txtBenifName2 As TextBox
     Friend WithEvents Label19 As Label
     Friend WithEvents Label18 As Label
 End Class
