@@ -54,7 +54,7 @@ Public Class Signup
         Dim opf As New OpenFileDialog
 
 
-        Dim destinationPath As String = Location & "\Resources\" & txtCreateUsername.Text & Path.GetExtension(opf.FileName)
+        Dim destinationPath As String = location & "\Resources\" & txtCreateUsername.Text & Path.GetExtension(opf.FileName)
         File.Copy(sourceFilePath, destinationPath, True)
         MsgBox("File saved to " & destinationPath)
         MessageBox.Show("File transferred successfully.")
@@ -108,5 +108,7 @@ Public Class Signup
         pBoxCreateProfile.Image = My.Resources.user
     End Sub
 
-
+    Private Sub btnCancel_MouseEnter(sender As Object, e As EventArgs) Handles btnCancel.MouseEnter
+        btnCancel.BackColor = 
+    End Sub
 End Class
