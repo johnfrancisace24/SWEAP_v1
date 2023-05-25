@@ -4,28 +4,28 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar
 Imports MySql.Data.MySqlClient
 
 Public Class userdashboard
-    Dim co As String = "server=172.30.206.81;port=3306;user=drugpusher;password=druguser;database=sweap"
+    Dim co As String = "server=172.30.206.81;port=3306;user=sweapp;password=druguser;database=sweap"
     Dim conn As New MySqlConnection(co)
     Dim cmd As MySqlCommand
     Dim i As Integer
     Dim dr As MySqlDataReader
 
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnprof.Click
         Panel3.Show()
         Panel1.Hide()
         Panel5.Hide()
 
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles btndash.Click
         Panel1.Show()
         Panel3.Hide()
         Panel5.Hide()
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btnview.Click
         Panel5.Show()
         Panel1.Hide()
         Panel3.Hide()
@@ -121,7 +121,5 @@ Public Class userdashboard
         End If
     End Sub
 
-    Private Sub fname_Click(sender As Object, e As EventArgs) Handles fname.Click
 
-    End Sub
 End Class
