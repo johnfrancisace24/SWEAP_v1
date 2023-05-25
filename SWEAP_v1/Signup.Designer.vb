@@ -400,6 +400,9 @@ Partial Class Signup
 
         Panel1.Size = New Size(1174, 837)
 
+
+        Panel1.Size = New Size(1174, 837)
+
         Panel1.TabIndex = 13
         ' 
         ' Label12
@@ -417,7 +420,7 @@ Partial Class Signup
         ' 
         ' txtLname
         ' 
-        txtLname.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txtLname.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
         txtLname.Location = New Point(491, 90)
         txtLname.Margin = New Padding(4, 3, 4, 3)
         txtLname.Name = "txtLname"
@@ -426,11 +429,14 @@ Partial Class Signup
         ' 
         ' Signup
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(10.0F, 25.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(255), CByte(204), CByte(51))
 
         ClientSize = New Size(844, 582)
+
+        ClientSize = New Size(1206, 870)
+
 
         ClientSize = New Size(1206, 870)
 
