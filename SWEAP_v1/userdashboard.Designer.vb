@@ -22,11 +22,12 @@ Partial Class userdashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(userdashboard))
         Panel2 = New Panel()
         Button5 = New Button()
-        Button4 = New Button()
-        Button3 = New Button()
-        Button2 = New Button()
+        btndash = New Button()
+        btnview = New Button()
+        btnprof = New Button()
         designation = New Label()
         fname = New Label()
         PictureBox1 = New PictureBox()
@@ -85,9 +86,9 @@ Partial Class userdashboard
         ' 
         Panel2.BackColor = Color.FromArgb(CByte(255), CByte(204), CByte(51))
         Panel2.Controls.Add(Button5)
-        Panel2.Controls.Add(Button4)
-        Panel2.Controls.Add(Button3)
-        Panel2.Controls.Add(Button2)
+        Panel2.Controls.Add(btndash)
+        Panel2.Controls.Add(btnview)
+        Panel2.Controls.Add(btnprof)
         Panel2.Controls.Add(designation)
         Panel2.Controls.Add(fname)
         Panel2.Controls.Add(PictureBox1)
@@ -114,56 +115,59 @@ Partial Class userdashboard
         Button5.Text = "LOG OUT"
         Button5.UseVisualStyleBackColor = True
         ' 
-        ' Button4
+        ' btndash
         ' 
-        Button4.Cursor = Cursors.Hand
-        Button4.FlatAppearance.BorderSize = 0
-        Button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(128), CByte(128))
-        Button4.FlatStyle = FlatStyle.Flat
-        Button4.ForeColor = SystemColors.ActiveCaptionText
-        Button4.Image = My.Resources.Resources.dashboard__2_
-        Button4.ImageAlign = ContentAlignment.MiddleLeft
-        Button4.Location = New Point(3, 259)
-        Button4.Name = "Button4"
-        Button4.Padding = New Padding(5, 0, 0, 0)
-        Button4.Size = New Size(239, 48)
-        Button4.TabIndex = 5
-        Button4.Text = "DASHBOARD"
-        Button4.UseVisualStyleBackColor = True
+        btndash.Cursor = Cursors.Hand
+        btndash.FlatAppearance.BorderSize = 0
+        btndash.FlatAppearance.CheckedBackColor = Color.Transparent
+        btndash.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(204), CByte(51))
+        btndash.FlatStyle = FlatStyle.Flat
+        btndash.ForeColor = SystemColors.ActiveCaptionText
+        btndash.Image = My.Resources.Resources.dashboard__2_
+        btndash.ImageAlign = ContentAlignment.MiddleLeft
+        btndash.Location = New Point(3, 259)
+        btndash.Name = "btndash"
+        btndash.Padding = New Padding(5, 0, 0, 0)
+        btndash.Size = New Size(239, 48)
+        btndash.TabIndex = 5
+        btndash.Text = "DASHBOARD"
+        btndash.UseVisualStyleBackColor = True
         ' 
-        ' Button3
+        ' btnview
         ' 
-        Button3.Cursor = Cursors.Hand
-        Button3.FlatAppearance.BorderSize = 0
-        Button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(128), CByte(128))
-        Button3.FlatStyle = FlatStyle.Flat
-        Button3.ForeColor = SystemColors.ActiveCaptionText
-        Button3.Image = My.Resources.Resources.group__2_
-        Button3.ImageAlign = ContentAlignment.MiddleLeft
-        Button3.Location = New Point(3, 363)
-        Button3.Name = "Button3"
-        Button3.Padding = New Padding(5, 0, 0, 0)
-        Button3.Size = New Size(239, 48)
-        Button3.TabIndex = 4
-        Button3.Text = "VIEW MEMBER"
-        Button3.UseVisualStyleBackColor = True
+        btnview.Cursor = Cursors.Hand
+        btnview.FlatAppearance.BorderSize = 0
+        btnview.FlatAppearance.CheckedBackColor = Color.Transparent
+        btnview.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(204), CByte(51))
+        btnview.FlatStyle = FlatStyle.Flat
+        btnview.ForeColor = SystemColors.ActiveCaptionText
+        btnview.Image = My.Resources.Resources.group__2_
+        btnview.ImageAlign = ContentAlignment.MiddleLeft
+        btnview.Location = New Point(3, 363)
+        btnview.Name = "btnview"
+        btnview.Padding = New Padding(5, 0, 0, 0)
+        btnview.Size = New Size(239, 48)
+        btnview.TabIndex = 4
+        btnview.Text = "VIEW MEMBER"
+        btnview.UseVisualStyleBackColor = True
         ' 
-        ' Button2
+        ' btnprof
         ' 
-        Button2.Cursor = Cursors.Hand
-        Button2.FlatAppearance.BorderSize = 0
-        Button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(128), CByte(128))
-        Button2.FlatStyle = FlatStyle.Flat
-        Button2.ForeColor = SystemColors.ActiveCaptionText
-        Button2.Image = My.Resources.Resources.avatar
-        Button2.ImageAlign = ContentAlignment.MiddleLeft
-        Button2.Location = New Point(3, 311)
-        Button2.Name = "Button2"
-        Button2.Padding = New Padding(5, 0, 0, 0)
-        Button2.Size = New Size(239, 48)
-        Button2.TabIndex = 3
-        Button2.Text = "PROFILE"
-        Button2.UseVisualStyleBackColor = True
+        btnprof.Cursor = Cursors.Hand
+        btnprof.FlatAppearance.BorderSize = 0
+        btnprof.FlatAppearance.CheckedBackColor = Color.Transparent
+        btnprof.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(204), CByte(51))
+        btnprof.FlatStyle = FlatStyle.Flat
+        btnprof.ForeColor = SystemColors.ActiveCaptionText
+        btnprof.Image = My.Resources.Resources.avatar
+        btnprof.ImageAlign = ContentAlignment.MiddleLeft
+        btnprof.Location = New Point(3, 311)
+        btnprof.Name = "btnprof"
+        btnprof.Padding = New Padding(5, 0, 0, 0)
+        btnprof.Size = New Size(239, 48)
+        btnprof.TabIndex = 3
+        btnprof.Text = "PROFILE"
+        btnprof.UseVisualStyleBackColor = True
         ' 
         ' designation
         ' 
@@ -201,13 +205,15 @@ Partial Class userdashboard
         ' Button1
         ' 
         Button1.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button1.Cursor = Cursors.Hand
         Button1.Dock = DockStyle.Right
+        Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point)
         Button1.ForeColor = SystemColors.ButtonHighlight
-        Button1.Location = New Point(1142, 0)
+        Button1.Location = New Point(1143, 0)
         Button1.Name = "Button1"
-        Button1.Size = New Size(47, 39)
+        Button1.Size = New Size(46, 39)
         Button1.TabIndex = 2
         Button1.Text = "X"
         Button1.UseVisualStyleBackColor = False
@@ -476,7 +482,6 @@ Partial Class userdashboard
         Label11.Dock = DockStyle.Left
         Label11.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Label11.ForeColor = SystemColors.ControlLightLight
-        Label11.Image = My.Resources.Resources.Logo3
         Label11.ImageAlign = ContentAlignment.MiddleLeft
         Label11.Location = New Point(0, 0)
         Label11.Name = "Label11"
@@ -585,6 +590,7 @@ Partial Class userdashboard
         Controls.Add(Panel5)
         Controls.Add(Panel3)
         FormBorderStyle = FormBorderStyle.None
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "userdashboard"
         StartPosition = FormStartPosition.CenterScreen
         Text = "userdashboard"
@@ -605,13 +611,13 @@ Partial Class userdashboard
         ResumeLayout(False)
     End Sub
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnview As Button
+    Friend WithEvents btnprof As Button
     Friend WithEvents designation As Label
     Friend WithEvents fname As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents btndash As Button
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Panel5 As Panel
