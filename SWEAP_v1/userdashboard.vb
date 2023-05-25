@@ -36,13 +36,15 @@ Public Class userdashboard
         Try
             conn.Open()
 
-            Dim query As String = "SELECT name FROM user"
+            Dim query As String = "SELECT first_name FROM user"
 
             Dim cmd As New MySqlCommand(query, conn)
+
+            'cmd.Parameters.AddWithValue("@id", dr.GetString("id"))
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
             If reader.Read() Then
-                Dim name As String = reader.GetString("name")
+                Dim name As String = reader.GetString("first_name")
                 fname.Text = name
             End If
             MsgBox("Gumana")
@@ -90,10 +92,10 @@ Public Class userdashboard
 
         Try
             conn.Open()
-            Dim cmd As New MySqlCommand("SELECT * FROM user", conn)
+            Dim cmd As New MySqlCommand("SELECT * FROM `user` ", conn)
             dr = cmd.ExecuteReader
             While dr.Read
-                DataGridView1.Rows.Add(dr.Item("name"), dr.Item("contact"), dr.Item("office"), dr.Item("region"), dr.Item("employment_type"), dr.Item("status_of_employment"), dr.Item("position"), dr.Item("designation"))
+                DataGridView1.Rows.Add(dr.Item("first_name"), dr.Item("contact"), dr.Item("office"), dr.Item("region"), dr.Item("employment_type"), dr.Item("status_of_employment"), dr.Item("position"), dr.Item("designation"))
             End While
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -106,6 +108,8 @@ Public Class userdashboard
         DGV_load()
         flname()
         position()
+        mem()
+
 
 
     End Sub
@@ -119,4 +123,7 @@ Public Class userdashboard
         End If
     End Sub
 
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
 End Class

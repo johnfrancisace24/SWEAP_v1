@@ -100,6 +100,7 @@ Partial Class userdashboard
         Button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(128), CByte(128))
         Button4.FlatStyle = FlatStyle.Flat
         Button4.ForeColor = SystemColors.ButtonHighlight
+        Button4.Image = My.Resources.Resources.layout
         Button4.ImageAlign = ContentAlignment.MiddleLeft
         Button4.Location = New Point(3, 245)
         Button4.Name = "Button4"
@@ -116,6 +117,7 @@ Partial Class userdashboard
         Button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(128), CByte(128))
         Button3.FlatStyle = FlatStyle.Flat
         Button3.ForeColor = SystemColors.ButtonHighlight
+        Button3.Image = My.Resources.Resources.team
         Button3.ImageAlign = ContentAlignment.MiddleLeft
         Button3.Location = New Point(3, 327)
         Button3.Name = "Button3"
@@ -132,6 +134,7 @@ Partial Class userdashboard
         Button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(128), CByte(128))
         Button2.FlatStyle = FlatStyle.Flat
         Button2.ForeColor = SystemColors.ButtonHighlight
+        Button2.Image = My.Resources.Resources.profile
         Button2.ImageAlign = ContentAlignment.MiddleLeft
         Button2.Location = New Point(3, 286)
         Button2.Name = "Button2"
@@ -440,14 +443,14 @@ Partial Class userdashboard
         Label11.Location = New Point(0, 0)
         Label11.Name = "Label11"
         Label11.Padding = New Padding(5, 0, 0, 0)
-        Label11.Size = New Size(369, 39)
+        Label11.Size = New Size(435, 39)
         Label11.TabIndex = 3
         Label11.Text = "Social Welfare Employees Association of the Philippines"
         Label11.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Panel5
         ' 
-        Panel5.BackColor = Color.Teal
+        Panel5.BackColor = Color.FromArgb(CByte(239), CByte(243), CByte(246))
         Panel5.Controls.Add(DataGridView1)
         Panel5.Controls.Add(TextBox1)
         Panel5.Controls.Add(Label3)
@@ -516,7 +519,7 @@ Partial Class userdashboard
         ' 
         ' TextBox1
         ' 
-        TextBox1.Location = New Point(689, 13)
+        TextBox1.Location = New Point(689, 14)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(237, 23)
         TextBox1.TabIndex = 1
@@ -525,7 +528,7 @@ Partial Class userdashboard
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label3.ForeColor = SystemColors.ButtonFace
+        Label3.ForeColor = SystemColors.ActiveCaptionText
         Label3.Location = New Point(620, 13)
         Label3.Name = "Label3"
         Label3.Size = New Size(63, 21)
@@ -538,11 +541,11 @@ Partial Class userdashboard
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(56), CByte(103), CByte(214))
         ClientSize = New Size(1189, 640)
-        Controls.Add(Panel1)
         Controls.Add(Panel2)
         Controls.Add(Panel4)
         Controls.Add(Panel5)
         Controls.Add(Panel3)
+        Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
         Name = "userdashboard"
         StartPosition = FormStartPosition.CenterScreen
