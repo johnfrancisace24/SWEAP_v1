@@ -106,6 +106,7 @@ Partial Class Form1
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        Label3.ForeColor = Color.White
         Label3.Location = New Point(400, 270)
         Label3.Name = "Label3"
         Label3.Size = New Size(128, 15)
@@ -114,10 +115,11 @@ Partial Class Form1
         ' 
         ' LinkLabelsignup
         ' 
+        LinkLabelsignup.ActiveLinkColor = Color.Cyan
         LinkLabelsignup.AutoSize = True
         LinkLabelsignup.DisabledLinkColor = Color.Transparent
         LinkLabelsignup.ForeColor = Color.Aqua
-        LinkLabelsignup.LinkColor = Color.AliceBlue
+        LinkLabelsignup.LinkColor = Color.DeepSkyBlue
         LinkLabelsignup.Location = New Point(542, 269)
         LinkLabelsignup.Name = "LinkLabelsignup"
         LinkLabelsignup.Size = New Size(73, 15)
@@ -184,6 +186,7 @@ Partial Class Form1
         Controls.Add(Panel1)
         ForeColor = Color.Black
         FormBorderStyle = FormBorderStyle.FixedSingle
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Margin = New Padding(3, 2, 3, 2)
         Name = "Form1"
         StartPosition = FormStartPosition.CenterScreen

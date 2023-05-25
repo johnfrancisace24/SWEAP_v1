@@ -108,7 +108,5 @@ Public Class Signup
         pBoxCreateProfile.Image = My.Resources.user
     End Sub
 
-    Private Sub btnCancel_MouseEnter(sender As Object, e As EventArgs) Handles btnCancel.MouseEnter
-        btnCancel.BackColor = 
-    End Sub
+
 End Class
