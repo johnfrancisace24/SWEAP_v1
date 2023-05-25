@@ -20,7 +20,6 @@ Public Class Signup
     Private Sub ButtonUpload_Click(sender As Object, e As EventArgs) Handles ButtonUpload.Click
         ' Dim imageInput As String
         Dim locateProject As String = Path.GetDirectoryName(Application.StartupPath)
-        Dim resourceLocation As String = Path.Combine(locateProject, "Resources")
         Dim opf As New OpenFileDialog
         Dim sourceFilePath As String
         opf.Filter = "Choose Image(*.jpg; *.png; *.gif) | * .jpg; *.png; *.gif"
