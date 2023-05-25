@@ -7,9 +7,10 @@ Public Class Signup
     Dim conn As New MySqlConnection(cnstr)
     Dim rid As MySqlDataReader
     Dim str As String
+    Dim sourceFilePath As String
 
 
-    Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles ButtonCancel.Click
+    Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Hide()
         Form1.Show()
     End Sub
@@ -20,13 +21,13 @@ Public Class Signup
     Dim arrimage() As Byte
     Private Sub ButtonUpload_Click(sender As Object, e As EventArgs) Handles ButtonUpload.Click
         ' Dim imageInput As String
-        Dim locateProject As String = My.Application.Info.DirectoryPath
-        Dim indext As Integer = locateProject.IndexOf("bin\Debug\net6.0-windows")
-        Dim location As String = locateProject.Substring(0, indext)
-        MsgBox(locateProject)
-        MsgBox(location)
+        ' Dim locateProject As String = My.Application.Info.DirectoryPath
+        ' Dim indext As Integer = locateProject.IndexOf("bin\Debug\net6.0-windows")
+        ' Dim location As String = locateProject.Substring(0, indext)
+        ' MsgBox(locateProject)
+        ' MsgBox(location)
         Dim opf As New OpenFileDialog
-        Dim sourceFilePath As String
+
         opf.Filter = "Choose Image(*.jpg; *.png; *.gif) | * .jpg; *.png; *.gif"
         'opf.InitialDirectory = "C:\"
         If opf.ShowDialog = DialogResult.OK Then
@@ -35,16 +36,31 @@ Public Class Signup
             pBoxCreateProfile.BackgroundImage = System.Drawing.Image.FromFile(sourceFilePath)
         End If
 
-        Dim destinationPath As String = location & "\Resources\" & txtCreateUsername.Text & Path.GetExtension(opf.FileName)
 
-
-        File.Copy(sourceFilePath, destinationPath, True)
-        MsgBox("File saved to " & destinationPath)
-        MessageBox.Show("File transferred successfully.")
+        ' Dim destinationPath As String = location & "\Resources\" & txtCreateUsername.Text & Path.GetExtension(opf.FileName)
+        ' File.Copy(sourceFilePath, destinationPath, True)
+        ' MsgBox("File saved to " & destinationPath)
+        ' MessageBox.Show("File transferred successfully.")
 
     End Sub
 
     Private Sub ButtonReg_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
+        '-------------------------SAVE PROFILE---------------------------------------
+        Dim locateProject As String = My.Application.Info.DirectoryPath
+        Dim indext As Integer = locateProject.IndexOf("bin\Debug\net6.0-windows")
+        Dim location As String = locateProject.Substring(0, indext)
+        MsgBox(locateProject)
+        MsgBox(location)
+        Dim opf As New OpenFileDialog
+
+
+        Dim destinationPath As String = location & "\Resources\" & txtCreateUsername.Text & Path.GetExtension(opf.FileName)
+        File.Copy(sourceFilePath, destinationPath, True)
+        MsgBox("File saved to " & destinationPath)
+        MessageBox.Show("File transferred successfully.")
+        '------------------------------------------------------------
+        Dim imageInput As String = txtCreateUsername.Text & Path.GetExtension(opf.FileName)
+
         If (txtFname.Text = "" Or txtLname.Text = "") Then
             MsgBox("Fields can't be blank.")
         Else
@@ -92,7 +108,7 @@ Public Class Signup
         pBoxCreateProfile.Image = My.Resources.user
     End Sub
 
-    Private Sub ButtonCancel_MouseEnter(sender As Object, e As EventArgs) Handles ButtonCancel.MouseEnter
-
+    Private Sub btnCancel_MouseEnter(sender As Object, e As EventArgs) Handles btnCancel.MouseEnter
+        btnCancel.BackColor = 
     End Sub
 End Class
