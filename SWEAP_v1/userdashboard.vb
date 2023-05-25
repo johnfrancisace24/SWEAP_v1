@@ -29,48 +29,6 @@ Public Class userdashboard
         Panel1.Hide()
     End Sub
 
-
-    Public Sub flname()
-        Try
-            conn.Open()
-
-            Dim query As String = "SELECT username, password, address, first_name, middle_name, last_name, position FROM user WHERE id=2"
-
-            Dim cmd As New MySqlCommand(query, conn)
-
-            'cmd.Parameters.AddWithValue("@id", dr.GetString("id"))
-            Dim dr As MySqlDataReader = cmd.ExecuteReader()
-
-            If dr.Read() Then
-                Dim name As String = (dr.GetString("first_name") + " " + dr.GetString("middle_name") + " " + dr.GetString("last_name"))
-                Dim des As String = dr.GetString("position")
-                Dim username As String = dr.GetString("username")
-                Dim password As String = dr.GetString("password")
-                Dim address As String = dr.GetString("Address")
-                Dim position As String = dr.GetString("position")
-                'Dim pic As String = dr.GetString("")
-
-                fname.Text = name
-                designation.Text = des
-                userTxt.Text = username
-                passTxt.Text = password
-                addTxt.Text = address
-                posTxt.Text = position
-            End If
-            MsgBox("Gumana")
-
-
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        Finally
-            If dr IsNot Nothing Then
-                dr.Close()
-            End If
-            conn.Close()
-        End Try
-
-    End Sub
-
     Public Sub mem()
         conn.Open()
         cmd = New MySqlCommand("SELECT count(*) FROM `user` ", conn)
@@ -84,7 +42,7 @@ Public Class userdashboard
 
     End Sub
     Private Sub userdashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        flname()
+
         mem()
     End Sub
 
@@ -93,7 +51,7 @@ Public Class userdashboard
         AnswerYes = MsgBox("Are you sure you want to Exit", vbQuestion + vbYesNo, "User Repsonse")
 
         If AnswerYes = vbYes Then
-            Me.Hide()
+            Close()
         End If
     End Sub
 
@@ -111,5 +69,21 @@ Public Class userdashboard
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 
+    End Sub
+
+    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
+        Try
+            conn.Open()
+            Dim cmd As New MySqlCommand("SELECT CONCAT(first_name, ' ', middle_name, ' ', last_name) AS fullName FROM user WHERE id=@ID", conn)
+            cmd.Parameters.AddWithValue("@ID", Form1.log_id)
+            dr = cmd.ExecuteReader
+            While dr.Read
+                lblFname.Text = dr.GetString("fullName")
+            End While
+        Catch ex As Exception
+            MsgBox("doesn't wokr lmao2")
+        Finally
+            conn.Close()
+        End Try
     End Sub
 End Class

@@ -29,7 +29,7 @@ Partial Class userdashboard
         btndash = New Button()
         btnprof = New Button()
         designation = New Label()
-        fname = New Label()
+        lblFname = New Label()
         PictureBox1 = New PictureBox()
         Button1 = New Button()
         Panel3 = New Panel()
@@ -87,7 +87,7 @@ Partial Class userdashboard
         Panel2.Controls.Add(btndash)
         Panel2.Controls.Add(btnprof)
         Panel2.Controls.Add(designation)
-        Panel2.Controls.Add(fname)
+        Panel2.Controls.Add(lblFname)
         Panel2.Controls.Add(PictureBox1)
         Panel2.Dock = DockStyle.Left
         Panel2.Location = New Point(0, 39)
@@ -174,16 +174,16 @@ Partial Class userdashboard
         designation.TabIndex = 2
         designation.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' fname
+        ' lblFname
         ' 
-        fname.Dock = DockStyle.Top
-        fname.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        fname.ForeColor = SystemColors.ActiveCaptionText
-        fname.Location = New Point(0, 164)
-        fname.Name = "fname"
-        fname.Size = New Size(245, 26)
-        fname.TabIndex = 1
-        fname.TextAlign = ContentAlignment.MiddleCenter
+        lblFname.Dock = DockStyle.Top
+        lblFname.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        lblFname.ForeColor = SystemColors.ActiveCaptionText
+        lblFname.Location = New Point(0, 164)
+        lblFname.Name = "lblFname"
+        lblFname.Size = New Size(245, 26)
+        lblFname.TabIndex = 1
+        lblFname.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' PictureBox1
         ' 
@@ -617,7 +617,7 @@ Partial Class userdashboard
     Friend WithEvents Panel2 As Panel
     Friend WithEvents btnprof As Button
     Friend WithEvents designation As Label
-    Friend WithEvents fname As Label
+    Friend WithEvents lblFname As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button1 As Button
     Friend WithEvents btndash As Button

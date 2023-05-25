@@ -1,5 +1,10 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Form1
+    '---------------------------FOR SESSION--------------------------------------------------------
+    Public Shared log_id As Integer
+
+    '----------------------------------------------------------------------------------------------
+
     Dim test As String = "server=172.30.206.81;port=3306;user=sweapp;password=druguser;database=sweap"
     Dim conn As New MySqlConnection(test)
     Dim gagi As Integer
@@ -25,10 +30,10 @@ Public Class Form1
 
         If (txtUser.Text = "") Then
             MsgBox("Username can't be blank.")
-        ElseIf (txtBoxPass.text = "") Then
+        ElseIf (txtBoxPass.Text = "") Then
             MsgBox("Password can't be blank.")
         Else
-            Dim status As String
+            Dim status As Integer = 3
             Try
                 conn.Open()
                 Dim cmd As New MySqlCommand("SELECT * FROM user WHERE username=@NAME AND password=@PASS", conn)
@@ -37,6 +42,7 @@ Public Class Form1
                 rid = cmd.ExecuteReader
                 While rid.Read
                     status = rid.GetInt32("is_admin")
+                    log_id = rid.GetInt32("id")
                 End While
             Catch ex As Exception
                 MsgBox("Account doesn't exist.")

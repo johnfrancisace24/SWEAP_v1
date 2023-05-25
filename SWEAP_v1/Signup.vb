@@ -8,6 +8,7 @@ Public Class Signup
     Dim rid As MySqlDataReader
     Dim str As String
     Dim sourceFilePath As String
+    Dim getExtension As String
 
 
     Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
@@ -34,6 +35,7 @@ Public Class Signup
             'imageInput = System.IO.Path.GetFullPath(opf.FileName)
             sourceFilePath = System.IO.Path.GetFullPath(opf.FileName)
             pBoxCreateProfile.BackgroundImage = System.Drawing.Image.FromFile(sourceFilePath)
+            getExtension = Path.GetExtension(opf.FileName)
         End If
 
 
@@ -63,7 +65,7 @@ Public Class Signup
             MsgBox("File saved to " & destinationPath)
             MessageBox.Show("File transferred successfully.")
             '------------------------------------------------------------
-            Dim imageInput As String = txtCreateUsername.Text & Path.GetExtension(opf.FileName)
+            Dim imageInput As String = "\" & txtCreateUsername.Text & getExtension
             Try
                 conn.Open()
                 Dim cmd As New MySqlCommand("INSERT INTO user(username, password, first_name, middle_name, last_name, address, contact, email, educational, 
