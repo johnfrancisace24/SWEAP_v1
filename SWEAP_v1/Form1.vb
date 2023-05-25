@@ -36,17 +36,17 @@ Public Class Form1
                 cmd.Parameters.AddWithValue("@PASS", txtBoxPass.Text)
                 rid = cmd.ExecuteReader
                 While rid.Read
-                    status = rid.GetString("status")
+                    status = rid.GetInt32("is_admin")
                 End While
             Catch ex As Exception
                 MsgBox("Account doesn't exist.")
             Finally
                 conn.Close()
             End Try
-            If (status = "admin") Then
+            If (status = 1) Then
                 AdminDashboard.Show()
                 Me.Hide()
-            ElseIf (status = "user") Then
+            ElseIf (status = 0) Then
                 userdashboard.Show()
                 Me.Hide()
             Else

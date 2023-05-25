@@ -2,7 +2,7 @@
 Imports MySql.Data.MySqlClient
 
 Public Class userdashboard
-    Dim co As String = "server=localhost;port=3306;user=root;password=;database=sweap"
+    Dim co As String = "server=172.30.206.81;port=3306;user=drugpusher;password=druguser;database=sweap"
     Dim conn As New MySqlConnection(co)
     Dim cmd As MySqlCommand
     Dim i As Integer
@@ -30,7 +30,7 @@ Public Class userdashboard
 
     End Sub
 
-<<<<<<< HEAD
+
     Public Sub flname()
         Try
             conn.Open()
@@ -108,6 +108,5 @@ Public Class userdashboard
             Me.Hide()
         End If
     End Sub
-=======
->>>>>>> 6c008a8f62523f16b4c998bddae8d1317aa28f9f
+
 End Class

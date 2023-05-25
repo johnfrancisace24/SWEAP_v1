@@ -37,27 +37,11 @@ Public Class Signup
         If (txtFname.Text = "" Or txtLname.Text = "") Then
             MsgBox("Fields can't be blank.")
         Else
-            Dim getID As Integer
             Try
                 conn.Open()
-                Dim cmd As New MySqlCommand("INSERT INTO user(username, password, email, created_at, updated_at)
-                                            VALUES(@NAME, @PW, @EMAIL, NOW(), NOW()", conn)
-                Dim cmd2 As New MySqlCommand("SELECT * FROM user WHERE username=@USERNAME", conn)
-                Dim cmd3 As New MySqlCommand("INSERT INTO user_info(user_id, first_name, last_name)VALUES(@UID, @FNAME, @LNAME)", conn)
-                cmd.Parameters.AddWithValue("@NAME", txtCreateUsername.Text)
-                cmd.Parameters.AddWithValue("@PW", txtCreatePw.Text)
-                cmd.Parameters.AddWithValue("@EMAIL", txtEmail.Text)
-                cmd.ExecuteNonQuery()
-                cmd2.Parameters.AddWithValue("@USERNAME", txtCreateUsername.Text)
-
-                rid = cmd2.ExecuteReader
-                While rid.Read
-                    getID = rid.GetInt32("id")
-                End While
-                cmd3.Parameters.AddWithValue("@UID", getID)
-                cmd3.Parameters.AddWithValue("FNAME", txtFname.Text)
-                cmd3.Parameters.AddWithValue("@LNAME", txtLname.Text)
-                cmd3.ExecuteNonQuery()
+                Dim cmd As New MySqlCommand("INSERT INTO user(username, password, first_name, last_name, contact, email, office, region, employment_type
+                                             employment_status, position, designation, image, id_admin create_at, updated_at) VALUES(@UNAME, @PW, @FNAME, 
+                                             @LNAME, @CONTACT, @EMAIL, @OFFICE, @REGION, @EMPTYPE, @EMSTAT, @POSITION, @DESIGNATION, @IMG, @ISADMIN, NOW(), NOW()", conn)
                 MsgBox("successfully added")
             Catch ex As Exception
                 MsgBox("Doesn't work lmao.")

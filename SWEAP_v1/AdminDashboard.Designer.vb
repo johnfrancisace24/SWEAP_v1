@@ -60,7 +60,7 @@ Partial Class AdminDashboard
         bttnLogout.FlatAppearance.BorderSize = 0
         bttnLogout.FlatStyle = FlatStyle.Flat
         bttnLogout.Font = New Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        bttnLogout.Image = My.Resources.Resources.exit1
+        ' bttnLogout.Image = My.Resources.Resources.exit1
         bttnLogout.ImageAlign = ContentAlignment.MiddleLeft
         bttnLogout.Location = New Point(0, 730)
         bttnLogout.Name = "bttnLogout"
@@ -96,7 +96,7 @@ Partial Class AdminDashboard
         bttnFundtran.FlatAppearance.BorderSize = 0
         bttnFundtran.FlatStyle = FlatStyle.Flat
         bttnFundtran.Font = New Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        bttnFundtran.Image = My.Resources.Resources.fund
+        'bttnFundtran.Image = My.Resources.Resources.fund
         bttnFundtran.ImageAlign = ContentAlignment.MiddleLeft
         bttnFundtran.Location = New Point(0, 434)
         bttnFundtran.Name = "bttnFundtran"
@@ -112,7 +112,7 @@ Partial Class AdminDashboard
         bttnEmploy.FlatAppearance.BorderSize = 0
         bttnEmploy.FlatStyle = FlatStyle.Flat
         bttnEmploy.Font = New Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        bttnEmploy.Image = My.Resources.Resources.team
+        ' bttnEmploy.Image = My.Resources.Resources.team
         bttnEmploy.ImageAlign = ContentAlignment.MiddleLeft
         bttnEmploy.Location = New Point(0, 363)
         bttnEmploy.Name = "bttnEmploy"
@@ -128,7 +128,7 @@ Partial Class AdminDashboard
         bttnDashboard.FlatAppearance.BorderSize = 0
         bttnDashboard.FlatStyle = FlatStyle.Flat
         bttnDashboard.Font = New Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        bttnDashboard.Image = My.Resources.Resources.dashboard
+        ' bttnDashboard.Image = My.Resources.Resources.dashboard
         bttnDashboard.ImageAlign = ContentAlignment.MiddleLeft
         bttnDashboard.Location = New Point(0, 292)
         bttnDashboard.Name = "bttnDashboard"
