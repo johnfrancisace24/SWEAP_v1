@@ -15,24 +15,26 @@ Public Class userdashboard
         Panel3.Show()
         Panel1.Hide()
         Panel5.Hide()
-
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles btndash.Click
         Panel1.Show()
         Panel3.Hide()
         Panel5.Hide()
-
     End Sub
 
-
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        Panel5.Show()
+        Panel3.Hide()
+        Panel1.Hide()
+    End Sub
 
 
     Public Sub flname()
         Try
             conn.Open()
 
-            Dim query As String = "SELECT first_name, designation  FROM user"
+            Dim query As String = "SELECT username, password, address, first_name, middle_name, last_name, position FROM user WHERE id=2"
 
             Dim cmd As New MySqlCommand(query, conn)
 
@@ -40,11 +42,20 @@ Public Class userdashboard
             Dim dr As MySqlDataReader = cmd.ExecuteReader()
 
             If dr.Read() Then
-                Dim name As String = dr.GetString("first_name")
-                Dim des As String = dr.GetString("designation")
+                Dim name As String = (dr.GetString("first_name") + " " + dr.GetString("middle_name") + " " + dr.GetString("last_name"))
+                Dim des As String = dr.GetString("position")
+                Dim username As String = dr.GetString("username")
+                Dim password As String = dr.GetString("password")
+                Dim address As String = dr.GetString("Address")
+                Dim position As String = dr.GetString("position")
                 'Dim pic As String = dr.GetString("")
+
                 fname.Text = name
                 designation.Text = des
+                userTxt.Text = username
+                passTxt.Text = password
+                addTxt.Text = address
+                posTxt.Text = position
             End If
             MsgBox("Gumana")
 
@@ -52,7 +63,9 @@ Public Class userdashboard
         Catch ex As Exception
             MsgBox(ex.Message)
         Finally
-            dr.Close()
+            If dr IsNot Nothing Then
+                dr.Close()
+            End If
             conn.Close()
         End Try
 
@@ -71,12 +84,8 @@ Public Class userdashboard
 
     End Sub
     Private Sub userdashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        DGV_load()
         flname()
         mem()
-
-
-
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -100,5 +109,7 @@ Public Class userdashboard
         End If
     End Sub
 
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 
+    End Sub
 End Class
