@@ -28,7 +28,7 @@ Partial Class userdashboard
         Button5 = New Button()
         btndash = New Button()
         btnprof = New Button()
-        designation = New Label()
+        lblpostion = New Label()
         lblFname = New Label()
         imgProfile = New PictureBox()
         Button1 = New Button()
@@ -86,7 +86,7 @@ Partial Class userdashboard
         Panel2.Controls.Add(Button5)
         Panel2.Controls.Add(btndash)
         Panel2.Controls.Add(btnprof)
-        Panel2.Controls.Add(designation)
+        Panel2.Controls.Add(lblpostion)
         Panel2.Controls.Add(lblFname)
         Panel2.Controls.Add(imgProfile)
         Panel2.Dock = DockStyle.Left
@@ -163,15 +163,16 @@ Partial Class userdashboard
         btnprof.Text = "PROFILE"
         btnprof.UseVisualStyleBackColor = True
         ' 
-        ' designation
+        ' lblpostion
         ' 
-        designation.Font = New Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        designation.ForeColor = SystemColors.ActiveCaptionText
-        designation.Location = New Point(0, 199)
-        designation.Name = "designation"
-        designation.Size = New Size(245, 20)
-        designation.TabIndex = 2
-        designation.TextAlign = ContentAlignment.MiddleCenter
+        lblpostion.Font = New Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        lblpostion.ForeColor = SystemColors.ActiveCaptionText
+        lblpostion.Location = New Point(3, 202)
+        lblpostion.Name = "lblpostion"
+        lblpostion.Size = New Size(242, 20)
+        lblpostion.TabIndex = 2
+        lblpostion.Text = "--------------------"
+        lblpostion.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' lblFname
         ' 
@@ -179,8 +180,9 @@ Partial Class userdashboard
         lblFname.ForeColor = SystemColors.ActiveCaptionText
         lblFname.Location = New Point(0, 173)
         lblFname.Name = "lblFname"
-        lblFname.Size = New Size(245, 26)
+        lblFname.Size = New Size(242, 26)
         lblFname.TabIndex = 1
+        lblFname.Text = "---------------------"
         lblFname.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' imgProfile
@@ -588,9 +590,9 @@ Partial Class userdashboard
         ClientSize = New Size(1189, 640)
         Controls.Add(Panel2)
         Controls.Add(Panel4)
+        Controls.Add(Panel5)
         Controls.Add(Panel1)
         Controls.Add(Panel3)
-        Controls.Add(Panel5)
         FormBorderStyle = FormBorderStyle.None
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "userdashboard"
@@ -613,7 +615,7 @@ Partial Class userdashboard
     End Sub
     Friend WithEvents Panel2 As Panel
     Friend WithEvents btnprof As Button
-    Friend WithEvents designation As Label
+    Friend WithEvents lblpostion As Label
     Friend WithEvents lblFname As Label
     Friend WithEvents imgProfile As PictureBox
     Friend WithEvents Button1 As Button

@@ -52,7 +52,7 @@ Public Class userdashboard
         AnswerYes = MsgBox("Are you sure you want to Exit", vbQuestion + vbYesNo, "User Repsonse")
 
         If AnswerYes = vbYes Then
-            Close()
+            Application.Exit()
         End If
     End Sub
 
@@ -80,18 +80,24 @@ Public Class userdashboard
         Dim pathCatcher As String
         Try
             conn.Open()
-            Dim cmd As New MySqlCommand("SELECT CONCAT(first_name, ' ', middle_name, ' ', last_name) AS fullName, image FROM user WHERE id=@ID", conn)
+            Dim cmd As New MySqlCommand("SELECT CONCAT(first_name, ' ', middle_name, ' ', last_name) AS fullName, * FROM user WHERE id=@ID", conn)
             cmd.Parameters.AddWithValue("@ID", Form1.log_id)
             dr = cmd.ExecuteReader
             While dr.Read
                 lblFname.Text = dr.GetString("fullName")
-                pathCatcher = dr.GetString("image")
+                'pathCatcher = dr.GetString("image")
+                lblpostion.Text = dr.GetString("position")
+                userTxt.Text = dr.GetString("username")
+                passTxt.Text = dr.GetString("password")
+                addTxt.Text = dr.GetString("address")
+                posTxt.Text = dr.GetString("position")
+
             End While
         Catch ex As Exception
             MsgBox("doesn't wokr lmao2")
         Finally
             conn.Close()
         End Try
-        imgProfile.BackgroundImage = Image.FromFile(destinationPath & pathCatcher)
+        'imgProfile.BackgroundImage = Image.FromFile(destinationPath & pathCatcher)
     End Sub
 End Class
