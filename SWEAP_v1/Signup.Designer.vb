@@ -58,7 +58,7 @@ Partial Class Signup
         ' 
         ' ButtonCancel
         ' 
-        ButtonCancel.BackColor = Color.PaleVioletRed
+        ButtonCancel.BackColor = Color.FromArgb(CByte(45), CByte(152), CByte(218))
         ButtonCancel.FlatStyle = FlatStyle.Flat
         ButtonCancel.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         ButtonCancel.Location = New Point(228, 434)
@@ -71,7 +71,7 @@ Partial Class Signup
         ' 
         ' btnRegister
         ' 
-        btnRegister.BackColor = Color.SpringGreen
+        btnRegister.BackColor = Color.FromArgb(CByte(45), CByte(152), CByte(218))
         btnRegister.FlatStyle = FlatStyle.Flat
         btnRegister.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         btnRegister.Location = New Point(446, 434)
