@@ -71,35 +71,22 @@ Public Class userdashboard
     Sub Edit()
         Try
             conn.Open()
-            Dim cmd As New MySqlCommand("UPDATE `user` SET `username`=@username,`password`=@password,`address`=@address  WHERE `id`=@id", conn)
+            Dim cmd As New MySqlCommand("UPDATE `user` SET `username`=@username,`password`=@password,`address`=@address, `position`=@position WHERE `id`=@id", conn)
             'cmd.Parameters.Clear()
             'cmd.Parameters.AddWithValue("@id", form1.log_id)
-            'cmd.Parameters.AddWithValue("@FIRSTNAME", fname.Text)
-            'cmd.Parameters.AddWithValue("@MIDDLENAME", mname.Text)
-            'cmd.Parameters.AddWithValue("@LASTNAME", lname.Text)
-            'cmd.Parameters.AddWithValue("@ADDRESS", lname.Text)
-            'cmd.Parameters.AddWithValue("@GENDER", gend.Text)
-            'cmd.Parameters.AddWithValue("@COURSE", course.Text)
-            'cmd.Parameters.AddWithValue("@YEAR", Year.Text)
-            'cmd.Parameters.AddWithValue("@SECTION", section.Text)
-            'cmd.Parameters.AddWithValue("@STATUS", status.Text)
-            'cmd.Parameters.AddWithValue("@BDATE", DateTime.Value)
+            'cmd.Parameters.AddWithValue("@username", fname.Text)
+            'cmd.Parameters.AddWithValue("@password", mname.Text)
+            'cmd.Parameters.AddWithValue("@address", lname.Text)
+            'cmd.Parameters.AddWithValue("@position", lname.Text)
 
-            i = cmd.ExecuteNonQuery
-            If (i > 0) Then
-                MessageBox.Show("Updated successfully!", "ALERT")
-            Else
-                MessageBox.Show("Please!, Select a record to update details.", "ALERT")
-            End If
+            cmd.ExecuteNonQuery()
+            MessageBox.Show("Updated successfully!", "ALERT")
         Catch ex As Exception
+            MessageBox.Show("Please!, Select a record to update details.", "ALERT")
             MsgBox(ex.Message)
         Finally
             conn.Close()
         End Try
-        DGV_load()
-        'Clear()
-
-
     End Sub
 
 
@@ -132,7 +119,11 @@ Public Class userdashboard
         'imgProfile.BackgroundImage = Image.FromFile(destinationPath & pathCatcher)
     End Sub
 
-    Private Sub Label11_Click(sender As Object, e As EventArgs) Handles Label11.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Edit()
+    End Sub
+
+    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
 
     End Sub
 End Class

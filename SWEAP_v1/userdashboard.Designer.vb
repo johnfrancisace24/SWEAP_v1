@@ -34,17 +34,13 @@ Partial Class userdashboard
         Button1 = New Button()
         Panel3 = New Panel()
         TextBox6 = New TextBox()
-        TextBox7 = New TextBox()
         TextBox8 = New TextBox()
         TextBox9 = New TextBox()
-        TextBox5 = New TextBox()
         TextBox4 = New TextBox()
         TextBox3 = New TextBox()
         TextBox2 = New TextBox()
-        Label9 = New Label()
         Label2 = New Label()
         Label1 = New Label()
-        Label7 = New Label()
         Label6 = New Label()
         Label5 = New Label()
         Label4 = New Label()
@@ -69,6 +65,15 @@ Partial Class userdashboard
         Label15 = New Label()
         Label14 = New Label()
         Label3 = New Label()
+        TextBox1 = New TextBox()
+        Label7 = New Label()
+        TextBox5 = New TextBox()
+        Label17 = New Label()
+        TextBox10 = New TextBox()
+        Label18 = New Label()
+        TextBox11 = New TextBox()
+        Label19 = New Label()
+        Label9 = New Label()
         Panel2.SuspendLayout()
         CType(imgProfile, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
@@ -214,18 +219,23 @@ Partial Class userdashboard
         ' Panel3
         ' 
         Panel3.BackColor = Color.FromArgb(CByte(239), CByte(243), CByte(246))
+        Panel3.Controls.Add(Label9)
+        Panel3.Controls.Add(TextBox11)
+        Panel3.Controls.Add(Label19)
+        Panel3.Controls.Add(TextBox10)
+        Panel3.Controls.Add(Label18)
+        Panel3.Controls.Add(TextBox5)
+        Panel3.Controls.Add(Label17)
+        Panel3.Controls.Add(TextBox1)
+        Panel3.Controls.Add(Label7)
         Panel3.Controls.Add(TextBox6)
-        Panel3.Controls.Add(TextBox7)
         Panel3.Controls.Add(TextBox8)
         Panel3.Controls.Add(TextBox9)
-        Panel3.Controls.Add(TextBox5)
         Panel3.Controls.Add(TextBox4)
         Panel3.Controls.Add(TextBox3)
         Panel3.Controls.Add(TextBox2)
-        Panel3.Controls.Add(Label9)
         Panel3.Controls.Add(Label2)
         Panel3.Controls.Add(Label1)
-        Panel3.Controls.Add(Label7)
         Panel3.Controls.Add(Label6)
         Panel3.Controls.Add(Label5)
         Panel3.Controls.Add(Label4)
@@ -237,147 +247,111 @@ Partial Class userdashboard
         ' 
         ' TextBox6
         ' 
-        TextBox6.Location = New Point(597, 218)
+        TextBox6.Location = New Point(482, 204)
         TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(257, 23)
+        TextBox6.Size = New Size(298, 23)
         TextBox6.TabIndex = 18
-        ' 
-        ' TextBox7
-        ' 
-        TextBox7.Location = New Point(597, 184)
-        TextBox7.Name = "TextBox7"
-        TextBox7.Size = New Size(257, 23)
-        TextBox7.TabIndex = 17
         ' 
         ' TextBox8
         ' 
-        TextBox8.Location = New Point(597, 150)
+        TextBox8.Location = New Point(483, 264)
         TextBox8.Name = "TextBox8"
-        TextBox8.Size = New Size(257, 23)
+        TextBox8.Size = New Size(298, 23)
         TextBox8.TabIndex = 16
         ' 
         ' TextBox9
         ' 
-        TextBox9.Location = New Point(597, 116)
+        TextBox9.Location = New Point(483, 324)
         TextBox9.Name = "TextBox9"
-        TextBox9.Size = New Size(257, 23)
+        TextBox9.Size = New Size(298, 23)
         TextBox9.TabIndex = 15
-        ' 
-        ' TextBox5
-        ' 
-        TextBox5.Location = New Point(146, 216)
-        TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(257, 23)
-        TextBox5.TabIndex = 14
         ' 
         ' TextBox4
         ' 
-        TextBox4.Location = New Point(146, 182)
+        TextBox4.Location = New Point(140, 204)
         TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(257, 23)
+        TextBox4.Size = New Size(298, 23)
         TextBox4.TabIndex = 13
         ' 
         ' TextBox3
         ' 
-        TextBox3.Location = New Point(146, 148)
+        TextBox3.Location = New Point(140, 148)
         TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(257, 23)
+        TextBox3.Size = New Size(298, 23)
         TextBox3.TabIndex = 12
         ' 
         ' TextBox2
         ' 
-        TextBox2.Location = New Point(146, 114)
+        TextBox2.Location = New Point(140, 95)
         TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(257, 23)
+        TextBox2.Size = New Size(298, 23)
         TextBox2.TabIndex = 11
-        ' 
-        ' Label9
-        ' 
-        Label9.AutoSize = True
-        Label9.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label9.ForeColor = SystemColors.ActiveCaptionText
-        Label9.Location = New Point(490, 184)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(101, 21)
-        Label9.TabIndex = 10
-        Label9.Text = "Designation:"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Label2.ForeColor = SystemColors.ActiveCaptionText
-        Label2.Location = New Point(415, 150)
+        Label2.Location = New Point(483, 240)
         Label2.Name = "Label2"
-        Label2.Size = New Size(176, 21)
+        Label2.Size = New Size(149, 21)
         Label2.TabIndex = 8
-        Label2.Text = "Status of employment:"
+        Label2.Text = "Employment status"
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.ForeColor = SystemColors.ActiveCaptionText
-        Label1.Location = New Point(448, 118)
+        Label1.Location = New Point(483, 300)
         Label1.Name = "Label1"
-        Label1.Size = New Size(143, 21)
+        Label1.Size = New Size(92, 21)
         Label1.TabIndex = 7
-        Label1.Text = "Employment type:"
-        ' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label7.ForeColor = SystemColors.ActiveCaptionText
-        Label7.Location = New Point(74, 218)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(66, 21)
-        Label7.TabIndex = 6
-        Label7.Text = "Region:"
+        Label1.Text = "Committee"
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Label6.ForeColor = SystemColors.ActiveCaptionText
-        Label6.Location = New Point(81, 184)
+        Label6.Location = New Point(140, 180)
         Label6.Name = "Label6"
-        Label6.Size = New Size(59, 21)
+        Label6.Size = New Size(67, 21)
         Label6.TabIndex = 5
-        Label6.Text = "Office:"
+        Label6.Text = "Contact"
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Label5.ForeColor = SystemColors.ActiveCaptionText
-        Label5.Location = New Point(69, 150)
+        Label5.Location = New Point(140, 124)
         Label5.Name = "Label5"
-        Label5.Size = New Size(71, 21)
+        Label5.Size = New Size(70, 21)
         Label5.TabIndex = 4
-        Label5.Text = "Contact:"
+        Label5.Text = "Address"
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Label4.ForeColor = SystemColors.ActiveCaptionText
-        Label4.Location = New Point(83, 114)
+        Label4.Location = New Point(140, 71)
         Label4.Name = "Label4"
-        Label4.Size = New Size(57, 21)
+        Label4.Size = New Size(53, 21)
         Label4.TabIndex = 3
-        Label4.Text = "Name:"
+        Label4.Text = "Name"
         ' 
         ' Label8
         ' 
         Label8.AutoSize = True
         Label8.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Label8.ForeColor = SystemColors.ActiveCaptionText
-        Label8.Location = New Point(523, 218)
+        Label8.Location = New Point(482, 180)
         Label8.Name = "Label8"
-        Label8.Size = New Size(68, 21)
+        Label8.Size = New Size(64, 21)
         Label8.TabIndex = 9
-        Label8.Text = "Postion:"
+        Label8.Text = "Postion"
         ' 
         ' Panel1
         ' 
@@ -506,7 +480,7 @@ Partial Class userdashboard
         Button3.BackColor = Color.FromArgb(CByte(255), CByte(204), CByte(51))
         Button3.Cursor = Cursors.Hand
         Button3.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Button3.Location = New Point(163, 218)
+        Button3.Location = New Point(472, 214)
         Button3.Name = "Button3"
         Button3.Size = New Size(104, 32)
         Button3.TabIndex = 8
@@ -515,21 +489,21 @@ Partial Class userdashboard
         ' 
         ' posTxt
         ' 
-        posTxt.Location = New Point(163, 181)
+        posTxt.Location = New Point(420, 185)
         posTxt.Name = "posTxt"
         posTxt.Size = New Size(213, 23)
         posTxt.TabIndex = 7
         ' 
         ' addTxt
         ' 
-        addTxt.Location = New Point(163, 152)
+        addTxt.Location = New Point(420, 156)
         addTxt.Name = "addTxt"
         addTxt.Size = New Size(213, 23)
         addTxt.TabIndex = 6
         ' 
         ' passTxt
         ' 
-        passTxt.Location = New Point(163, 122)
+        passTxt.Location = New Point(420, 126)
         passTxt.Name = "passTxt"
         passTxt.PasswordChar = "*"c
         passTxt.Size = New Size(213, 23)
@@ -537,7 +511,7 @@ Partial Class userdashboard
         ' 
         ' userTxt
         ' 
-        userTxt.Location = New Point(163, 93)
+        userTxt.Location = New Point(420, 97)
         userTxt.Name = "userTxt"
         userTxt.Size = New Size(213, 23)
         userTxt.TabIndex = 4
@@ -546,7 +520,7 @@ Partial Class userdashboard
         ' 
         Label16.AutoSize = True
         Label16.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label16.Location = New Point(85, 183)
+        Label16.Location = New Point(342, 187)
         Label16.Name = "Label16"
         Label16.Size = New Size(72, 21)
         Label16.TabIndex = 3
@@ -556,7 +530,7 @@ Partial Class userdashboard
         ' 
         Label15.AutoSize = True
         Label15.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label15.Location = New Point(83, 154)
+        Label15.Location = New Point(340, 158)
         Label15.Name = "Label15"
         Label15.Size = New Size(74, 21)
         Label15.TabIndex = 2
@@ -566,7 +540,7 @@ Partial Class userdashboard
         ' 
         Label14.AutoSize = True
         Label14.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label14.Location = New Point(74, 124)
+        Label14.Location = New Point(331, 128)
         Label14.Name = "Label14"
         Label14.Size = New Size(83, 21)
         Label14.TabIndex = 1
@@ -576,11 +550,94 @@ Partial Class userdashboard
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label3.Location = New Point(70, 95)
+        Label3.Location = New Point(327, 99)
         Label3.Name = "Label3"
         Label3.Size = New Size(87, 21)
         Label3.TabIndex = 0
         Label3.Text = "Username:"
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Location = New Point(140, 264)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(298, 23)
+        TextBox1.TabIndex = 20
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label7.ForeColor = SystemColors.ActiveCaptionText
+        Label7.Location = New Point(140, 240)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(48, 21)
+        Label7.TabIndex = 19
+        Label7.Text = "Email"
+        ' 
+        ' TextBox5
+        ' 
+        TextBox5.Location = New Point(140, 324)
+        TextBox5.Name = "TextBox5"
+        TextBox5.Size = New Size(298, 23)
+        TextBox5.TabIndex = 22
+        ' 
+        ' Label17
+        ' 
+        Label17.AutoSize = True
+        Label17.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label17.ForeColor = SystemColors.ActiveCaptionText
+        Label17.Location = New Point(140, 300)
+        Label17.Name = "Label17"
+        Label17.Size = New Size(177, 21)
+        Label17.TabIndex = 21
+        Label17.Text = "Educational attainment" & vbCrLf
+        ' 
+        ' TextBox10
+        ' 
+        TextBox10.Location = New Point(482, 95)
+        TextBox10.Name = "TextBox10"
+        TextBox10.Size = New Size(298, 23)
+        TextBox10.TabIndex = 24
+        ' 
+        ' Label18
+        ' 
+        Label18.AutoSize = True
+        Label18.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label18.ForeColor = SystemColors.ActiveCaptionText
+        Label18.Location = New Point(482, 71)
+        Label18.Name = "Label18"
+        Label18.Size = New Size(78, 21)
+        Label18.TabIndex = 23
+        Label18.Text = "Birthdate"
+        ' 
+        ' TextBox11
+        ' 
+        TextBox11.Location = New Point(482, 147)
+        TextBox11.Name = "TextBox11"
+        TextBox11.Size = New Size(298, 23)
+        TextBox11.TabIndex = 26
+        ' 
+        ' Label19
+        ' 
+        Label19.AutoSize = True
+        Label19.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label19.ForeColor = SystemColors.ActiveCaptionText
+        Label19.Location = New Point(482, 123)
+        Label19.Name = "Label19"
+        Label19.Size = New Size(55, 21)
+        Label19.TabIndex = 25
+        Label19.Text = "Office"
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label9.ForeColor = SystemColors.ActiveCaptionText
+        Label9.Location = New Point(140, 400)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(103, 21)
+        Label9.TabIndex = 27
+        Label9.Text = "Contribution"
         ' 
         ' userdashboard
         ' 
@@ -622,19 +679,15 @@ Partial Class userdashboard
     Friend WithEvents btndash As Button
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox7 As TextBox
     Friend WithEvents TextBox8 As TextBox
     Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents TextBox5 As TextBox
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
@@ -659,4 +712,13 @@ Partial Class userdashboard
     Friend WithEvents Label14 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Button3 As Button
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents Label19 As Label
+    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label9 As Label
 End Class
