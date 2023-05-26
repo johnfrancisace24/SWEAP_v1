@@ -68,9 +68,40 @@ Public Class userdashboard
         End If
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Sub Edit()
+        Try
+            conn.Open()
+            Dim cmd As New MySqlCommand("UPDATE `user` SET `username`=@username,`password`=@password,`address`=@address  WHERE `id`=@id", conn)
+            'cmd.Parameters.Clear()
+            'cmd.Parameters.AddWithValue("@id", form1.log_id)
+            'cmd.Parameters.AddWithValue("@FIRSTNAME", fname.Text)
+            'cmd.Parameters.AddWithValue("@MIDDLENAME", mname.Text)
+            'cmd.Parameters.AddWithValue("@LASTNAME", lname.Text)
+            'cmd.Parameters.AddWithValue("@ADDRESS", lname.Text)
+            'cmd.Parameters.AddWithValue("@GENDER", gend.Text)
+            'cmd.Parameters.AddWithValue("@COURSE", course.Text)
+            'cmd.Parameters.AddWithValue("@YEAR", Year.Text)
+            'cmd.Parameters.AddWithValue("@SECTION", section.Text)
+            'cmd.Parameters.AddWithValue("@STATUS", status.Text)
+            'cmd.Parameters.AddWithValue("@BDATE", DateTime.Value)
+
+            i = cmd.ExecuteNonQuery
+            If (i > 0) Then
+                MessageBox.Show("Updated successfully!", "ALERT")
+            Else
+                MessageBox.Show("Please!, Select a record to update details.", "ALERT")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            conn.Close()
+        End Try
+        DGV_load()
+        'Clear()
+
 
     End Sub
+
 
     Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
         Dim locateProject As String = My.Application.Info.DirectoryPath
