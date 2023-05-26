@@ -48,7 +48,8 @@ Public Class Signup
 
     Private Sub ButtonReg_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
 
-        If (txtFname.Text = "" Or txtLname.Text = "") Then
+        If (txtFname.Text = "" Or txtLname.Text = "" Or txtMname.Text = "" Or txtAddress.Text = "" Or txtContact.Text = "" Or txtEmail.Text = "" Or txtEduc.Text = "" Or
+            txtCreateUsername.Text = "" Or txtCreatePw.Text = "") Then
             MsgBox("Fields can't be blank.")
         Else
             '-------------------------SAVE PROFILE---------------------------------------
