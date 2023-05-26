@@ -86,11 +86,11 @@ Public Class userdashboard
             While dr.Read
                 lblFname.Text = dr.GetString("fullName")
                 'pathCatcher = dr.GetString("image")
-                lblpostion.Text = dr.GetString("position")
-                userTxt.Text = dr.GetString("username")
-                passTxt.Text = dr.GetString("password")
-                addTxt.Text = dr.GetString("address")
-                posTxt.Text = dr.GetString("position")
+                'lblpostion.Text = dr.GetString("position")
+                'userTxt.Text = dr.GetString("username")
+                ' passTxt.Text = dr.GetString("password")
+                'addTxt.Text = dr.GetString("address")
+                'posTxt.Text = dr.GetString("position")
 
             End While
         Catch ex As Exception
@@ -99,5 +99,9 @@ Public Class userdashboard
             conn.Close()
         End Try
         'imgProfile.BackgroundImage = Image.FromFile(destinationPath & pathCatcher)
+    End Sub
+
+    Private Sub Label11_Click(sender As Object, e As EventArgs) Handles Label11.Click
+
     End Sub
 End Class
