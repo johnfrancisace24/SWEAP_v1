@@ -31,13 +31,13 @@ Public Class userdashboard
     End Sub
 
     Public Sub mem()
-        conn.Open()
-        cmd = New MySqlCommand("SELECT count(*) FROM `user` ", conn)
+        'conn.Open()
+        'cmd = New MySqlCommand("SELECT count(*) FROM `user` ", conn)
 
-        Dim count1 = Convert.ToString(cmd.ExecuteScalar)
+        'Dim count1 = Convert.ToString(cmd.ExecuteScalar)
 
-        cnt.Text = count1
-        conn.Close()
+        'cnt.Text = count1
+        'conn.Close()
     End Sub
     Public Sub DGV_load()
 
@@ -82,7 +82,6 @@ Public Class userdashboard
             cmd.ExecuteNonQuery()
             MessageBox.Show("Updated successfully!", "ALERT")
         Catch ex As Exception
-            MessageBox.Show("Please!, Select a record to update details.", "ALERT")
             MsgBox(ex.Message)
         Finally
             conn.Close()
