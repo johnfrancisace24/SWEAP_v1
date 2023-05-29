@@ -5,7 +5,7 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar
 Imports MySql.Data.MySqlClient
 
 Public Class userdashboard
-    Dim co As String = "server=127.0.0.1;user=sweapp;password=druguser;database=sweap;port=3306"
+    Dim co As String = "server=172.30.206.156;user=sweapp;password=druguser;database=sweap;port=3306"
     Dim conn As New MySqlConnection(co)
     Dim cmd As MySqlCommand
     Dim i As Integer

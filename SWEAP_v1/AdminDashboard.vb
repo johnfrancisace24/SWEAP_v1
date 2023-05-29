@@ -3,6 +3,12 @@
     Private Sub bttnDashboard_Click(sender As Object, e As EventArgs) Handles bttnDashboard.Click
         PnlDash.Height = bttnDashboard.Height
         PnlDash.Top = bttnDashboard.Top
+
+        PnlDashboard.Visible = True
+
+
+
+
         PnlDash.BackColor = Color.FromArgb(255, 77, 77)
         pnlEmp.BackColor = Color.FromArgb(56, 103, 214)
         pnlFund.BackColor = Color.FromArgb(56, 103, 214)
