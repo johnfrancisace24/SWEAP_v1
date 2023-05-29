@@ -57,6 +57,7 @@ Partial Class userdashboard
         Label4 = New Label()
         Label8 = New Label()
         Panel1 = New Panel()
+        Label21 = New Label()
         Label12 = New Label()
         Panel6 = New Panel()
         Label10 = New Label()
@@ -72,7 +73,6 @@ Partial Class userdashboard
         Label15 = New Label()
         Label14 = New Label()
         Label3 = New Label()
-        Label21 = New Label()
         Panel2.SuspendLayout()
         CType(imgProfile, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
@@ -499,6 +499,14 @@ Partial Class userdashboard
         Panel1.Size = New Size(938, 601)
         Panel1.TabIndex = 19
         ' 
+        ' Label21
+        ' 
+        Label21.AutoSize = True
+        Label21.Location = New Point(34, 240)
+        Label21.Name = "Label21"
+        Label21.Size = New Size(0, 15)
+        Label21.TabIndex = 4
+        ' 
         ' Label12
         ' 
         Label12.AutoSize = True
@@ -649,14 +657,6 @@ Partial Class userdashboard
         Label3.Size = New Size(87, 21)
         Label3.TabIndex = 0
         Label3.Text = "Username:"
-        ' 
-        ' Label21
-        ' 
-        Label21.AutoSize = True
-        Label21.Location = New Point(34, 240)
-        Label21.Name = "Label21"
-        Label21.Size = New Size(0, 15)
-        Label21.TabIndex = 4
         ' 
         ' userdashboard
         ' 

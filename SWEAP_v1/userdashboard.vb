@@ -93,7 +93,7 @@ Public Class userdashboard
         Dim locateProject As String = My.Application.Info.DirectoryPath
         Dim indext As Integer = locateProject.IndexOf("bin\Debug\net6.0-windows")
         Dim location As String = locateProject.Substring(0, indext)
-        Dim destinationPath As String = location & "\Resources"
+        Dim destinationPath As String = location & "Resources"
         Dim pathCatcher As String
         Try
             conn.Open()
@@ -124,7 +124,23 @@ Public Class userdashboard
                 addTxt.Text = dr.GetString("address")
                 posTxt.Text = dr.GetString("position")
 
+                Dim imagePath As String = dr.GetString("image")
+                If Not String.IsNullOrEmpty(imagePath) Then
+                    Dim imagePathInResources As String = (destinationPath + imagePath)
+                    If File.Exists(imagePathInResources) Then
+                        imgProfile.Image = Image.FromFile(imagePathInResources)
 
+                    Else
+
+                        MsgBox(imagePathInResources)
+                        MsgBox(destinationPath)
+                        ' Handle case when the image file does not exist
+                        imgProfile.Image = Nothing ' Set a default image or display a placeholder
+                    End If
+                Else
+                    ' Handle case when the image path is empty or null
+                    imgProfile.Image = Nothing ' Set a default image or display a placeholder
+                End If
             End If
         Catch ex As Exception
             MsgBox("doesn't wokr lmao2")
@@ -136,5 +152,9 @@ Public Class userdashboard
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Edit()
+    End Sub
+
+    Private Sub lblFname_Click(sender As Object, e As EventArgs) Handles lblFname.Click
+
     End Sub
 End Class
