@@ -62,7 +62,6 @@ Partial Class userdashboard
         Panel6 = New Panel()
         Label10 = New Label()
         Panel4 = New Panel()
-        Label11 = New Label()
         Panel5 = New Panel()
         Button3 = New Button()
         posTxt = New TextBox()
@@ -73,6 +72,7 @@ Partial Class userdashboard
         Label15 = New Label()
         Label14 = New Label()
         Label3 = New Label()
+        Label11 = New Label()
         Panel2.SuspendLayout()
         CType(imgProfile, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
@@ -518,7 +518,7 @@ Partial Class userdashboard
         ' 
         ' Panel6
         ' 
-        Panel6.BackColor = Color.FromArgb(CByte(153), CByte(0), CByte(0))
+        Panel6.BackColor = Color.DarkRed
         Panel6.Location = New Point(14, 55)
         Panel6.Name = "Panel6"
         Panel6.Size = New Size(912, 143)
@@ -536,7 +536,7 @@ Partial Class userdashboard
         ' 
         ' Panel4
         ' 
-        Panel4.BackColor = Color.FromArgb(CByte(153), CByte(0), CByte(0))
+        Panel4.BackColor = Color.DarkRed
         Panel4.Controls.Add(Label11)
         Panel4.Controls.Add(Button1)
         Panel4.Dock = DockStyle.Top
@@ -545,20 +545,6 @@ Partial Class userdashboard
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(1189, 39)
         Panel4.TabIndex = 5
-        ' 
-        ' Label11
-        ' 
-        Label11.Dock = DockStyle.Left
-        Label11.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label11.ForeColor = SystemColors.ControlLightLight
-        Label11.ImageAlign = ContentAlignment.MiddleLeft
-        Label11.Location = New Point(0, 0)
-        Label11.Name = "Label11"
-        Label11.Padding = New Padding(5, 0, 0, 0)
-        Label11.Size = New Size(429, 39)
-        Label11.TabIndex = 3
-        Label11.Text = "Social Welfare Employees Association Of The Philippines"
-        Label11.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Panel5
         ' 
@@ -658,6 +644,16 @@ Partial Class userdashboard
         Label3.TabIndex = 0
         Label3.Text = "Username:"
         ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Font = New Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point)
+        Label11.Location = New Point(192, 6)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(805, 26)
+        Label11.TabIndex = 3
+        Label11.Text = "SOCIAL WELFARE EMPLOYEES ASSOCIATION OF THE PHILIPPINES"
+        ' 
         ' userdashboard
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -681,6 +677,7 @@ Partial Class userdashboard
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         Panel4.ResumeLayout(False)
+        Panel4.PerformLayout()
         Panel5.ResumeLayout(False)
         Panel5.PerformLayout()
         ResumeLayout(False)
@@ -708,7 +705,6 @@ Partial Class userdashboard
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label10 As Label
-    Friend WithEvents Label11 As Label
     Friend WithEvents Button5 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Panel5 As Panel
@@ -735,4 +731,5 @@ Partial Class userdashboard
     Friend WithEvents Label20 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label21 As Label
+    Friend WithEvents Label11 As Label
 End Class

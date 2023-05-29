@@ -40,7 +40,7 @@ Partial Class AdminDashboard
         ' 
         ' Panel1
         ' 
-        Panel1.BackColor = Color.FromArgb(CByte(56), CByte(103), CByte(214))
+        Panel1.BackColor = Color.FromArgb(CByte(255), CByte(204), CByte(51))
         Panel1.Controls.Add(bttnLogout)
         Panel1.Controls.Add(pnlFund)
         Panel1.Controls.Add(pnlEmp)
@@ -53,7 +53,7 @@ Partial Class AdminDashboard
         Panel1.Location = New Point(0, 0)
         Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(239, 583)
+        Panel1.Size = New Size(239, 640)
         Panel1.TabIndex = 0
         ' 
         ' bttnLogout
@@ -167,7 +167,7 @@ Partial Class AdminDashboard
         Panel5.Location = New Point(239, 0)
         Panel5.Margin = New Padding(3, 2, 3, 2)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(958, 81)
+        Panel5.Size = New Size(950, 81)
         Panel5.TabIndex = 1
         ' 
         ' Label1
@@ -184,8 +184,8 @@ Partial Class AdminDashboard
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.RoyalBlue
-        ClientSize = New Size(1197, 583)
+        BackColor = Color.DarkRed
+        ClientSize = New Size(1189, 640)
         ControlBox = False
         Controls.Add(Panel5)
         Controls.Add(Panel1)
