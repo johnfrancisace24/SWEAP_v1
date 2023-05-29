@@ -22,6 +22,7 @@ Partial Class AdminDashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(AdminDashboard))
         Panel1 = New Panel()
         bttnLogout = New Button()
         pnlFund = New Panel()
@@ -63,7 +64,7 @@ Partial Class AdminDashboard
         bttnLogout.Font = New Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
         bttnLogout.Image = My.Resources.Resources._exit
         bttnLogout.ImageAlign = ContentAlignment.MiddleLeft
-        bttnLogout.Location = New Point(0, 548)
+        bttnLogout.Location = New Point(0, 603)
         bttnLogout.Margin = New Padding(3, 2, 3, 2)
         bttnLogout.Name = "bttnLogout"
         bttnLogout.Padding = New Padding(44, 0, 0, 0)
@@ -149,8 +150,8 @@ Partial Class AdminDashboard
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.BackColor = Color.FromArgb(CByte(56), CByte(103), CByte(214))
-        PictureBox1.BackgroundImage = My.Resources.Resources.love
+        PictureBox1.BackColor = Color.Transparent
+        PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), Image)
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox1.Location = New Point(21, 16)
         PictureBox1.Margin = New Padding(3, 2, 3, 2)
@@ -161,7 +162,7 @@ Partial Class AdminDashboard
         ' 
         ' Panel5
         ' 
-        Panel5.BackColor = Color.FromArgb(CByte(255), CByte(77), CByte(77))
+        Panel5.BackColor = Color.FromArgb(CByte(214), CByte(48), CByte(49))
         Panel5.Controls.Add(Label1)
         Panel5.Dock = DockStyle.Top
         Panel5.Location = New Point(239, 0)
@@ -174,6 +175,7 @@ Partial Class AdminDashboard
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.ForeColor = SystemColors.ControlLightLight
         Label1.Location = New Point(69, 24)
         Label1.Name = "Label1"
         Label1.Size = New Size(805, 26)
