@@ -5,7 +5,7 @@ Public Class Form1
 
     '----------------------------------------------------------------------------------------------
 
-    Dim test As String = "server=127.0.0.1;user=sweapp;password=druguser;database=sweap;port=3306"
+    Dim test As String = "server=172.30.206.156;user=sweapp;password=druguser;database=sweap;port=3306"
     Dim conn As New MySqlConnection(test)
     Dim gagi As Integer
     Dim rid As MySqlDataReader
