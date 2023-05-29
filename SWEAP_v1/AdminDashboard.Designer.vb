@@ -34,6 +34,7 @@ Partial Class AdminDashboard
         PictureBox1 = New PictureBox()
         Panel5 = New Panel()
         Label1 = New Label()
+        Panel2 = New Panel()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel5.SuspendLayout()
@@ -162,7 +163,7 @@ Partial Class AdminDashboard
         ' 
         ' Panel5
         ' 
-        Panel5.BackColor = Color.FromArgb(CByte(214), CByte(48), CByte(49))
+        Panel5.BackColor = Color.DarkRed
         Panel5.Controls.Add(Label1)
         Panel5.Dock = DockStyle.Top
         Panel5.Location = New Point(239, 0)
@@ -176,11 +177,19 @@ Partial Class AdminDashboard
         Label1.AutoSize = True
         Label1.Font = New Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.ForeColor = SystemColors.ControlLightLight
-        Label1.Location = New Point(69, 24)
+        Label1.Location = New Point(73, 24)
         Label1.Name = "Label1"
         Label1.Size = New Size(805, 26)
         Label1.TabIndex = 0
         Label1.Text = "SOCIAL WELFARE EMPLOYEES ASSOCIATION OF THE PHILIPPINES"
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = Color.FromArgb(CByte(255), CByte(204), CByte(51))
+        Panel2.Location = New Point(243, 87)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(943, 548)
+        Panel2.TabIndex = 2
         ' 
         ' AdminDashboard
         ' 
@@ -189,6 +198,7 @@ Partial Class AdminDashboard
         BackColor = Color.DarkRed
         ClientSize = New Size(1189, 640)
         ControlBox = False
+        Controls.Add(Panel2)
         Controls.Add(Panel5)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
@@ -214,4 +224,5 @@ Partial Class AdminDashboard
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents bttnLogout As Button
+    Friend WithEvents Panel2 As Panel
 End Class
