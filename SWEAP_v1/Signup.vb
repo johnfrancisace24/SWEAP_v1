@@ -3,7 +3,7 @@ Imports System.Reflection
 Imports MySql.Data.MySqlClient
 
 Public Class Signup
-    Dim cnstr As String = "server=172.30.206.81;user=sweapp;password=druguser;database=sweap;port=3306"
+    Dim cnstr As String = "server=127.0.0.1;user=sweapp;password=druguser;database=sweap;port=3306"
     Dim conn As New MySqlConnection(cnstr)
     Dim rid As MySqlDataReader
     Dim str As String
@@ -65,8 +65,8 @@ Public Class Signup
             Dim imageInput As String = "\" & txtCreateUsername.Text & getExtension
             Try
                 conn.Open()
-                Dim cmd As New MySqlCommand("INSERT INTO user(username, password, first_name, middle_name, last_name, address, contact, email, educational, 
-                                                bdate, is_admin, office, position, employment_status, committee, image, created_at, updated_at) VALUES(@UNAME, @PW, @FNAME, 
+                Dim cmd As New MySqlCommand("INSERT INTO user (username, password, first_name, middle_name, last_name, address, contact, email, educational, 
+                                                birthdate, is_admin, office, position, employment_status, committee, image, created_at, updated_at) VALUES(@UNAME, @PW, @FNAME, 
                                              @MNAME, @LNAME, @ADRS, @CONTACT, @EMAIL, @EDUC, @BDAY, @ISADMIN, @OFFICE, @POSITION, @EMSTAT, @COMITEE, @IMG, NOW(), NOW())", conn)
                 cmd.Parameters.AddWithValue("@UNAME", txtCreateUsername.Text)
                 cmd.Parameters.AddWithValue("@PW", txtCreatePw.Text)

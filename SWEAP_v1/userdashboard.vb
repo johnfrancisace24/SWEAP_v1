@@ -5,7 +5,7 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar
 Imports MySql.Data.MySqlClient
 
 Public Class userdashboard
-    Dim co As String = "server=172.30.206.81;port=3306;user=sweapp;password=druguser;database=sweap"
+    Dim co As String = "server=127.0.0.1;user=sweapp;password=druguser;database=sweap;port=3306"
     Dim conn As New MySqlConnection(co)
     Dim cmd As MySqlCommand
     Dim i As Integer
@@ -72,12 +72,12 @@ Public Class userdashboard
         Try
             conn.Open()
             Dim cmd As New MySqlCommand("UPDATE `user` SET `username`=@username,`password`=@password,`address`=@address, `position`=@position WHERE `id`=@id", conn)
-            'cmd.Parameters.Clear()
-            'cmd.Parameters.AddWithValue("@id", form1.log_id)
-            'cmd.Parameters.AddWithValue("@username", fname.Text)
-            'cmd.Parameters.AddWithValue("@password", mname.Text)
-            'cmd.Parameters.AddWithValue("@address", lname.Text)
-            'cmd.Parameters.AddWithValue("@position", lname.Text)
+            cmd.Parameters.Clear()
+            cmd.Parameters.AddWithValue("@id", Form1.log_id)
+            cmd.Parameters.AddWithValue("@username", userTxt.Text)
+            cmd.Parameters.AddWithValue("@password", passTxt.Text)
+            cmd.Parameters.AddWithValue("@address", addTxt.Text)
+            cmd.Parameters.AddWithValue("@position", posTxt.Text)
 
             cmd.ExecuteNonQuery()
             MessageBox.Show("Updated successfully!", "ALERT")
@@ -97,32 +97,44 @@ Public Class userdashboard
         Dim pathCatcher As String
         Try
             conn.Open()
-            Dim cmd As New MySqlCommand("SELECT CONCAT(first_name, ' ', middle_name, ' ', last_name) AS fullName, * FROM user WHERE id=@ID", conn)
+            Dim cmd As New MySqlCommand("Select *, CONCAT(first_name, ' ', middle_name, ' ', last_name) AS fullName FROM user WHERE id=@ID", conn)
             cmd.Parameters.AddWithValue("@ID", Form1.log_id)
             dr = cmd.ExecuteReader
-            While dr.Read
+            If dr.Read() Then
+                'imgProfile.Image = Image.FromFile(destinationPath & dr.GetString("username"))
+                'Dim data As Byte() = DirectCast(dr("image"), Byte())
+                'Dim ms As New MemoryStream(data)
+                'imgProfile.Image = Image.FromStream(ms)
                 lblFname.Text = dr.GetString("fullName")
-                'pathCatcher = dr.GetString("image")
-                'lblpostion.Text = dr.GetString("position")
-                'userTxt.Text = dr.GetString("username")
-                ' passTxt.Text = dr.GetString("password")
-                'addTxt.Text = dr.GetString("address")
-                'posTxt.Text = dr.GetString("position")
+                lblpostion.Text = dr.GetString("position")
 
-            End While
+                txtfname.Text = dr.GetString("fullName")
+                txtadd.Text = dr.GetString("address")
+                txtcontact.Text = dr.GetString("contact")
+                txtemail.Text = dr.GetString("email")
+                txteduc.Text = dr.GetString("educational")
+                txtbdate.Text = dr.GetString("birthdate")
+                txtoffice.Text = dr.GetString("office")
+                txtpos.Text = dr.GetString("position")
+                txtemploy.Text = dr.GetString("employment_status")
+                txtcom.Text = dr.GetString("committee")
+
+                userTxt.Text = dr.GetString("username")
+                passTxt.Text = dr.GetString("password")
+                addTxt.Text = dr.GetString("address")
+                posTxt.Text = dr.GetString("position")
+
+
+            End If
         Catch ex As Exception
             MsgBox("doesn't wokr lmao2")
         Finally
             conn.Close()
         End Try
-        'imgProfile.BackgroundImage = Image.FromFile(destinationPath & pathCatcher)
+
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Edit()
-    End Sub
-
-    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
-
     End Sub
 End Class

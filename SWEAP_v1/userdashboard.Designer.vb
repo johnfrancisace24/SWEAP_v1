@@ -72,6 +72,7 @@ Partial Class userdashboard
         Label15 = New Label()
         Label14 = New Label()
         Label3 = New Label()
+        Label21 = New Label()
         Panel2.SuspendLayout()
         CType(imgProfile, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
@@ -488,7 +489,8 @@ Partial Class userdashboard
         ' 
         ' Panel1
         ' 
-        Panel1.BackColor = Color.FromArgb(CByte(255), CByte(204), CByte(51))
+        Panel1.BackColor = Color.FromArgb(CByte(239), CByte(243), CByte(246))
+        Panel1.Controls.Add(Label21)
         Panel1.Controls.Add(Label12)
         Panel1.Controls.Add(Panel6)
         Panel1.Controls.Add(Label10)
@@ -648,6 +650,14 @@ Partial Class userdashboard
         Label3.TabIndex = 0
         Label3.Text = "Username:"
         ' 
+        ' Label21
+        ' 
+        Label21.AutoSize = True
+        Label21.Location = New Point(34, 240)
+        Label21.Name = "Label21"
+        Label21.Size = New Size(0, 15)
+        Label21.TabIndex = 4
+        ' 
         ' userdashboard
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -724,4 +734,5 @@ Partial Class userdashboard
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Label20 As Label
     Friend WithEvents Label13 As Label
+    Friend WithEvents Label21 As Label
 End Class
