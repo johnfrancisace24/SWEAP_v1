@@ -128,7 +128,7 @@ Public Class userdashboard
                 If Not String.IsNullOrEmpty(imagePath) Then
                     Dim imagePathInResources As String = (destinationPath + imagePath)
                     If File.Exists(imagePathInResources) Then
-                        imgProfile.Image = Image.FromFile(imagePathInResources)
+                        imgProfile.BackgroundImage = Image.FromFile(imagePathInResources)
 
                     Else
 

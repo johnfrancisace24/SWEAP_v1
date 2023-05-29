@@ -192,7 +192,7 @@ Partial Class userdashboard
         ' imgProfile
         ' 
         imgProfile.BackgroundImage = My.Resources.Resources.profile__1_
-        imgProfile.BackgroundImageLayout = ImageLayout.Center
+        imgProfile.BackgroundImageLayout = ImageLayout.Stretch
         imgProfile.Dock = DockStyle.Top
         imgProfile.Location = New Point(0, 0)
         imgProfile.Margin = New Padding(0)
@@ -562,6 +562,7 @@ Partial Class userdashboard
         ' 
         ' Label11
         ' 
+        Label11.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
         Label11.AutoSize = True
         Label11.Font = New Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point)
         Label11.Location = New Point(192, 6)
@@ -686,9 +687,9 @@ Partial Class userdashboard
         ClientSize = New Size(1189, 640)
         Controls.Add(Panel2)
         Controls.Add(Panel4)
+        Controls.Add(Panel1)
         Controls.Add(Panel3)
         Controls.Add(Panel5)
-        Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "userdashboard"
