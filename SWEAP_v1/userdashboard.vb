@@ -94,7 +94,7 @@ Public Class userdashboard
         Dim indext As Integer = locateProject.IndexOf("bin\Debug\net6.0-windows")
         Dim location As String = locateProject.Substring(0, indext)
         Dim destinationPath As String = location & "Resources"
-        Dim pathCatcher As String
+
         Try
             conn.Open()
             Dim cmd As New MySqlCommand("Select *, CONCAT(first_name, ' ', middle_name, ' ', last_name) AS fullName FROM user WHERE id=@ID", conn)

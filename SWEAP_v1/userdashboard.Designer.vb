@@ -283,7 +283,7 @@ Partial Class userdashboard
         ' 
         txtoffice.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
         txtoffice.Enabled = False
-        txtoffice.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        txtoffice.Font = New Font("Segoe UI", 9.75F, FontStyle.Underline, GraphicsUnit.Point)
         txtoffice.Location = New Point(482, 147)
         txtoffice.Name = "txtoffice"
         txtoffice.Size = New Size(298, 25)
@@ -305,7 +305,7 @@ Partial Class userdashboard
         ' 
         txtbdate.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
         txtbdate.Enabled = False
-        txtbdate.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        txtbdate.Font = New Font("Segoe UI", 9.75F, FontStyle.Underline, GraphicsUnit.Point)
         txtbdate.Location = New Point(482, 95)
         txtbdate.Name = "txtbdate"
         txtbdate.Size = New Size(298, 25)
@@ -327,7 +327,7 @@ Partial Class userdashboard
         ' 
         txteduc.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
         txteduc.Enabled = False
-        txteduc.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        txteduc.Font = New Font("Segoe UI", 9.75F, FontStyle.Underline, GraphicsUnit.Point)
         txteduc.Location = New Point(140, 324)
         txteduc.Name = "txteduc"
         txteduc.Size = New Size(298, 25)
@@ -349,7 +349,7 @@ Partial Class userdashboard
         ' 
         txtemail.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
         txtemail.Enabled = False
-        txtemail.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        txtemail.Font = New Font("Segoe UI", 9.75F, FontStyle.Underline, GraphicsUnit.Point)
         txtemail.Location = New Point(140, 264)
         txtemail.Name = "txtemail"
         txtemail.Size = New Size(298, 25)
@@ -371,7 +371,7 @@ Partial Class userdashboard
         ' 
         txtpos.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
         txtpos.Enabled = False
-        txtpos.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        txtpos.Font = New Font("Segoe UI", 9.75F, FontStyle.Underline, GraphicsUnit.Point)
         txtpos.Location = New Point(482, 204)
         txtpos.Name = "txtpos"
         txtpos.Size = New Size(298, 25)
@@ -381,7 +381,7 @@ Partial Class userdashboard
         ' 
         txtemploy.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
         txtemploy.Enabled = False
-        txtemploy.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        txtemploy.Font = New Font("Segoe UI", 9.75F, FontStyle.Underline, GraphicsUnit.Point)
         txtemploy.Location = New Point(483, 264)
         txtemploy.Name = "txtemploy"
         txtemploy.Size = New Size(298, 25)
@@ -391,7 +391,7 @@ Partial Class userdashboard
         ' 
         txtcom.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
         txtcom.Enabled = False
-        txtcom.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        txtcom.Font = New Font("Segoe UI", 9.75F, FontStyle.Underline, GraphicsUnit.Point)
         txtcom.Location = New Point(483, 324)
         txtcom.Name = "txtcom"
         txtcom.Size = New Size(298, 25)
@@ -401,7 +401,7 @@ Partial Class userdashboard
         ' 
         txtcontact.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
         txtcontact.Enabled = False
-        txtcontact.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        txtcontact.Font = New Font("Segoe UI", 9.75F, FontStyle.Underline, GraphicsUnit.Point)
         txtcontact.Location = New Point(140, 204)
         txtcontact.Name = "txtcontact"
         txtcontact.Size = New Size(298, 25)
@@ -411,7 +411,7 @@ Partial Class userdashboard
         ' 
         txtadd.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
         txtadd.Enabled = False
-        txtadd.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        txtadd.Font = New Font("Segoe UI", 9.75F, FontStyle.Underline, GraphicsUnit.Point)
         txtadd.Location = New Point(140, 148)
         txtadd.Name = "txtadd"
         txtadd.Size = New Size(298, 25)
@@ -421,7 +421,7 @@ Partial Class userdashboard
         ' 
         txtfname.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
         txtfname.Enabled = False
-        txtfname.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        txtfname.Font = New Font("Segoe UI", 9.75F, FontStyle.Underline, GraphicsUnit.Point)
         txtfname.Location = New Point(140, 95)
         txtfname.Name = "txtfname"
         txtfname.Size = New Size(298, 25)
@@ -501,10 +501,14 @@ Partial Class userdashboard
         ' 
         ' Panel1
         ' 
+<<<<<<< HEAD
 
 
         Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
 
+=======
+        Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+>>>>>>> 3652c4217169e6889418593ea9cd17e88d9e4cfb
         Panel1.BackColor = Color.FromArgb(CByte(255), CByte(204), CByte(51))
         Panel1.Controls.Add(Label21)
         Panel1.Controls.Add(Label12)
@@ -565,14 +569,14 @@ Partial Class userdashboard
         ' 
         ' Label11
         ' 
-        Label11.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
-        Label11.AutoSize = True
+        Label11.Dock = DockStyle.Top
         Label11.Font = New Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point)
-        Label11.Location = New Point(192, 6)
+        Label11.Location = New Point(0, 0)
         Label11.Name = "Label11"
-        Label11.Size = New Size(805, 26)
+        Label11.Size = New Size(1143, 39)
         Label11.TabIndex = 3
         Label11.Text = "SOCIAL WELFARE EMPLOYEES ASSOCIATION OF THE PHILIPPINES"
+        Label11.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Panel5
         ' 
@@ -690,15 +694,15 @@ Partial Class userdashboard
         ClientSize = New Size(1189, 640)
         Controls.Add(Panel2)
         Controls.Add(Panel4)
-        Controls.Add(Panel1)
         Controls.Add(Panel3)
         Controls.Add(Panel5)
+        Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "userdashboard"
         StartPosition = FormStartPosition.CenterScreen
         Text = "userdashboard"
-        WindowState = FormWindowState.Maximized
+        WindowState = FormWindowState.Minimized
         Panel2.ResumeLayout(False)
         CType(imgProfile, ComponentModel.ISupportInitialize).EndInit()
         Panel3.ResumeLayout(False)
@@ -706,7 +710,6 @@ Partial Class userdashboard
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         Panel4.ResumeLayout(False)
-        Panel4.PerformLayout()
         Panel5.ResumeLayout(False)
         Panel5.PerformLayout()
         ResumeLayout(False)
