@@ -695,7 +695,7 @@ Partial Class userdashboard
         Name = "userdashboard"
         StartPosition = FormStartPosition.CenterScreen
         Text = "userdashboard"
-        WindowState = FormWindowState.Maximized
+        WindowState = FormWindowState.Minimized
         Panel2.ResumeLayout(False)
         CType(imgProfile, ComponentModel.ISupportInitialize).EndInit()
         Panel3.ResumeLayout(False)
