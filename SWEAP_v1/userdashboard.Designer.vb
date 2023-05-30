@@ -501,14 +501,7 @@ Partial Class userdashboard
         ' 
         ' Panel1
         ' 
-<<<<<<< HEAD
-
-
         Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-
-=======
-        Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
->>>>>>> 3652c4217169e6889418593ea9cd17e88d9e4cfb
         Panel1.BackColor = Color.FromArgb(CByte(255), CByte(204), CByte(51))
         Panel1.Controls.Add(Label21)
         Panel1.Controls.Add(Label12)
@@ -570,7 +563,7 @@ Partial Class userdashboard
         ' Label11
         ' 
         Label11.Dock = DockStyle.Top
-        Label11.Font = New Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point)
+        Label11.Font = New Font("Times New Roman", 18.0F, FontStyle.Bold, GraphicsUnit.Point)
         Label11.Location = New Point(0, 0)
         Label11.Name = "Label11"
         Label11.Size = New Size(1143, 39)
@@ -646,7 +639,7 @@ Partial Class userdashboard
         ' 
         Label16.Anchor = AnchorStyles.Top
         Label16.AutoSize = True
-        Label16.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label16.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
         Label16.Location = New Point(342, 187)
         Label16.Name = "Label16"
         Label16.Size = New Size(72, 21)
@@ -657,7 +650,7 @@ Partial Class userdashboard
         ' 
         Label15.Anchor = AnchorStyles.Top
         Label15.AutoSize = True
-        Label15.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label15.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
         Label15.Location = New Point(340, 158)
         Label15.Name = "Label15"
         Label15.Size = New Size(74, 21)
@@ -668,7 +661,7 @@ Partial Class userdashboard
         ' 
         Label14.Anchor = AnchorStyles.Top
         Label14.AutoSize = True
-        Label14.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label14.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
         Label14.Location = New Point(331, 128)
         Label14.Name = "Label14"
         Label14.Size = New Size(83, 21)
@@ -679,7 +672,7 @@ Partial Class userdashboard
         ' 
         Label3.Anchor = AnchorStyles.Top
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label3.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
         Label3.Location = New Point(327, 99)
         Label3.Name = "Label3"
         Label3.Size = New Size(87, 21)
@@ -688,15 +681,15 @@ Partial Class userdashboard
         ' 
         ' userdashboard
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(153), CByte(0), CByte(0))
         ClientSize = New Size(1189, 640)
         Controls.Add(Panel2)
         Controls.Add(Panel4)
+        Controls.Add(Panel1)
         Controls.Add(Panel3)
         Controls.Add(Panel5)
-        Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "userdashboard"

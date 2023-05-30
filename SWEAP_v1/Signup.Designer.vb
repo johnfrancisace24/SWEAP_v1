@@ -125,12 +125,12 @@ Partial Class Signup
         ' 
         Label11.AutoSize = True
         Label11.BackColor = Color.Transparent
-        Label11.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label11.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Label11.ForeColor = Color.Yellow
         Label11.Location = New Point(290, 325)
         Label11.Margin = New Padding(2, 0, 2, 0)
         Label11.Name = "Label11"
-        Label11.Size = New Size(96, 16)
+        Label11.Size = New Size(98, 16)
         Label11.TabIndex = 25
         Label11.Text = "PASSWORD "
         ' 
@@ -138,12 +138,12 @@ Partial Class Signup
         ' 
         Label10.AutoSize = True
         Label10.BackColor = Color.Transparent
-        Label10.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label10.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Label10.ForeColor = Color.Yellow
         Label10.Location = New Point(41, 325)
         Label10.Margin = New Padding(2, 0, 2, 0)
         Label10.Name = "Label10"
-        Label10.Size = New Size(93, 16)
+        Label10.Size = New Size(92, 16)
         Label10.TabIndex = 23
         Label10.Text = "USERNAME"
         ' 
@@ -231,12 +231,12 @@ Partial Class Signup
         ' 
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.ForeColor = Color.Yellow
         Label1.Location = New Point(41, 27)
         Label1.Margin = New Padding(2, 0, 2, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(102, 16)
+        Label1.Size = New Size(98, 16)
         Label1.TabIndex = 0
         Label1.Text = "FIRST NAME"
         ' 
@@ -253,12 +253,12 @@ Partial Class Signup
         ' 
         Label3.AutoSize = True
         Label3.BackColor = Color.Transparent
-        Label3.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label3.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Label3.ForeColor = Color.Yellow
         Label3.Location = New Point(41, 145)
         Label3.Margin = New Padding(2, 0, 2, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(80, 16)
+        Label3.Size = New Size(79, 16)
         Label3.TabIndex = 2
         Label3.Text = "CONTACT"
         ' 
@@ -266,12 +266,12 @@ Partial Class Signup
         ' 
         Label9.AutoSize = True
         Label9.BackColor = Color.Transparent
-        Label9.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label9.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Label9.ForeColor = Color.Yellow
         Label9.Location = New Point(290, 265)
         Label9.Margin = New Padding(2, 0, 2, 0)
         Label9.Name = "Label9"
-        Label9.Size = New Size(270, 16)
+        Label9.Size = New Size(258, 16)
         Label9.TabIndex = 10
         Label9.Text = "COMMITTEE'S YOU WANT TO JOIN"
         ' 
@@ -279,12 +279,12 @@ Partial Class Signup
         ' 
         Label4.AutoSize = True
         Label4.BackColor = Color.Transparent
-        Label4.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label4.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Label4.ForeColor = Color.Yellow
         Label4.Location = New Point(290, 145)
         Label4.Margin = New Padding(2, 0, 2, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(56, 16)
+        Label4.Size = New Size(51, 16)
         Label4.TabIndex = 3
         Label4.Text = "EMAIL"
         ' 
@@ -305,12 +305,12 @@ Partial Class Signup
         ' 
         Label5.AutoSize = True
         Label5.BackColor = Color.Transparent
-        Label5.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label5.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Label5.ForeColor = Color.Yellow
         Label5.Location = New Point(290, 204)
         Label5.Margin = New Padding(2, 0, 2, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(64, 16)
+        Label5.Size = New Size(60, 16)
         Label5.TabIndex = 4
         Label5.Text = "OFFICE"
         ' 
@@ -318,12 +318,12 @@ Partial Class Signup
         ' 
         Label6.AutoSize = True
         Label6.BackColor = Color.Transparent
-        Label6.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label6.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Label6.ForeColor = Color.Yellow
         Label6.Location = New Point(538, 204)
         Label6.Margin = New Padding(2, 0, 2, 0)
         Label6.Name = "Label6"
-        Label6.Size = New Size(82, 16)
+        Label6.Size = New Size(78, 16)
         Label6.TabIndex = 5
         Label6.Text = "POSITION"
         ' 
@@ -331,12 +331,12 @@ Partial Class Signup
         ' 
         Label2.AutoSize = True
         Label2.BackColor = Color.Transparent
-        Label2.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label2.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Label2.ForeColor = Color.Yellow
         Label2.Location = New Point(41, 265)
         Label2.Margin = New Padding(2, 0, 2, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(181, 16)
+        Label2.Size = New Size(176, 16)
         Label2.TabIndex = 6
         Label2.Text = "EMPLOYMENT STATUS"
         ' 
@@ -405,12 +405,12 @@ Partial Class Signup
         ' 
         Label19.AutoSize = True
         Label19.BackColor = Color.Transparent
-        Label19.Font = New Font("Century", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Label19.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
         Label19.ForeColor = Color.Yellow
         Label19.Location = New Point(4, 383)
         Label19.Margin = New Padding(2, 0, 2, 0)
         Label19.Name = "Label19"
-        Label19.Size = New Size(185, 23)
+        Label19.Size = New Size(163, 24)
         Label19.TabIndex = 58
         Label19.Text = "BENEFICIARIES"
         ' 
@@ -418,12 +418,12 @@ Partial Class Signup
         ' 
         Label18.AutoSize = True
         Label18.BackColor = Color.Transparent
-        Label18.Font = New Font("Century", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Label18.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
         Label18.ForeColor = Color.Yellow
         Label18.Location = New Point(4, 0)
         Label18.Margin = New Padding(2, 0, 2, 0)
         Label18.Name = "Label18"
-        Label18.Size = New Size(231, 23)
+        Label18.Size = New Size(211, 24)
         Label18.TabIndex = 57
         Label18.Text = "MEMBERSHIP FORM"
         ' 
@@ -431,7 +431,7 @@ Partial Class Signup
         ' 
         Label17.AutoSize = True
         Label17.BackColor = Color.Transparent
-        Label17.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label17.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Label17.ForeColor = Color.Yellow
         Label17.Location = New Point(630, 412)
         Label17.Margin = New Padding(2, 0, 2, 0)
@@ -444,12 +444,12 @@ Partial Class Signup
         ' 
         Label8.AutoSize = True
         Label8.BackColor = Color.Transparent
-        Label8.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label8.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Label8.ForeColor = Color.Yellow
         Label8.Location = New Point(433, 412)
         Label8.Margin = New Padding(2, 0, 2, 0)
         Label8.Name = "Label8"
-        Label8.Size = New Size(123, 16)
+        Label8.Size = New Size(117, 16)
         Label8.TabIndex = 55
         Label8.Text = "RELATIONSHIP"
         ' 
@@ -457,12 +457,12 @@ Partial Class Signup
         ' 
         Label7.AutoSize = True
         Label7.BackColor = Color.Transparent
-        Label7.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label7.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Label7.ForeColor = Color.Yellow
         Label7.Location = New Point(178, 412)
         Label7.Margin = New Padding(2, 0, 2, 0)
         Label7.Name = "Label7"
-        Label7.Size = New Size(52, 16)
+        Label7.Size = New Size(50, 16)
         Label7.TabIndex = 54
         Label7.Text = "NAME"
         ' 
@@ -595,7 +595,7 @@ Partial Class Signup
         ' txtBenifName1
         ' 
         txtBenifName1.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        txtBenifName1.Location = New Point(38, 431)
+        txtBenifName1.Location = New Point(38, 430)
         txtBenifName1.Margin = New Padding(2, 1, 2, 1)
         txtBenifName1.Name = "txtBenifName1"
         txtBenifName1.Size = New Size(347, 29)
@@ -605,12 +605,12 @@ Partial Class Signup
         ' 
         Label16.AutoSize = True
         Label16.BackColor = Color.Transparent
-        Label16.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label16.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Label16.ForeColor = Color.Yellow
         Label16.Location = New Point(41, 203)
         Label16.Margin = New Padding(2, 0, 2, 0)
         Label16.Name = "Label16"
-        Label16.Size = New Size(96, 16)
+        Label16.Size = New Size(94, 16)
         Label16.TabIndex = 37
         Label16.Text = "BIRTHDATE"
         ' 
@@ -636,12 +636,12 @@ Partial Class Signup
         ' 
         Label15.AutoSize = True
         Label15.BackColor = Color.Transparent
-        Label15.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label15.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Label15.ForeColor = Color.Yellow
         Label15.Location = New Point(538, 145)
         Label15.Margin = New Padding(2, 0, 2, 0)
         Label15.Name = "Label15"
-        Label15.Size = New Size(227, 16)
+        Label15.Size = New Size(215, 16)
         Label15.TabIndex = 34
         Label15.Text = "EDUCATIONAL ATTAINMENT"
         ' 
@@ -659,12 +659,12 @@ Partial Class Signup
         ' 
         Label14.AutoSize = True
         Label14.BackColor = Color.Transparent
-        Label14.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label14.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Label14.ForeColor = Color.Yellow
         Label14.Location = New Point(41, 84)
         Label14.Margin = New Padding(2, 0, 2, 0)
         Label14.Name = "Label14"
-        Label14.Size = New Size(124, 16)
+        Label14.Size = New Size(120, 16)
         Label14.TabIndex = 32
         Label14.Text = "FULL ADDRESS"
         ' 
@@ -672,12 +672,12 @@ Partial Class Signup
         ' 
         Label13.AutoSize = True
         Label13.BackColor = Color.Transparent
-        Label13.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label13.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Label13.ForeColor = Color.Yellow
         Label13.Location = New Point(290, 26)
         Label13.Margin = New Padding(2, 0, 2, 0)
         Label13.Name = "Label13"
-        Label13.Size = New Size(118, 16)
+        Label13.Size = New Size(110, 16)
         Label13.TabIndex = 30
         Label13.Text = "MIDDLE NAME"
         ' 
@@ -694,12 +694,12 @@ Partial Class Signup
         ' 
         Label12.AutoSize = True
         Label12.BackColor = Color.Transparent
-        Label12.Font = New Font("Century", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label12.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Label12.ForeColor = Color.Yellow
         Label12.Location = New Point(538, 26)
         Label12.Margin = New Padding(2, 0, 2, 0)
         Label12.Name = "Label12"
-        Label12.Size = New Size(96, 16)
+        Label12.Size = New Size(92, 16)
         Label12.TabIndex = 0
         Label12.Text = "LAST NAME"
         ' 

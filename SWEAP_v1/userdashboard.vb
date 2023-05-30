@@ -101,10 +101,6 @@ Public Class userdashboard
             cmd.Parameters.AddWithValue("@ID", Form1.log_id)
             dr = cmd.ExecuteReader
             If dr.Read() Then
-                'imgProfile.Image = Image.FromFile(destinationPath & dr.GetString("username"))
-                'Dim data As Byte() = DirectCast(dr("image"), Byte())
-                'Dim ms As New MemoryStream(data)
-                'imgProfile.Image = Image.FromStream(ms)
                 lblFname.Text = dr.GetString("fullName")
                 lblpostion.Text = dr.GetString("position")
 
