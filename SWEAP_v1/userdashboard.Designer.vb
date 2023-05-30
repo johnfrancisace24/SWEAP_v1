@@ -501,14 +501,11 @@ Partial Class userdashboard
         ' 
         ' Panel1
         ' 
-<<<<<<< HEAD
 
 
         Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
 
-=======
         Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
->>>>>>> 3652c4217169e6889418593ea9cd17e88d9e4cfb
         Panel1.BackColor = Color.FromArgb(CByte(255), CByte(204), CByte(51))
         Panel1.Controls.Add(Label21)
         Panel1.Controls.Add(Label12)
