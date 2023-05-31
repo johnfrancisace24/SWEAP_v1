@@ -101,6 +101,9 @@ Public Class userdashboard
             cmd.Parameters.AddWithValue("@ID", Form1.log_id)
             dr = cmd.ExecuteReader
             If dr.Read() Then
+                Dim imagePath As String = dr.GetString("image")
+                Dim imagePathInResources As String = (destinationPath + imagePath)
+                imgProfile.BackgroundImage = Image.FromFile(imagePathInResources)
                 lblFname.Text = dr.GetString("fullName")
                 lblpostion.Text = dr.GetString("position")
 
@@ -120,23 +123,6 @@ Public Class userdashboard
                 addTxt.Text = dr.GetString("address")
                 posTxt.Text = dr.GetString("position")
 
-                Dim imagePath As String = dr.GetString("image")
-                If Not String.IsNullOrEmpty(imagePath) Then
-                    Dim imagePathInResources As String = (destinationPath + imagePath)
-                    If File.Exists(imagePathInResources) Then
-                        imgProfile.BackgroundImage = Image.FromFile(imagePathInResources)
-
-                    Else
-
-                        MsgBox(imagePathInResources)
-                        MsgBox(destinationPath)
-                        ' Handle case when the image file does not exist
-                        imgProfile.Image = Nothing ' Set a default image or display a placeholder
-                    End If
-                Else
-                    ' Handle case when the image path is empty or null
-                    imgProfile.Image = Nothing ' Set a default image or display a placeholder
-                End If
             End If
         Catch ex As Exception
             MsgBox("doesn't wokr lmao2")
