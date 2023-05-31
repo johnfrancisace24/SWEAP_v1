@@ -161,7 +161,7 @@ Partial Class Form1
         Label2.ForeColor = Color.Transparent
         Label2.Location = New Point(385, 125)
         Label2.Name = "Label2"
-        Label2.Size = New Size(106, 24)
+        Label2.Size = New Size(106, 23)
         Label2.TabIndex = 12
         Label2.Text = "PASSWORD"
         ' 
@@ -172,7 +172,7 @@ Partial Class Form1
         Label1.ForeColor = Color.Transparent
         Label1.Location = New Point(382, 53)
         Label1.Name = "Label1"
-        Label1.Size = New Size(110, 24)
+        Label1.Size = New Size(110, 23)
         Label1.TabIndex = 11
         Label1.Text = "USERNAME"
         ' 
