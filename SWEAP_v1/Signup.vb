@@ -1,15 +1,17 @@
 ﻿Imports System.IO
+Imports System.Reflection
 Imports MySql.Data.MySqlClient
 
 Public Class Signup
-
-    Dim conn As New MySqlConnection
-    Dim cnstr As String = "server= 172.30.206.81; user = drugpusher; password= druguser; database = sweap; port=3306"
-    Dim cmd As New MySqlCommand
+    Dim cnstr As String = "server=127.0.0.1;user=sweapp;password=druguser;database=sweap;port=3306"
+    Dim conn As New MySqlConnection(cnstr)
+    Dim rid As MySqlDataReader
     Dim str As String
+    Dim sourceFilePath As String
+    Dim getExtension As String
 
 
-    Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles ButtonCancel.Click
+    Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Hide()
         Form1.Show()
     End Sub
@@ -19,58 +21,80 @@ Public Class Signup
     Dim imgpath As String
     Dim arrimage() As Byte
     Private Sub ButtonUpload_Click(sender As Object, e As EventArgs) Handles ButtonUpload.Click
-        Try
-            PictureBoxProfile.BackgroundImage = Nothing
-            Dim ofd As FileDialog = New OpenFileDialog()
-            ofd.Filter = "Image File (*.jpg;*.png;*.gif;*.jpeg)|*.jpg;*.png;*.gif;*.jpeg"
+        ' Dim imageInput As String
+        ' Dim locateProject As String = My.Application.Info.DirectoryPath
+        ' Dim indext As Integer = locateProject.IndexOf("bin\Debug\net6.0-windows")
+        ' Dim location As String = locateProject.Substring(0, indext)
+        ' MsgBox(locateProject)
+        ' MsgBox(location)
+        Dim opf As New OpenFileDialog
 
-            If ofd.ShowDialog() = DialogResult.OK Then
-                imgpath = ofd.FileName
-                PictureBoxProfile.ImageLocation = imgpath
-            End If
-            ofd = Nothing
-        Catch ex As Exception
-            MsgBox(ex.Message.ToString())
-        End Try
+        opf.Filter = "Choose Image(*.jpg; *.png; *.gif) | * .jpg; *.png; *.gif"
+        'opf.InitialDirectory = "C:\"
+        If opf.ShowDialog = DialogResult.OK Then
+            'imageInput = System.IO.Path.GetFullPath(opf.FileName)
+            sourceFilePath = System.IO.Path.GetFullPath(opf.FileName)
+            pBoxCreateProfile.BackgroundImage = System.Drawing.Image.FromFile(sourceFilePath)
+            getExtension = Path.GetExtension(opf.FileName)
+        End If
+
+
+        ' Dim destinationPath As String = location & "\Resources\" & txtCreateUsername.Text & Path.GetExtension(opf.FileName)
+        ' File.Copy(sourceFilePath, destinationPath, True)
+        ' MsgBox("File saved to " & destinationPath)
+        ' MessageBox.Show("File transferred successfully.")
+
     End Sub
 
-    Private Sub ButtonReg_Click(sender As Object, e As EventArgs) Handles ButtonReg.Click
+    Private Sub ButtonReg_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
 
-        Try
-
-
-            conn = New MySqlConnection(cnstr)
-            conn.Open()
-            str = "insert into register (name, contact, email, office, region, employment_type, status_of_employment, position, designation, username, password ) values (@name,@contact,@email,@office,@region,@emtype,@stat,@pos,@desig,@username,@password)"
-            cmd.Connection = conn
-            cmd.CommandText = str
-
-            cmd.Parameters.AddWithValue("@name", txtFname.Text)
-            cmd.Parameters.AddWithValue("@contact", txtContact.Text)
-            cmd.Parameters.AddWithValue("@email", txtEmail.Text)
-            cmd.Parameters.AddWithValue("@office", pickOffice.Text)
-            cmd.Parameters.AddWithValue("@region", pickRegion.Text)
-            cmd.Parameters.AddWithValue("@emtype", pickEmType.Text)
-            cmd.Parameters.AddWithValue("@stat", pickEmStat.Text)
-            cmd.Parameters.AddWithValue("@pos", pickPosition.Text)
-            cmd.Parameters.AddWithValue("@desig", pickDesignation.Text)
-            cmd.Parameters.AddWithValue("@username", txtCreateUsername.Text)
-            cmd.Parameters.AddWithValue("@password", txtCreatePw.Text)
+        If (txtFname.Text = "" Or txtLname.Text = "" Or txtMname.Text = "" Or txtAddress.Text = "" Or txtContact.Text = "" Or txtEmail.Text = "" Or txtEduc.Text = "" Or
+            txtCreateUsername.Text = "" Or txtCreatePw.Text = "") Then
+            MsgBox("Fields can't be blank.")
+        Else
+            '-------------------------SAVE PROFILE---------------------------------------
+            Dim locateProject As String = My.Application.Info.DirectoryPath
+            Dim indext As Integer = locateProject.IndexOf("bin\Debug\net6.0-windows")
+            Dim location As String = locateProject.Substring(0, indext)
+            Dim opf As New OpenFileDialog
 
 
-
-            Dim i As Integer = cmd.ExecuteNonQuery
-            If i > 0 Then
-                MessageBox.Show("Account Successfully Created!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                clear()
-                Me.Close()
+            Dim destinationPath As String = location & "\Resources\" & txtCreateUsername.Text & getExtension
+            File.Copy(sourceFilePath, destinationPath, True)
+            '------------------------------------------------------------
+            Dim imageInput As String = "\" & txtCreateUsername.Text & getExtension
+            Try
+                conn.Open()
+                Dim cmd As New MySqlCommand("INSERT INTO user (username, password, first_name, middle_name, last_name, address, contact, email, educational, 
+                                                birthdate, is_admin, office, position, employment_status, committee, image, created_at, updated_at) VALUES(@UNAME, @PW, @FNAME, 
+                                             @MNAME, @LNAME, @ADRS, @CONTACT, @EMAIL, @EDUC, @BDAY, @ISADMIN, @OFFICE, @POSITION, @EMSTAT, @COMITEE, @IMG, NOW(), NOW())", conn)
+                cmd.Parameters.AddWithValue("@UNAME", txtCreateUsername.Text)
+                cmd.Parameters.AddWithValue("@PW", txtCreatePw.Text)
+                cmd.Parameters.AddWithValue("@FNAME", txtFname.Text)
+                cmd.Parameters.AddWithValue("@MNAME", txtMname.Text)
+                cmd.Parameters.AddWithValue("@LNAME", txtLname.Text)
+                cmd.Parameters.AddWithValue("@ADRS", txtAddress.Text)
+                cmd.Parameters.AddWithValue("@CONTACT", txtContact.Text)
+                cmd.Parameters.AddWithValue("@EMAIL", txtEmail.Text)
+                cmd.Parameters.AddWithValue("@EDUC", txtEduc.Text)
+                cmd.Parameters.AddWithValue("@BDAY", pickBDate.Value)
+                cmd.Parameters.AddWithValue("@ISADMIN", 0)
+                cmd.Parameters.AddWithValue("@OFFICE", pickOffice.SelectedItem)
+                cmd.Parameters.AddWithValue("@POSITION", pickPosition.SelectedItem)
+                'cmd.Parameters.AddWithValue("@SKILLS", txtSkills)
+                cmd.Parameters.AddWithValue("@EMSTAT", pickEmStat.SelectedItem)
+                cmd.Parameters.AddWithValue("@COMITEE", pickCommittee.SelectedItem)
+                cmd.Parameters.AddWithValue("@IMG", imageInput)
+                cmd.ExecuteNonQuery()
+                MsgBox("successfully added")
+                Me.Hide()
                 Form1.Show()
-            Else
-                MessageBox.Show("Account Cannot be Created!", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
+            Catch ex As Exception
+                MsgBox("Doesn't work lmao.")
+            Finally
+                conn.Close()
+            End Try
+        End If
     End Sub
 
     Sub clear()
@@ -79,14 +103,11 @@ Public Class Signup
         txtEmail.Clear()
         pickOffice.Text = ""
         pickPosition.Text = ""
-        pickEmType.Text = ""
-        pickRegion.Text = ""
+
         pickEmStat.Text = ""
-        pickDesignation.Text = ""
+        pickCommittee.Text = ""
         txtCreateUsername.Clear()
         txtCreatePw.Clear()
-        PictureBoxProfile.Image = My.Resources.user
+        pBoxCreateProfile.Image = My.Resources.user
     End Sub
-
-
 End Class

@@ -1,6 +1,11 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Form1
-    Dim test As String = "server=172.30.206.81;port=3306;user=drugpusher;password=druguser;database=sweap"
+    '---------------------------FOR SESSION--------------------------------------------------------
+    Public Shared log_id As Integer
+
+    '----------------------------------------------------------------------------------------------
+
+    Dim test As String = "server=172.30.206.156;user=sweapp;password=druguser;database=sweap;port=3306"
     Dim conn As New MySqlConnection(test)
     Dim gagi As Integer
     Dim rid As MySqlDataReader
@@ -22,28 +27,43 @@ Public Class Form1
     End Sub
 
     Private Sub ButtonLogIn_Click(sender As Object, e As EventArgs) Handles btnLogIn.Click
-        Dim status As String
 
-        Try
-            conn.Open()
-            Dim cmd As New MySqlCommand("SELECT * FROM user WHERE username=@NAME AND password=@PASS", conn)
-            cmd.Parameters.AddWithValue("@NAME", txtUser.Text)
-            cmd.Parameters.AddWithValue("@PASS", txtBoxPass.Text)
-            rid = cmd.ExecuteReader
-            While rid.Read
-                status = rid.GetString("status")
-            End While
-        Catch ex As Exception
-            MsgBox("Account doesn't exist.")
-        Finally
-            conn.Close()
-        End Try
-        If (status = "admin") Then
-            AdminDashboard.Show()
-            Me.Hide()
+        If (txtUser.Text = "") Then
+            MsgBox("Username can't be blank.")
+        ElseIf (txtBoxPass.Text = "") Then
+            MsgBox("Password can't be blank.")
         Else
-            MsgBox("Invalid username or passowrd.")
+            Dim status As Integer = 3
+            Try
+                conn.Open()
+                Dim cmd As New MySqlCommand("SELECT * FROM user WHERE username=@NAME AND password=@PASS", conn)
+                cmd.Parameters.AddWithValue("@NAME", txtUser.Text)
+                cmd.Parameters.AddWithValue("@PASS", txtBoxPass.Text)
+                rid = cmd.ExecuteReader
+                While rid.Read
+                    status = rid.GetInt32("is_admin")
+                    log_id = rid.GetInt32("id")
+                End While
+            Catch ex As Exception
+                MsgBox("Account doesn't exist.")
+            Finally
+                conn.Close()
+            End Try
+            If (status = 1) Then
+                AdminDashboard.Show()
+                Me.Hide()
+            ElseIf (status = 0) Then
+                userdashboard.Show()
+                Me.Hide()
+            Else
+                MsgBox("Invalid username or passowrd.")
+            End If
         End If
+
+
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
     End Sub
 End Class
