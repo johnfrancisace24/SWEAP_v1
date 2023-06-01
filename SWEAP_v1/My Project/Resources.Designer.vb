@@ -93,6 +93,7 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+
         Friend ReadOnly Property dashboard__2_() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("dashboard (2)", resourceCulture)
@@ -133,6 +134,7 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+
         Friend ReadOnly Property layout() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("layout", resourceCulture)
@@ -203,6 +205,8 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+
+
         Friend ReadOnly Property profile__1_() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("profile (1)", resourceCulture)
@@ -223,6 +227,7 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+
         Friend ReadOnly Property team() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("team", resourceCulture)
